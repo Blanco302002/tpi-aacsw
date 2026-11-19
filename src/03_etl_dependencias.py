@@ -32,6 +32,9 @@ from comun import DATOS, EMPRESAS, empresas_en
 ENTRADA = DATOS / "dependencias_top_ar.csv"
 RADAR_TOP = DATOS / "radar_top100_ar.csv"
 CATEGORIAS_BLANDAS = {"Authentication", "Payment processors"}
+# Rubros que se sacan del análisis (se informa cuántos en los metadatos).
+# "Apuestas" se deja: es uso real y es parte de la historia en Argentina.
+EXCLUIR_RUBROS = {"Adultos"}
 ORDEN = {e: i for i, (_, e) in enumerate(EMPRESAS)}
 
 
@@ -72,6 +75,14 @@ def dependencias(fila):
 # Los patrones van anclados al comienzo de una parte del dominio:
 # "(^|\.)x\." encuentra x.com pero no dropbox.com.
 RUBROS = [
+    # Primero adultos y apuestas, para que una quiniela .gov.ar quede en Apuestas.
+    (r"xvideos|xnxx|porn|xhamster|(^|[^a-z])sex|sexo|escort|onlyfans|hentai|xxx"
+     r"|redtube|youporn|brazzers|chaturbate|stripchat|bongacams|spankbang|eporner"
+     r"|tnaflix|rule34|erome|fapello|simpcity|cumlouder|poringa|camsoda|cam4|nsfw"
+     r"|milf|nude|desnud",                                                      "Adultos"),
+    (r"(?<!alfa)(?<!alpha)bet(?!ter|a\.|a-|a$)|casino|apuesta|ganamos|ganaencasa"
+     r"|1win|xbet|bplay|slot|poker|loteria|quiniela|codere|ruleta|bingo"
+     r"|tragamoneda|jackpot|jugadon|lotto",                                     "Apuestas"),
     (r"\.gob\.ar$|\.gov\.ar$|(^|\.)(afip|arca|anses)\.",                        "Estado"),
     (r"\.edu\.ar$|\.edu$|(^|\.)(utn|uba|unne|moodle|campus)\.",                "Educación"),
     (r"banco|(^|\.)(bbva|galicia|santander|macro|nbch|brubank|uala|mercadopago"
@@ -121,6 +132,10 @@ def main():
 
     df = pd.read_csv(ENTRADA)
     df["en_http_archive"] = a_bool(df["en_http_archive"])
+    rubro_previo = df["origin"].apply(host_de).apply(rubro_de)
+    excluidos = rubro_previo[rubro_previo.isin(EXCLUIR_RUBROS)].value_counts().to_dict()
+    df = df[~rubro_previo.isin(EXCLUIR_RUBROS)].copy()
+    print(f"Excluidos por rubro: {excluidos}")
     total_top = len(df)
     print(f"Sitios en el top de Argentina: {total_top}")
     print(f"Con datos en HTTP Archive:     {df['en_http_archive'].sum()} "
@@ -175,6 +190,7 @@ def main():
             "periodo": "CrUX 2026-10 / HTTP Archive crawl 2026-10-01 (ver sql/01)",
             "unidad_de_analisis": "origen web (ej. https://www.ejemplo.com.ar)",
             "sitios_en_top": int(total_top),
+            "excluidos_por_rubro": {k: int(v) for k, v in excluidos.items()},
             "sitios_con_datos": int(n),
             "transformaciones": "ver README, sección Transformaciones",
             "generado": date.today().isoformat(),
