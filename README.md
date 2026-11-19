@@ -11,6 +11,8 @@ Pipeline de datos para el TPI de Aspectos Avanzados de Calidad de Software (UTN 
 | 3 | `src/05_radar_ranking_ar.py` | Tu compu | Top 100 **ordenado** de dominios en Argentina (CrUX solo da tramos) |
 | 4 | `src/03_etl_dependencias.py` | Tu compu | Limpieza + % de sitios por empresa + `dependencias.json` para la pieza + top 100 para revisar |
 | 5 | `src/04_sitios_chaco.py` | Tu compu (opcional) | Lo mismo para sitios locales o del top 100 sin datos |
+| 6 | `src/06_resumen_caidas.py` | Tu compu | `data/resumen_caidas.csv`: cuánto cayó el tráfico de Argentina en cada caída |
+| — | `data/trends/` | A mano en Google Trends | Qué buscó la gente en cada caída (ver `data/trends/LEEME.md`) |
 
 `src/comun.py` no se corre solo: tiene la tabla de empresas y las rutas que usan los demás.
 
@@ -66,6 +68,11 @@ python src/04_sitios_chaco.py
 python src/04_sitios_chaco.py data/top100_sin_datos.csv
 ```
 
+### 6. Resumen de las caídas
+```powershell
+python src/06_resumen_caidas.py
+```
+
 ### Complemento manual para la perspectiva de Uso
 Google Trends (https://trends.google.com), región Argentina, en las fechas de cada caída: búsquedas como "no anda", "caída", "Cloudflare", "WhatsApp no funciona". Se descarga como CSV desde la misma página. Muestra mejor que Radar qué vivió la gente.
 
@@ -76,7 +83,9 @@ Google Trends (https://trends.google.com), región Argentina, en las fechas de c
 4. Se separan dependencias **duras** (CDN, hosting, nube, proxy: si se caen, el sitio no carga) y **blandas** (login y pagos de terceros: falla una función).
 5. La empresa principal de un sitio es la de su CDN; si no hay CDN, la primera dependencia dura conocida.
 6. El rubro se asigna con patrones sobre el dominio (heurística, se revisa a mano en el top 100).
-7. Radar: los valores son normalizados, no cantidades. Se compara cada serie contra su propia mediana (`valor_rel`) y contra la misma franja de la semana anterior.
+7. Radar: los valores son normalizados entre 0 y 1 dentro de cada serie, no cantidades. Se pide una sola serie continua desde una semana antes del evento, y cada momento se compara con la misma hora de la semana anterior (`dif_pct`). Pedir evento y control como dos series separadas da escalas distintas: se probó y se descartó.
+8. Ventanas de cada caída (en `src/06_resumen_caidas.py`): horarios de inicio y fin según cada postmortem.
+9. Top 100 de Radar: se cruza con HTTP Archive por dominio (`dominio` o `www.dominio`). Los que no cruzan se resuelven por DNS con el script 04 (dueño de la red de la IP).
 
 ## Licencias y citas
 - **Chrome UX Report** — Google. Dataset público en BigQuery.
@@ -92,3 +101,6 @@ Google Trends (https://trends.google.com), región Argentina, en las fechas de c
 - Cada sitio pesa lo mismo en los porcentajes, sea Google o un sitio chico (por eso se informa también el top 1.000 aparte).
 - Que un sitio use una CDN no significa que se caiga entero si esa CDN cae: es una *dependencia*, no una certeza de caída. Los postmortems ayudan a calibrar esto.
 - Radar mide tráfico que pasa por Cloudflare: durante una caída la gente reintenta, así que el tráfico puede no bajar.
+- En la caída de Cloudflare, el propio Radar marca que su medición estuvo afectada entre 11:48 y 14:42 UTC (`data/radar_anotaciones.csv`). La baja del 94 % mezcla tráfico que no llegó y tráfico que no se pudo registrar.
+- El top 100 de Radar incluye dominios técnicos (`googleapis.com`, `fbcdn.net`, `cloudfront.net`) que no son sitios que la gente visita: se usan como contexto, no como sitios.
+- Se excluyeron del análisis los sitios para adultos (cantidad en `dependencias.json → metadatos`).

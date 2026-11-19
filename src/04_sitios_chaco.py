@@ -91,6 +91,11 @@ def main():
     for s in sitios:
         d = s["dominio"].strip().lower()
         lista_ips = ips(d)
+        if not lista_ips and not d.startswith("www."):
+            # Muchos dominios base no tienen dirección propia (ej. ytimg.com): probar www.
+            lista_ips = ips(f"www.{d}")
+            if lista_ips:
+                d = f"www.{d}"
         asn, red = asn_de(lista_ips[0]) if lista_ips else (None, None)
         cname = " > ".join(cname_chain(d))
         dns_ = " ".join(nameservers(d))

@@ -1214,7 +1214,7 @@
     "Cloudflare"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 13
   },
   {
    "dominio": "ci.policiadelaciudad.gob.ar",
@@ -1832,7 +1832,7 @@
     "Akamai"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 64
   },
   {
    "dominio": "fcm.aulavirtual.unc.edu.ar",
@@ -3753,7 +3753,7 @@
     "Akamai"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 96
   },
   {
    "dominio": "store.steampowered.com",
@@ -4418,7 +4418,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 44
   },
   {
    "dominio": "www.ambito.com",
@@ -4659,7 +4659,7 @@
     "Microsoft (Azure)"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 46
   },
   {
    "dominio": "www.bna.com.ar",
@@ -5744,7 +5744,7 @@
     "Google"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 1
   },
   {
    "dominio": "www.gpsbahia.com.ar",
@@ -5883,7 +5883,7 @@
     "Otra"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 7
   },
   {
    "dominio": "www.iprofesional.com",
@@ -6393,7 +6393,7 @@
     "Amazon (AWS)"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 18
   },
   {
    "dominio": "www.mercadolibre.com.ar",
@@ -6404,7 +6404,7 @@
     "Amazon (AWS)"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 23
   },
   {
    "dominio": "www.mercadopago.com.ar",
@@ -6439,7 +6439,7 @@
     "Microsoft (Azure)"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 10
   },
   {
    "dominio": "www.minijuegos.com",
@@ -6628,7 +6628,7 @@
     "Amazon (AWS)"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 43
   },
   {
    "dominio": "www.newbalance.com.ar",
@@ -7103,7 +7103,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 60
   },
   {
    "dominio": "www.rosario.gob.ar",
@@ -7446,7 +7446,7 @@
    "blandas": [
     "Google"
    ],
-   "top100": null
+   "top100": 97
   },
   {
    "dominio": "www.todorelatos.com",
@@ -7698,7 +7698,7 @@
     "Otra"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 26
   },
   {
    "dominio": "www.wikidex.net",
@@ -7857,7 +7857,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 51
   },
   {
    "dominio": "xfapsters.com",
@@ -23041,7 +23041,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 11
   },
   {
    "dominio": "openapps.com.br",
@@ -29566,7 +29566,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 45
   },
   {
    "dominio": "www.adrianmercado.com.ar",
@@ -29935,7 +29935,7 @@
     "Akamai"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 9
   },
   {
    "dominio": "www.apross.gov.ar",
@@ -34993,7 +34993,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 77
   },
   {
    "dominio": "www.idrlabs.com",
@@ -36833,7 +36833,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 82
   },
   {
    "dominio": "www.metal-archives.com",
@@ -47201,7 +47201,7 @@
    "blandas": [
     "Otra"
    ],
-   "top100": null
+   "top100": 36
   },
   {
    "dominio": "brazino.co",
@@ -74154,7 +74154,7 @@
     "Cloudflare"
    ],
    "blandas": [],
-   "top100": null
+   "top100": 8
   },
   {
    "dominio": "www.cloudpayroll.com.ar",
@@ -81752,7 +81752,7 @@
    "principal": "Sin CDN detectado",
    "duras": [],
    "blandas": [],
-   "top100": null
+   "top100": 85
   },
   {
    "dominio": "www.oregonhotel.com.ar",

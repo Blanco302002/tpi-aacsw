@@ -15,11 +15,13 @@ Genera:
     data/radar_outages_ar.csv   cortes de internet registrados en Argentina
 
 Cómo leer los valores: Radar NO da cantidad de pedidos, da valores
-normalizados. Por eso cada serie se pide junto con su semana de control en
-la misma llamada, y además se agrega "valor_rel" = valor / mediana de su
-propia serie (1.0 = un momento típico; 0.7 = 30 % menos que lo típico).
-Comparar "valor_rel" del evento contra el de la semana anterior es válido
-aunque la escala original fuera distinta.
+normalizados entre 0 y 1 (MIN0_MAX) dentro de cada serie. Por eso se pide
+UNA sola serie continua que va desde una semana antes hasta el final del
+evento: así el evento y su control comparten la misma escala, y se compara
+cada momento con la misma hora del mismo día de la semana anterior
+("dif_pct": -50 = la mitad del tráfico habitual).
+(Probado: pedir evento y control como dos series separadas da escalas
+distintas y no se pueden comparar.)
 
 Nota: Radar mide el tráfico que pasa por Cloudflare. Durante una caída, la
 gente sigue pidiendo páginas (y recibe errores), así que el tráfico puede
@@ -28,7 +30,6 @@ no bajar. Hay que mirar los datos antes de usarlos en la pieza.
 
 import csv
 import os
-import statistics
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -84,50 +85,45 @@ def una_semana_antes(iso):
     return d.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def series_de(resultado):
-    """Las series de la respuesta, en orden (serie_0/serie_1 o por nombre)."""
-    return [v for k, v in resultado.items()
-            if k != "meta" and isinstance(v, dict) and "timestamps" in v]
-
-
-def relativo(valores):
-    nums = [float(v) for v in valores if v is not None]
-    mediana = statistics.median(nums) if nums else 0
-    return [round(float(v) / mediana, 4) if mediana and v is not None else None
-            for v in valores]
+def serie_continua(path, inicio, fin):
+    """Una sola serie desde una semana antes del inicio hasta el fin."""
+    for intervalo in ("15m", "1h"):  # si 15 min no está disponible, por hora
+        try:
+            res = get(path, {"location": LOCATION, "aggInterval": intervalo,
+                             "dateStart": una_semana_antes(inicio), "dateEnd": fin})
+            break
+        except ErrorRadar:
+            if intervalo == "1h":
+                raise
+    s = res["serie_0"]
+    anotaciones = ((res.get("meta") or {}).get("confidenceInfo") or {}).get("annotations") or []
+    return dict(zip(s["timestamps"], s["values"])), anotaciones
 
 
 def guardar_evento(nombre, inicio, fin):
-    filas = []
+    filas, notas = [], []
     for fuente, path in [("http", "/http/timeseries"), ("netflows", "/netflows/timeseries")]:
-        # Evento y control en la misma llamada: misma normalización.
-        res = get(path, {
-            "location": LOCATION,
-            "aggInterval": "15m",
-            "name": ["evento", "control"],
-            "dateStart": [inicio, una_semana_antes(inicio)],
-            "dateEnd": [fin, una_semana_antes(fin)],
-        })
-        series = series_de(res)
-        if len(series) < 2:
-            raise ErrorRadar(f"{fuente}: se esperaban 2 series y llegaron {len(series)}")
-        ev, ctl = series[0], series[1]
-        ev_rel, ctl_rel = relativo(ev["values"]), relativo(ctl["values"])
-        for i, ts in enumerate(ev["timestamps"]):
-            filas.append({
-                "fuente": fuente,
-                "timestamp_utc": ts,
-                "valor": ev["values"][i],
-                "valor_semana_anterior": ctl["values"][i] if i < len(ctl["values"]) else None,
-                "valor_rel": ev_rel[i],
-                "valor_rel_semana_anterior": ctl_rel[i] if i < len(ctl_rel) else None,
-            })
+        valores, anotaciones = serie_continua(path, inicio, fin)
+        for ts in sorted(valores):
+            if ts < inicio:
+                continue  # la semana anterior solo se usa como control
+            v, vc = valores[ts], valores.get(una_semana_antes(ts))
+            dif = (float(v) / float(vc) - 1) * 100 if v is not None and vc else None
+            filas.append({"fuente": fuente, "timestamp_utc": ts, "valor": v,
+                          "valor_semana_anterior": vc,
+                          "dif_pct": round(dif, 1) if dif is not None else None})
+        for a in anotaciones:
+            notas.append({"evento": nombre, "fuente": fuente,
+                          "inicio": a.get("startDate"), "fin": a.get("endDate"),
+                          "tipo": a.get("eventType"), "descripcion": a.get("description"),
+                          "link": a.get("linkedUrl")})
     ruta = DATOS / f"radar_{nombre}.csv"
     with open(ruta, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=filas[0].keys())
         w.writeheader()
         w.writerows(filas)
-    print(f"OK {ruta.name} ({len(filas)} filas)")
+    print(f"OK {ruta.name} ({len(filas)} filas, {len(notas)} anotaciones de Radar)")
+    return notas
 
 
 def guardar_outages():
@@ -162,13 +158,19 @@ def guardar_outages():
 if __name__ == "__main__":
     DATOS.mkdir(exist_ok=True)
     token()  # si falta el token, cortar acá con un mensaje claro
-    fallas = 0
+    fallas, notas = 0, []
     for nombre, (ini, fin) in EVENTOS.items():
         try:
-            guardar_evento(nombre, ini, fin)
+            notas += guardar_evento(nombre, ini, fin)
         except (ErrorRadar, requests.RequestException) as e:
             fallas += 1
             print(f"FALLÓ {nombre}: {e}")  # una ventana fallida no frena las demás
+    # Anotaciones que Radar pega a cada serie (ej. "su propia medición estuvo afectada")
+    with open(DATOS / "radar_anotaciones.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["evento", "fuente", "inicio", "fin",
+                                          "tipo", "descripcion", "link"])
+        w.writeheader()
+        w.writerows(notas)
     try:
         guardar_outages()
     except (ErrorRadar, requests.RequestException) as e:
