@@ -14,12 +14,21 @@ y no se comparan entre archivos distintos.
 | `crowdstrike_busquedas_en_alza_mundo.csv` | Consultas relacionadas con "windows" | Mundo | Ídem | Muestra "windows crowdstrike" (+2.950 %) y "windows outage" (+3.200 %). |
 | `crowdstrike_busquedas_top_mundo.csv` | Ídem, por volumen | Mundo | Ídem | Contexto. |
 
-## Pendiente: serie temporal (lo más importante)
-Bajar el gráfico **"Interés a lo largo del tiempo"** con un rango de **un mes** (un dato por día:
-el pico se ve en el día de la caída) y con "downdetector" como término común a las tres caídas:
+## Series temporales (un dato por día, un mes alrededor de cada caída)
+Gráfico "Interés a lo largo del tiempo", Argentina, términos `<empresa>` y `downdetector`.
+Ojo al leerlas: las 2 primeras líneas del CSV son encabezado de Google.
 
-- Cloudflare: https://trends.google.com/trends/explore?date=2025-11-01%202025-11-30&geo=AR&q=cloudflare,downdetector
-- AWS: https://trends.google.com/trends/explore?date=2025-10-01%202025-10-31&geo=AR&q=aws,downdetector
-- CrowdStrike: https://trends.google.com/trends/explore?date=2024-07-01%202024-07-31&geo=AR&q=crowdstrike,downdetector
+| Archivo | Rango | Día de la caída | Un día normal | Día siguiente |
+|---|---|---|---|---|
+| `cloudflare_serie_AR.csv` | 01/11 → 30/11/2025 | **100** (18/11) | 1–2 | 16 |
+| `aws_serie_AR.csv` | 01/10 → 31/10/2025 | **100** (20/10) | 0–7 | 29 |
+| `crowdstrike_serie_AR.csv` | 01/07 → 31/07/2024 | **100** (19/07) | 0 | 20 |
 
-Guardarlos como `cloudflare_serie_AR.csv`, `aws_serie_AR.csv` y `crowdstrike_serie_AR.csv`.
+**Lectura:** en las tres caídas la gente en Argentina salió a buscar el nombre de una empresa
+que un día normal casi nadie busca. Cloudflare pasó de ~2 a 100 (unas 50 veces más).
+No se comparan las alturas entre archivos: cada uno tiene su propio 100.
+
+Links usados:
+- https://trends.google.com/trends/explore?date=2025-11-01%202025-11-30&geo=AR&q=cloudflare,downdetector
+- https://trends.google.com/trends/explore?date=2025-10-01%202025-10-31&geo=AR&q=aws,downdetector
+- https://trends.google.com/trends/explore?date=2024-07-01%202024-07-31&geo=AR&q=crowdstrike,downdetector
