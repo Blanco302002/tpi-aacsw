@@ -1,7 +1,7 @@
 # TPI DATA4QUALITY — ¿Qué se apaga si se cae una sola empresa?
 
 Pipeline de datos para el TPI de Aspectos Avanzados de Calidad de Software (UTN FRRe).
-El resumen de hallazgos está en [`docs/informe_avance.md`](docs/informe_avance.md).
+El resumen de hallazgos está en [`docs/informe_avance.md`](docs/informe_avance.md), y el de los postmortems (por qué se cayó cada uno) en [`docs/postmortems.md`](docs/postmortems.md).
 
 ## Dónde está cada cosa
 

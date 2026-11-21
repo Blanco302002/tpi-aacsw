@@ -94,16 +94,25 @@ resultados en `data/resultados/historial_servicios.csv` y `comparacion_mundo.csv
    **No es un problema argentino: es la forma en que está armada internet.** Argentina usa menos Akamai y
    más proveedores locales que el promedio mundial.
 4. **¿Y si se cae Akamai?** Akamai es la principal en 7 servicios (Santander, BBVA, TikTok, Disney+, HBO Max,
-   Infobae, La Nación). Akamai ya tuvo caídas globales: falta buscar el precedente y su postmortem.
+   Infobae, La Nación). **Precedente:** el 22/07/2021 una actualización de configuración de Akamai dejó sitios
+   de clientes inaccesibles hasta una hora (ver `docs/postmortems.md`).
 
 > **Aviso para mostrar en la pieza:** la infraestructura se consultó por DNS en noviembre de 2026, no el día de cada
 > caída; un servicio pudo cambiar de proveedor en el medio. Además, el DNS ve la "puerta de entrada" de cada
 > servicio, no lo que usa por dentro. Por eso "¿se cayó?" se apoya en noticias, no en el DNS.
 
-**Por qué se cayó (Proceso).** En los tres casos un cambio llegó a todo el mundo al mismo tiempo:
-- **Cloudflare:** un archivo de configuración generado automáticamente duplicó su tamaño y se distribuyó a toda la red.
-- **AWS:** un error en la automatización de DNS de un servicio interno, en una sola región, de la que dependían muchas otras cosas.
-- **CrowdStrike:** una actualización de contenido enviada a todas las computadoras a la vez, sin despliegue gradual.
+**Por qué se cayó (Proceso).** Según los postmortems oficiales (resumen completo con fuentes y citas en
+[`docs/postmortems.md`](postmortems.md)), ninguna fue un hackeo: fueron **cambios de rutina que el proceso dejó llegar a todos**.
+- **Cloudflare:** un cambio de permisos en una base de datos hizo que un archivo de configuración generado automáticamente
+  duplicara su tamaño. Ese archivo se copia solo a toda la red cada 5 minutos, y el software que lo lee tenía un límite
+  fijo: el proxy se colgó en todo el mundo. Se cayó también **Turnstile**, el anti-bots que otros sitios insertan en su
+  login, lo que refuerza la hipótesis de las **dependencias ocultas**.
+- **AWS:** dos partes de un sistema **automático** de DNS se pisaron entre sí (una falla latente) y dejaron vacía la
+  dirección de DynamoDB en us-east-1. Detrás cayeron en cadena otros servicios. Duró unas 14 horas y media.
+- **CrowdStrike:** una actualización de contenido de rutina con un error no detectado llegó a **todas** las computadoras
+  conectadas en 78 minutos, **sin despliegue por etapas**: 8,5 millones de equipos con Windows (menos del 1 %), que hubo
+  que arreglar a mano. Su análisis de causa raíz concluye que esos contenidos deberían tener despliegue por etapas.
+- **Los cuatro informes son "sin culpables"**: describen fallas del sistema, no de personas. Tres piden disculpas públicas.
 
 ## 4. Recién acá: el concepto de calidad
 - **Producto → Fiabilidad** (ISO/IEC 25010:2023): disponibilidad, tolerancia a fallos, recuperabilidad.
@@ -136,7 +145,7 @@ Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph
 ## 7. Próximos pasos
 | Fechas | Tarea |
 |---|---|
-| 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 57 servicios). Leer los 3 postmortems y anotar citas. |
+| 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 57 servicios). ~~Leer los 3 postmortems y anotar citas~~ (hecho: `docs/postmortems.md`). |
 | 24–27/11 | Pieza visual: historia de apertura + explorador. |
 | 28–29/11 | Ficha de evidencia. |
 | 30/11–2/12 | Guion del pitch (8 min) y ensayos. |
