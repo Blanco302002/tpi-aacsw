@@ -11,8 +11,9 @@ Uso:
     2. python src/02_radar_argentina.py
 
 Genera:
-    data/radar_<evento>.csv     serie de tráfico (15 min) del evento + semana anterior
-    data/radar_outages_ar.csv   cortes de internet registrados en Argentina
+    data/fuentes/radar_<evento>.csv     tráfico (15 min) del evento vs. semana anterior
+    data/fuentes/radar_outages_ar.csv   cortes de internet registrados en Argentina
+    data/fuentes/radar_anotaciones.csv  avisos que Radar pega a cada serie
 
 Cómo leer los valores: Radar NO da cantidad de pedidos, da valores
 normalizados entre 0 y 1 (MIN0_MAX) dentro de cada serie. Por eso se pide
@@ -34,7 +35,7 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
-from comun import DATOS, cargar_env
+from comun import CSV_ENC, FUENTES, cargar_env
 
 API = "https://api.cloudflare.com/client/v4/radar"
 LOCATION = "AR"
@@ -117,8 +118,8 @@ def guardar_evento(nombre, inicio, fin):
                           "inicio": a.get("startDate"), "fin": a.get("endDate"),
                           "tipo": a.get("eventType"), "descripcion": a.get("description"),
                           "link": a.get("linkedUrl")})
-    ruta = DATOS / f"radar_{nombre}.csv"
-    with open(ruta, "w", newline="", encoding="utf-8") as f:
+    ruta = FUENTES / f"radar_{nombre}.csv"
+    with open(ruta, "w", newline="", encoding=CSV_ENC) as f:
         w = csv.DictWriter(f, fieldnames=filas[0].keys())
         w.writeheader()
         w.writerows(filas)
@@ -146,8 +147,8 @@ def guardar_outages():
         "alcance": a.get("scope"), "descripcion": a.get("description"),
         "link": a.get("linkedUrl"),
     } for a in anotaciones]
-    ruta = DATOS / "radar_outages_ar.csv"
-    with open(ruta, "w", newline="", encoding="utf-8") as f:
+    ruta = FUENTES / "radar_outages_ar.csv"
+    with open(ruta, "w", newline="", encoding=CSV_ENC) as f:
         w = csv.DictWriter(f, fieldnames=["inicio", "fin", "causa", "tipo",
                                           "alcance", "descripcion", "link"])
         w.writeheader()
@@ -156,7 +157,6 @@ def guardar_outages():
 
 
 if __name__ == "__main__":
-    DATOS.mkdir(exist_ok=True)
     token()  # si falta el token, cortar acá con un mensaje claro
     fallas, notas = 0, []
     for nombre, (ini, fin) in EVENTOS.items():
@@ -166,7 +166,7 @@ if __name__ == "__main__":
             fallas += 1
             print(f"FALLÓ {nombre}: {e}")  # una ventana fallida no frena las demás
     # Anotaciones que Radar pega a cada serie (ej. "su propia medición estuvo afectada")
-    with open(DATOS / "radar_anotaciones.csv", "w", newline="", encoding="utf-8") as f:
+    with open(FUENTES / "radar_anotaciones.csv", "w", newline="", encoding=CSV_ENC) as f:
         w = csv.DictWriter(f, fieldnames=["evento", "fuente", "inicio", "fin",
                                           "tipo", "descripcion", "link"])
         w.writeheader()

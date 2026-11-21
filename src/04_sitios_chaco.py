@@ -1,8 +1,8 @@
 """
 04_sitios_chaco.py  (OPCIONAL)
 Para sitios que no aparecen en los datos de HTTP Archive: sitios locales
-(Moodle de la facultad, ATP, SAMEEP...) o los del top 100 que quedaron
-"SIN DATOS".
+(Moodle de la facultad, ATP, SAMEEP...). Sus funciones DNS también las
+usa 07_servicios.py.
 
 Hace lo mismo que tu navegador al entrar a un sitio: pregunta el DNS y
 averigua a qué red (empresa) pertenece la IP, usando el servicio público
@@ -11,11 +11,11 @@ sistema y no descarga páginas.
 
 Uso:
     pip install dnspython
-    python src/04_sitios_chaco.py                           # usa data/sitios_chaco.csv
-    python src/04_sitios_chaco.py data/top100_sin_datos.csv # u otro CSV
+    python src/04_sitios_chaco.py                  # usa data/fuentes/sitios_chaco.csv
+    python src/04_sitios_chaco.py otro_archivo.csv # u otro CSV
 
 Entrada: CSV con columnas dominio,nombre,rubro
-Salida:  data/<nombre_entrada>_resultado.csv
+Salida:  data/resultados/<nombre_entrada>_resultado.csv
 """
 
 import csv
@@ -24,7 +24,7 @@ from pathlib import Path
 
 import dns.resolver
 
-from comun import DATOS, empresas_en
+from comun import CSV_ENC, FUENTES, RESULTADOS, empresas_en
 
 RES = dns.resolver.Resolver()
 RES.lifetime = 5
@@ -81,8 +81,8 @@ def nameservers(dominio):
 
 
 def main():
-    entrada = Path(sys.argv[1]) if len(sys.argv) > 1 else DATOS / "sitios_chaco.csv"
-    with open(entrada, encoding="utf-8") as f:
+    entrada = Path(sys.argv[1]) if len(sys.argv) > 1 else FUENTES / "sitios_chaco.csv"
+    with open(entrada, encoding="utf-8-sig") as f:
         sitios = [s for s in csv.DictReader(f) if (s.get("dominio") or "").strip()]
     if not sitios:
         sys.exit(f"{entrada} no tiene dominios.")
@@ -112,8 +112,8 @@ def main():
         })
         print(f"{d:35} {filas[-1]['empresa_hosting']:22} ({red or 'sin respuesta'})")
 
-    salida = DATOS / f"{entrada.stem}_resultado.csv"
-    with open(salida, "w", newline="", encoding="utf-8") as f:
+    salida = RESULTADOS / f"{entrada.stem}_resultado.csv"
+    with open(salida, "w", newline="", encoding=CSV_ENC) as f:
         w = csv.DictWriter(f, fieldnames=filas[0].keys())
         w.writeheader()
         w.writerows(filas)

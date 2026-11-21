@@ -11,20 +11,19 @@ Qué hace: solo CONSULTA (GET) la API pública de Radar.
 Uso:
     python src/05_radar_ranking_ar.py
 Salida:
-    data/radar_top100_ar.csv   (puesto, dominio, categorias)
-Después corré 03_etl_dependencias.py: lo cruza solo.
+    data/fuentes/radar_top100_ar.csv   (puesto, dominio, categorias)
+Se usa como referencia para los dominios de las apps (ver servicios_ar.csv).
 """
 
 import csv
 import importlib
 
-from comun import DATOS
+from comun import CSV_ENC, FUENTES
 
 radar = importlib.import_module("02_radar_argentina")  # reusa token y llamada a la API
 
 
 def main():
-    DATOS.mkdir(exist_ok=True)
     res = radar.get("/ranking/top", {"location": radar.LOCATION, "limit": 100})
     lista = next((v for k, v in res.items() if k != "meta" and isinstance(v, list)), [])
     if not lista:
@@ -34,8 +33,8 @@ def main():
         "dominio": d.get("domain"),
         "categorias": " | ".join(c.get("name", "") for c in d.get("categories") or []),
     } for i, d in enumerate(lista)]
-    ruta = DATOS / "radar_top100_ar.csv"
-    with open(ruta, "w", newline="", encoding="utf-8") as f:
+    ruta = FUENTES / "radar_top100_ar.csv"
+    with open(ruta, "w", newline="", encoding=CSV_ENC) as f:
         w = csv.DictWriter(f, fieldnames=["puesto", "dominio", "categorias"])
         w.writeheader()
         w.writerows(filas)

@@ -1,0 +1,4 @@
+﻿dominio,nombre,rubro,cname,ip,asn,red,dns,empresa_hosting,empresa_dns
+frre.utn.edu.ar,UTN FRRe,Educación,,190.114.201.2,27883,"AS27883 - Universidad Tecnologica Nacional, AR",server3.frre.utn.edu.ar server1.frre.utn.edu.ar,Otra,Otra
+www.nbch.com.ar,Nuevo Banco del Chaco (verificar dominio),Bancos y pagos,,190.221.17.46,,,ns13.dnsmadeeasy.com ns14.dnsmadeeasy.com ns15.dnsmadeeasy.com ns10.dnsmadeeasy.com ns12.dnsmadeeasy.com ns11.dnsmadeeasy.com,sin respuesta,Otra
+chaco.gob.ar,Gobierno del Chaco (verificar dominio),Estado,,201.217.244.212,,,ns-1652.awsdns-14.co.uk ns-59.awsdns-07.com ns-559.awsdns-05.net ns-1081.awsdns-07.org,sin respuesta,Amazon (AWS)

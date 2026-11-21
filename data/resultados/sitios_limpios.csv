@@ -1,4 +1,4 @@
-origin,host,rank_ar,tramo,rubro,cdn,empresa_principal,duras,blandas
+﻿origin,host,rank_ar,tramo,rubro,cdn,empresa_principal,duras,blandas
 https://1nto.com,1nto.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://1win.lat,1win.lat,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://1xbetargen.com,1xbetargen.com,1000,Top 1.000,Apuestas,,Sin CDN detectado,,
@@ -69,7 +69,7 @@ https://bolavip.com,bolavip.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (A
 https://brazino777.com,brazino777.com,1000,Top 1.000,Otros,,Sin CDN detectado,,
 https://btspopuplatam.com,btspopuplatam.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://buenosaires.gob.ar,buenosaires.gob.ar,1000,Top 1.000,Estado,,Cloudflare,Cloudflare,
-https://business.facebook.com,business.facebook.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://business.facebook.com,business.facebook.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://business.google.com,business.google.com,1000,Top 1.000,Buscadores y consulta,Google,Google,Google,
 https://caba.betsson.bet.ar,caba.betsson.bet.ar,1000,Top 1.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://caba.bplay.bet.ar,caba.bplay.bet.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare | Microsoft (Azure),
@@ -95,7 +95,7 @@ https://cba.betsson.bet.ar,cba.betsson.bet.ar,1000,Top 1.000,Apuestas,Amazon Clo
 https://cdn.pla3.com,cdn.pla3.com,1000,Top 1.000,Otros,,Otra,Otra,
 https://cellshop.com,cellshop.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://celuapuestas.cash,celuapuestas.cash,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://cge.entrerios.gov.ar,cge.entrerios.gov.ar,1000,Top 1.000,Estado,,Cloudflare,Cloudflare | Google,Otra
+https://cge.entrerios.gov.ar,cge.entrerios.gov.ar,1000,Top 1.000,Estado,,Cloudflare,Cloudflare | Google,Meta (propia)
 https://character.ai,character.ai,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://chatarg.com,chatarg.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://chatgpt.com,chatgpt.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -151,7 +151,7 @@ https://espanol.yahoo.com,espanol.yahoo.com,1000,Top 1.000,Buscadores y consulta
 https://eternalmangas.org,eternalmangas.org,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://eva.una.edu.ar,eva.una.edu.ar,1000,Top 1.000,Educación,,Sin CDN detectado,,
 https://exitoina.perfil.com,exitoina.perfil.com,1000,Top 1.000,Medios,Cloudflare,Cloudflare,Cloudflare,
-https://faq.whatsapp.com,faq.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://faq.whatsapp.com,faq.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://fast.com,fast.com,1000,Top 1.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://fcm.aulavirtual.unc.edu.ar,fcm.aulavirtual.unc.edu.ar,1000,Top 1.000,Educación,,Sin CDN detectado,,
 https://fe.afip.gob.ar,fe.afip.gob.ar,1000,Top 1.000,Estado,,Sin CDN detectado,,
@@ -213,7 +213,7 @@ https://login.buenosaires.gob.ar,login.buenosaires.gob.ar,1000,Top 1.000,Estado,
 https://login.riverid.com.ar,login.riverid.com.ar,1000,Top 1.000,Otros,Microsoft Azure,Microsoft (Azure),Cloudflare | Microsoft (Azure),
 https://login.yahoo.com,login.yahoo.com,1000,Top 1.000,Buscadores y consulta,,Sin CDN detectado,,
 https://loteria.chaco.gov.ar,loteria.chaco.gov.ar,1000,Top 1.000,Apuestas,,Amazon (AWS),Amazon (AWS),
-https://m.facebook.com,m.facebook.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://m.facebook.com,m.facebook.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://m.filmaffinity.com,m.filmaffinity.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://m.shein.com,m.shein.com,1000,Top 1.000,Compras y delivery,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
 https://m.webnovel.com,m.webnovel.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
@@ -245,7 +245,7 @@ https://ngl.link,ngl.link,1000,Top 1.000,Otros,"Cloudflare, Fastly",Cloudflare,C
 https://noodlemagazine.com,noodlemagazine.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://notebook.google.com,notebook.google.com,1000,Top 1.000,Buscadores y consulta,Google,Google,Google,
 https://notitimba.com,notitimba.com,1000,Top 1.000,Otros,,Otra,Otra,
-https://nuevodiarioweb.com.ar,nuevodiarioweb.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://nuevodiarioweb.com.ar,nuevodiarioweb.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://numerosconsuerte.com.ar,numerosconsuerte.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://nya2.com,nya2.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://ofertas.pba.betsson.bet.ar,ofertas.pba.betsson.bet.ar,1000,Top 1.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
@@ -259,7 +259,7 @@ https://open.spotify.com,open.spotify.com,1000,Top 1.000,Entretenimiento,Fastly,
 https://oprastore.com,oprastore.com,1000,Top 1.000,Otros,,Otra,Otra,
 https://origin.app.promiedos.com.ar,origin.app.promiedos.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://orobetar.com,orobetar.com,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://ov.naturgynoa.com.ar,ov.naturgynoa.com.ar,1000,Top 1.000,Otros,,Sin CDN detectado,,Google
+https://ov.naturgynoa.com.ar,ov.naturgynoa.com.ar,1000,Top 1.000,Otros,,Sin CDN detectado,,Google | Meta (propia)
 https://padlet.com,padlet.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://pagosyrecargas.bancogalicia.com.ar,pagosyrecargas.bancogalicia.com.ar,1000,Top 1.000,Bancos y pagos,,Amazon (AWS),Amazon (AWS),
 https://partidas.mgob.gba.gob.ar,partidas.mgob.gba.gob.ar,1000,Top 1.000,Estado,,Sin CDN detectado,,
@@ -287,10 +287,10 @@ https://portal.openmedica.ar,portal.openmedica.ar,1000,Top 1.000,Otros,,Otra,Otr
 https://psicologia.aulavirtual.unc.edu.ar,psicologia.aulavirtual.unc.edu.ar,1000,Top 1.000,Educación,,Otra,Otra,
 https://puma.jusrionegro.gov.ar,puma.jusrionegro.gov.ar,1000,Top 1.000,Estado,,Amazon (AWS),Amazon (AWS),
 https://quesalio.com,quesalio.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://quinielacordoba.ruta1000.com.ar,quinielacordoba.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Otra
-https://quinieladelaciudad.ruta1000.com.ar,quinieladelaciudad.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Otra
-https://quinielaentrerios.ruta1000.com.ar,quinielaentrerios.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Otra
-https://quinielasantafe.ruta1000.com.ar,quinielasantafe.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Otra
+https://quinielacordoba.ruta1000.com.ar,quinielacordoba.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://quinieladelaciudad.ruta1000.com.ar,quinieladelaciudad.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://quinielaentrerios.ruta1000.com.ar,quinielaentrerios.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://quinielasantafe.ruta1000.com.ar,quinielasantafe.ruta1000.com.ar,1000,Top 1.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://radiomitre.cienradios.com,radiomitre.cienradios.com,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,
 https://reebok.com.ar,reebok.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://remotedesktop.google.com,remotedesktop.google.com,1000,Top 1.000,Buscadores y consulta,Google,Google,Google,
@@ -359,15 +359,15 @@ https://vivitusuerte.com,vivitusuerte.com,1000,Top 1.000,Otros,,Cloudflare,Cloud
 https://weather.com,weather.com,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai | Vercel,Google
 https://web-ceibo.gruposancorseguros.com,web-ceibo.gruposancorseguros.com,1000,Top 1.000,Otros,,Sin CDN detectado,,
 https://web.central.chat,web.central.chat,1000,Top 1.000,Otros,Google,Google,Google,
-https://web.whatsapp.com,web.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://web.whatsapp.com,web.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://web1.suizoargentina.com,web1.suizoargentina.com,1000,Top 1.000,Otros,,Cloudflare,Cloudflare,
 https://web3.suizoargentina.com,web3.suizoargentina.com,1000,Top 1.000,Otros,,Cloudflare,Cloudflare,
-https://webventas.sofse.gob.ar,webventas.sofse.gob.ar,1000,Top 1.000,Estado,,Otra,Otra,Google
+https://webventas.sofse.gob.ar,webventas.sofse.gob.ar,1000,Top 1.000,Estado,,Otra,Otra,Google | Meta (propia)
 https://wol.jw.org,wol.jw.org,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://wordwall.net,wordwall.net,1000,Top 1.000,Otros,Microsoft Azure,Microsoft (Azure),Cloudflare | Microsoft (Azure),
 https://ww3.lectulandia.com,ww3.lectulandia.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.0221.com.ar,www.0221.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.0223.com.ar,www.0223.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.0223.com.ar,www.0223.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.3djuegos.com,www.3djuegos.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.a24.com,www.a24.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.abc.es,www.abc.es,1000,Top 1.000,Otros,Fastly,Fastly,Fastly,Otra
@@ -437,9 +437,9 @@ https://www.correoargentino.com.ar,www.correoargentino.com.ar,1000,Top 1.000,Otr
 https://www.coto.com.ar,www.coto.com.ar,1000,Top 1.000,Otros,,Otra,Otra,
 https://www.crocs.com.ar,www.crocs.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Microsoft (Azure),
 https://www.cronica.com.ar,www.cronica.com.ar,1000,Top 1.000,Medios,,Cloudflare,Cloudflare,
-https://www.cronista.com,www.cronista.com,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Google | Akamai,Otra
+https://www.cronista.com,www.cronista.com,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Google | Akamai,Meta (propia)
 https://www.crunchyroll.com,www.crunchyroll.com,1000,Top 1.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),Otra
-https://www.cuitonline.com,www.cuitonline.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.cuitonline.com,www.cuitonline.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.dafont.com,www.dafont.com,1000,Top 1.000,Otros,,Sin CDN detectado,,
 https://www.dailymotion.com,www.dailymotion.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.deruedas.com.ar,www.deruedas.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -460,20 +460,20 @@ https://www.elancasti.com.ar,www.elancasti.com.ar,1000,Top 1.000,Otros,Cloudflar
 https://www.elconfidencial.com,www.elconfidencial.com,1000,Top 1.000,Otros,Incapsula,Imperva,Cloudflare | Amazon (AWS) | Imperva,
 https://www.elcordillerano.com.ar,www.elcordillerano.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.eldestapeweb.com,www.eldestapeweb.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://www.eldia.com,www.eldia.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.eldia.com,www.eldia.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.eldiariodelapampa.com.ar,www.eldiariodelapampa.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.eleconomista.es,www.eleconomista.es,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Google | Akamai,Google
 https://www.elespanol.com,www.elespanol.com,1000,Top 1.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Google
 https://www.elliberal.com.ar,www.elliberal.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.ellitoral.com,www.ellitoral.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.ellitoral.com,www.ellitoral.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.ellitoral.com.ar,www.ellitoral.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.elonce.com,www.elonce.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.elsol.com.ar,www.elsol.com.ar,1000,Top 1.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.elterritorio.com.ar,www.elterritorio.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google | Bunny,
 https://www.eltrecetv.com.ar,www.eltrecetv.com.ar,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,Google
 https://www.eltribuno.com,www.eltribuno.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.epec.com.ar,www.epec.com.ar,1000,Top 1.000,Otros,,Otra,Otra,Google
-https://www.espinof.com,www.espinof.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.epec.com.ar,www.epec.com.ar,1000,Top 1.000,Otros,,Otra,Otra,Google | Meta (propia)
+https://www.espinof.com,www.espinof.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.espn.com.ar,www.espn.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.falabella.com,www.falabella.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.familysearch.org,www.familysearch.org,1000,Top 1.000,Otros,"Amazon CloudFront, Incapsula",Amazon (AWS),Amazon (AWS) | Imperva,
@@ -504,12 +504,12 @@ https://www.hola.com,www.hola.com,1000,Top 1.000,Otros,Fastly,Fastly,Cloudflare 
 https://www.hushpuppies.com.ar,www.hushpuppies.com.ar,1000,Top 1.000,Otros,Microsoft Azure,Microsoft (Azure),Amazon (AWS) | Microsoft (Azure),
 https://www.ilovepdf.com,www.ilovepdf.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.imdb.com,www.imdb.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.infobae.com,www.infobae.com,1000,Top 1.000,Medios,Akamai,Akamai,Akamai,Otra
+https://www.infobae.com,www.infobae.com,1000,Top 1.000,Medios,Akamai,Akamai,Akamai,Meta (propia)
 https://www.infocielo.com,www.infocielo.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.infodefensa.com,www.infodefensa.com,1000,Top 1.000,Otros,,Cloudflare,Cloudflare | Google,
 https://www.infodolar.com,www.infodolar.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.instagram.com,www.instagram.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
-https://www.iprofesional.com,www.iprofesional.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.instagram.com,www.instagram.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
+https://www.iprofesional.com,www.iprofesional.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.ips.gba.gob.ar,www.ips.gba.gob.ar,1000,Top 1.000,Estado,,Otra,Otra,
 https://www.jbl.com.ar,www.jbl.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.jovencitas.gratis,www.jovencitas.gratis,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -544,10 +544,10 @@ https://www.loteriasmundiales.com.ar,www.loteriasmundiales.com.ar,1000,Top 1.000
 https://www.lpfplay.com,www.lpfplay.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.lpsg.com,www.lpsg.com,1000,Top 1.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.macro.com.ar,www.macro.com.ar,1000,Top 1.000,Bancos y pagos,,Otra,Otra,
-https://www.managerzone.com,www.managerzone.com,1000,Top 1.000,Otros,,Otra,Otra,Otra
+https://www.managerzone.com,www.managerzone.com,1000,Top 1.000,Otros,,Otra,Otra,Meta (propia)
 https://www.mangago.me,www.mangago.me,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.manhwaweb.com,www.manhwaweb.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.marca.com,www.marca.com,1000,Top 1.000,Otros,Fastly,Fastly,Fastly | Microsoft (Azure),Otra
+https://www.marca.com,www.marca.com,1000,Top 1.000,Otros,Fastly,Fastly,Fastly | Microsoft (Azure),Meta (propia)
 https://www.masonline.com.ar,www.masonline.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.maxiconsumo.com,www.maxiconsumo.com,1000,Top 1.000,Otros,Azion,Otra,Otra,
 https://www.megatone.net,www.megatone.net,1000,Top 1.000,Otros,,Sin CDN detectado,,
@@ -596,7 +596,7 @@ https://www.personal.com.ar,www.personal.com.ar,1000,Top 1.000,Otros,Amazon Clou
 https://www.pjn.gov.ar,www.pjn.gov.ar,1000,Top 1.000,Estado,,Cloudflare,Cloudflare,
 https://www.plataforma10.com.ar,www.plataforma10.com.ar,1000,Top 1.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.polybuzz.ai,www.polybuzz.ai,1000,Top 1.000,Otros,,Sin CDN detectado,,Google
-https://www.primeraedicion.com.ar,www.primeraedicion.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.primeraedicion.com.ar,www.primeraedicion.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.primevideo.com,www.primevideo.com,1000,Top 1.000,Entretenimiento,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.promiedos.com.ar,www.promiedos.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.pronosticoextendido.net,www.pronosticoextendido.net,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -636,9 +636,9 @@ https://www.stockcenter.com.ar,www.stockcenter.com.ar,1000,Top 1.000,Otros,Cloud
 https://www.studbook.org.ar,www.studbook.org.ar,1000,Top 1.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.temu.com,www.temu.com,1000,Top 1.000,Compras y delivery,,Microsoft (Azure),Microsoft (Azure),Otra
 https://www.theblowers.com,www.theblowers.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.threads.com,www.threads.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://www.threads.com,www.threads.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://www.tiava.com,www.tiava.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.ticketek.com.ar,www.ticketek.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Otra
+https://www.ticketek.com.ar,www.ticketek.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Meta (propia)
 https://www.tiempo3.com,www.tiempo3.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.tiempodesanjuan.com,www.tiempodesanjuan.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.tiendalaserenisima.com.ar,www.tiendalaserenisima.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -648,7 +648,7 @@ https://www.todorelatos.com,www.todorelatos.com,1000,Top 1.000,Otros,Cloudflare,
 https://www.tokkobroker.com,www.tokkobroker.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.topper.com.ar,www.topper.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.transfermarkt.com.ar,www.transfermarkt.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.trendencias.com,www.trendencias.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Otra
+https://www.trendencias.com,www.trendencias.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Meta (propia)
 https://www.tripadvisor.com.ar,www.tripadvisor.com.ar,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://www.triunfonet.com.ar,www.triunfonet.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.tucuapuestas.bet.ar,www.tucuapuestas.bet.ar,1000,Top 1.000,Apuestas,Google,Google,Google,
@@ -665,11 +665,11 @@ https://www.ver.com.ar,www.ver.com.ar,1000,Top 1.000,Otros,Fastly,Fastly,Fastly,
 https://www.videosdemadurasx.com,www.videosdemadurasx.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.visa.com.ar,www.visa.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.wattpad.com,www.wattpad.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
-https://www.whatsapp.com,www.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Otra,Otra,
+https://www.whatsapp.com,www.whatsapp.com,1000,Top 1.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://www.wikidex.net,www.wikidex.net,1000,Top 1.000,Otros,,Otra,Otra,
 https://www.windguru.cz,www.windguru.cz,1000,Top 1.000,Otros,,Cloudflare,Cloudflare,Google
 https://www.wordreference.com,www.wordreference.com,1000,Top 1.000,Otros,,Amazon (AWS),Amazon (AWS),
-https://www.xataka.com,www.xataka.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.xataka.com,www.xataka.com,1000,Top 1.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.xbox.com,www.xbox.com,1000,Top 1.000,Otros,Akamai,Akamai,Cloudflare | Akamai | Microsoft (Azure),
 https://www.xpaja.net,www.xpaja.net,1000,Top 1.000,Otros,,Cloudflare,Cloudflare,
 https://www.yenny-elateneo.com,www.yenny-elateneo.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
@@ -680,7 +680,7 @@ https://www.zonajobs.com.ar,www.zonajobs.com.ar,1000,Top 1.000,Otros,Cloudflare,
 https://www.zonaprop.com.ar,www.zonaprop.com.ar,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://x.com,x.com,1000,Top 1.000,Redes y mensajería,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
 https://xfapsters.com,xfapsters.com,1000,Top 1.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://xhendra.ar,xhendra.ar,1000,Top 1.000,Otros,,Google,Google | Microsoft (Azure),Google
+https://xhendra.ar,xhendra.ar,1000,Top 1.000,Otros,,Google,Google | Microsoft (Azure),Google | Meta (propia)
 https://xorgasmo.com,xorgasmo.com,1000,Top 1.000,Otros,,Cloudflare,Cloudflare,
 https://y2mate.gs,y2mate.gs,1000,Top 1.000,Otros,,Otra,Otra,
 http://77virtual.freeddns.org,77virtual.freeddns.org,5000,Top 5.000,Otros,,Otra,Otra,
@@ -691,11 +691,11 @@ http://e-fich.unl.edu.ar,e-fich.unl.edu.ar,5000,Top 5.000,Educación,,Sin CDN de
 http://juetaeno.larioja.edu.ar:8080,juetaeno.larioja.edu.ar:8080,5000,Top 5.000,Otros,,Sin CDN detectado,,
 http://mira.supercanal.com.ar,mira.supercanal.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
 http://proximostrenes.ferrovias.com.ar,proximostrenes.ferrovias.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
-http://quini6.ruta1000.com.ar,quini6.ruta1000.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Otra
-http://quinielabuenosaires.ruta1000.com.ar,quinielabuenosaires.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Sin CDN detectado,,Otra
-http://quinielacorrientes.ruta1000.com.ar,quinielacorrientes.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Otra,Otra,Otra
-http://quinielamontevideo.ruta1000.com.ar,quinielamontevideo.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Sin CDN detectado,,Otra
-http://quinielanacional.ruta1000.com.ar,quinielanacional.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Cloudflare,Cloudflare,Otra
+http://quini6.ruta1000.com.ar,quini6.ruta1000.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Meta (propia)
+http://quinielabuenosaires.ruta1000.com.ar,quinielabuenosaires.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Sin CDN detectado,,Meta (propia)
+http://quinielacorrientes.ruta1000.com.ar,quinielacorrientes.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Otra,Otra,Meta (propia)
+http://quinielamontevideo.ruta1000.com.ar,quinielamontevideo.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Sin CDN detectado,,Meta (propia)
+http://quinielanacional.ruta1000.com.ar,quinielanacional.ruta1000.com.ar,5000,Top 5.000,Apuestas,,Cloudflare,Cloudflare,Meta (propia)
 http://sistemas.chubut.edu.ar,sistemas.chubut.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
 http://slaweb.cromosol.com,slaweb.cromosol.com,5000,Top 5.000,Otros,,Otra,Otra,
 http://tramix.persjuri.gba.gov.ar:8080,tramix.persjuri.gba.gov.ar:8080,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -795,7 +795,7 @@ https://allaccesshelp.zendesk.com,allaccesshelp.zendesk.com,5000,Top 5.000,Otros
 https://alltec.ar,alltec.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://almacendearmado.com.ar,almacendearmado.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://alpacabet.io,alpacabet.io,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://alpogo.com,alpogo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://alpogo.com,alpogo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://alprestamo.com,alprestamo.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://altatension.net,altatension.net,5000,Top 5.000,Otros,Google,Google,Google,
 https://altorancho.com,altorancho.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
@@ -932,7 +932,7 @@ https://autogestion.credicuotas.com.ar,autogestion.credicuotas.com.ar,5000,Top 5
 https://autogestion.dpec.com.ar,autogestion.dpec.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://autogestion.guarani.unlp.edu.ar,autogestion.guarani.unlp.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
 https://autogestion.mardelplata.gob.ar,autogestion.mardelplata.gob.ar,5000,Top 5.000,Estado,Cloudflare,Cloudflare,Cloudflare,
-https://autogestion.omint.com.ar,autogestion.omint.com.ar,5000,Top 5.000,Otros,,Microsoft (Azure),Microsoft (Azure),Google
+https://autogestion.omint.com.ar,autogestion.omint.com.ar,5000,Top 5.000,Otros,,Microsoft (Azure),Microsoft (Azure),Google | Meta (propia)
 https://autogestion.policiadelaciudad.gob.ar,autogestion.policiadelaciudad.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://autogestion.sancristobal.com.ar,autogestion.sancristobal.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://autogestion.sistemas.unam.edu.ar,autogestion.sistemas.unam.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
@@ -1225,7 +1225,7 @@ https://contractia.app,contractia.app,5000,Top 5.000,Otros,Cloudflare,Cloudflare
 https://convertio.co,convertio.co,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://copafacil.com,copafacil.com,5000,Top 5.000,Otros,Fastly,Fastly,Google | Fastly | Bunny,
 https://cordoba.gob.ar,cordoba.gob.ar,5000,Top 5.000,Estado,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://cordoba.jugadon.bet.ar,cordoba.jugadon.bet.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Google
+https://cordoba.jugadon.bet.ar,cordoba.jugadon.bet.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://correo.gna.gob.ar,correo.gna.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
 https://correo.santafe.edu.ar,correo.santafe.edu.ar,5000,Top 5.000,Educación,,Otra,Otra,
 https://cotizador.lacaja.com.ar,cotizador.lacaja.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
@@ -1276,11 +1276,11 @@ https://deportespba.bplay.bet.ar,deportespba.bplay.bet.ar,5000,Top 5.000,Apuesta
 https://deportessantafe.bplay.bet.ar,deportessantafe.bplay.bet.ar,5000,Top 5.000,Apuestas,,Cloudflare,Cloudflare | Microsoft (Azure),
 https://deportivoaat.com.ar,deportivoaat.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://deportnet.com,deportnet.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
-https://deportv.gob.ar,deportv.gob.ar,5000,Top 5.000,Estado,Google,Google,Google,Otra
+https://deportv.gob.ar,deportv.gob.ar,5000,Top 5.000,Estado,Google,Google,Google,Meta (propia)
 https://derivaciones.manlab.com.ar,derivaciones.manlab.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://derpibooru.org,derpibooru.org,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://desafioelclub.leer.org,desafioelclub.leer.org,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://developers.facebook.com,developers.facebook.com,5000,Top 5.000,Redes y mensajería,Facebook,Cloudflare,Cloudflare,
+https://developers.facebook.com,developers.facebook.com,5000,Top 5.000,Redes y mensajería,Facebook,Meta (propia),Cloudflare | Meta (propia),
 https://dgr.lapampa.gob.ar,dgr.lapampa.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
 https://dgrentas.arcat.gob.ar,dgrentas.arcat.gob.ar,5000,Top 5.000,Estado,Cloudflare,Cloudflare,Cloudflare,
 https://dialnet.unirioja.es,dialnet.unirioja.es,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -1313,7 +1313,7 @@ https://doramasflix.io,doramasflix.io,5000,Top 5.000,Otros,Cloudflare,Cloudflare
 https://dossanjuan.online,dossanjuan.online,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://dragonkind.com,dragonkind.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://drama.fandom.com,drama.fandom.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://drean.com.ar,drean.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Otra
+https://drean.com.ar,drean.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://drt.sanfrancisco.gov.ar,drt.sanfrancisco.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://dts.cemla.com.ar,dts.cemla.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://duckduckgo.com,duckduckgo.com,5000,Top 5.000,Buscadores y consulta,,Otra,Otra,Otra
@@ -1353,7 +1353,7 @@ https://elenemigos.com,elenemigos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare
 https://elevenlabs.io,elevenlabs.io,5000,Top 5.000,Otros,Google,Google,Cloudflare | Google,Otra
 https://elgourmet.com,elgourmet.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://elmonterizo.com,elmonterizo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://elnueve.com,elnueve.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://elnueve.com,elnueve.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://elparaisodepaso.com.ar,elparaisodepaso.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://elprincipitomayorista.mitiendanube.com,elprincipitomayorista.mitiendanube.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://elrosalenio.com.ar,elrosalenio.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,
@@ -1417,8 +1417,8 @@ https://es.nudogram.com,es.nudogram.com,5000,Top 5.000,Otros,Cloudflare,Cloudfla
 https://es.onlinesoccermanager.com,es.onlinesoccermanager.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://es.pictoa.com,es.pictoa.com,5000,Top 5.000,Otros,BunnyCDN,Bunny,Cloudflare | Bunny,
 https://es.piliapp.com,es.piliapp.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://es.quizzclub.com,es.quizzclub.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),Otra
-https://es.quora.com,es.quora.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://es.quizzclub.com,es.quizzclub.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),Meta (propia)
+https://es.quora.com,es.quora.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://es.search.yahoo.com,es.search.yahoo.com,5000,Top 5.000,Buscadores y consulta,,Otra,Otra,
 https://es.slideshare.net,es.slideshare.net,5000,Top 5.000,Otros,Fastly,Fastly,Amazon (AWS) | Fastly,
 https://es.sporcle.com,es.sporcle.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS) | Google,
@@ -1586,7 +1586,7 @@ https://grok.com,grok.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://grupoutopia.com.ar,grupoutopia.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://grupovenus.com,grupovenus.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://guacurari.com,guacurari.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://gualeguaychu.gov.ar,gualeguaychu.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://gualeguaychu.gov.ar,gualeguaychu.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://guarani-autogestionagencia.bue.edu.ar,guarani-autogestionagencia.bue.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
 https://guarani.frba.utn.edu.ar,guarani.frba.utn.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
 https://guarani.unaj.edu.ar,guarani.unaj.edu.ar,5000,Top 5.000,Educación,,Otra,Otra,
@@ -1613,7 +1613,7 @@ https://hcm19.sapsf.com,hcm19.sapsf.com,5000,Top 5.000,Otros,Akamai,Akamai,Akama
 https://hdfull.org,hdfull.org,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://heben.com.ar,heben.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://help.disneyplus.com,help.disneyplus.com,5000,Top 5.000,Entretenimiento,Cloudflare,Cloudflare,Cloudflare,
-https://help.instagram.com,help.instagram.com,5000,Top 5.000,Redes y mensajería,Facebook,Otra,Otra,
+https://help.instagram.com,help.instagram.com,5000,Top 5.000,Redes y mensajería,Facebook,Meta (propia),Meta (propia),
 https://help.netflix.com,help.netflix.com,5000,Top 5.000,Entretenimiento,,Amazon (AWS),Amazon (AWS),
 https://help.openai.com,help.openai.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Microsoft (Azure),Otra
 https://help.steampowered.com,help.steampowered.com,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
@@ -1678,7 +1678,7 @@ https://informes.nosis.com,informes.nosis.com,5000,Top 5.000,Otros,,Cloudflare,C
 https://ingenieria.campus.mdp.edu.ar,ingenieria.campus.mdp.edu.ar,5000,Top 5.000,Educación,,Otra,Otra,
 https://ingles.lenguasvivas.net,ingles.lenguasvivas.net,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://ingresantes.unlam.edu.ar,ingresantes.unlam.edu.ar,5000,Top 5.000,Educación,,Cloudflare,Cloudflare,
-https://inmanga.com,inmanga.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://inmanga.com,inmanga.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://inmoclick.com,inmoclick.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
 https://inmoup.com.ar,inmoup.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://inovaarg.com,inovaarg.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -1729,7 +1729,7 @@ https://jewels.playapp.casa,jewels.playapp.casa,5000,Top 5.000,Otros,Cloudflare,
 https://jobs.pan-american-energy.com,jobs.pan-american-energy.com,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://jomasport.ar,jomasport.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://joyfullplayland.com,joyfullplayland.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://juanitajo.com,juanitajo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
+https://juanitajo.com,juanitajo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://juegos.games,juegos.games,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://juegos.gba.gob.ar,juegos.gba.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://juegosdigitalesargentina.com,juegosdigitalesargentina.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -1740,7 +1740,7 @@ https://junin24.com,junin24.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloud
 https://jusmendoza.gob.ar,jusmendoza.gob.ar,5000,Top 5.000,Estado,Cloudflare,Cloudflare,Cloudflare,Google
 https://kahoot.it,kahoot.it,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://kaj.seriesturcastv.to,kaj.seriesturcastv.to,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://kaotic.com,kaotic.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://kaotic.com,kaotic.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://kbhgames.com,kbhgames.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://kcdjobs.com,kcdjobs.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://kemono.cr,kemono.cr,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -1788,7 +1788,7 @@ https://lendi.ar,lendi.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://lenguas.aulavirtual.unc.edu.ar,lenguas.aulavirtual.unc.edu.ar,5000,Top 5.000,Educación,,Otra,Otra,
 https://letrasbonitas.com.es,letrasbonitas.com.es,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://libreriapeniel.com,libreriapeniel.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://ligarafaelinadefutbol.com,ligarafaelinadefutbol.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Otra
+https://ligarafaelinadefutbol.com,ligarafaelinadefutbol.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://limitlesstcg.com,limitlesstcg.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
 https://link.me,link.me,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://linkvertise.com,linkvertise.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
@@ -1920,7 +1920,7 @@ https://miportal.kennedy.edu.ar,miportal.kennedy.edu.ar,5000,Top 5.000,Educació
 https://miportal.sanatorioallende.com,miportal.sanatorioallende.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://miprepagaideal.com,miprepagaideal.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://mira.video-arg.com,mira.video-arg.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://mirandstad.randstad.com.ar,mirandstad.randstad.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://mirandstad.randstad.com.ar,mirandstad.randstad.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://mireb.bagues.com.ar,mireb.bagues.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://mis-tarjetas.prismamediosdepago.com,mis-tarjetas.prismamediosdepago.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://miscomunicacionesdigitales.com.ar,miscomunicacionesdigitales.com.ar,5000,Top 5.000,Otros,Incapsula,Imperva,Imperva,
@@ -1949,8 +1949,8 @@ https://movil.omnilineas.com.ar,movil.omnilineas.com.ar,5000,Top 5.000,Otros,Goo
 https://movil.todorelatos.com,movil.todorelatos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://mp.telecentro.net.ar,mp.telecentro.net.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://mrush.es,mrush.es,5000,Top 5.000,Otros,,Otra,Otra,
-https://msptucuman.gov.ar,msptucuman.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,Otra
-https://mubi.com,mubi.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://msptucuman.gov.ar,msptucuman.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,Meta (propia)
+https://mubi.com,mubi.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://mudafy.com.ar,mudafy.com.ar,5000,Top 5.000,Otros,Vercel,Vercel,Vercel,
 https://mundoazulgrana.com.ar,mundoazulgrana.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://mundogremial.com,mundogremial.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -1992,8 +1992,8 @@ https://norteticket.com,norteticket.com,5000,Top 5.000,Otros,Cloudflare,Cloudfla
 https://notebook.google,notebook.google,5000,Top 5.000,Otros,Google,Google,Google,
 https://notebookspro.ar,notebookspro.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://notiblog.net,notiblog.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://noticias.mitelefe.com,noticias.mitelefe.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Otra
-https://noticias.perfil.com,noticias.perfil.com,5000,Top 5.000,Medios,Cloudflare,Cloudflare,Cloudflare,Otra
+https://noticias.mitelefe.com,noticias.mitelefe.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Meta (propia)
+https://noticias.perfil.com,noticias.perfil.com,5000,Top 5.000,Medios,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://noticiasargentinas.com,noticiasargentinas.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://notificaciones.jus.mendoza.gov.ar,notificaciones.jus.mendoza.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://notube.im,notube.im,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -2030,7 +2030,7 @@ https://oglobo.globo.com,oglobo.globo.com,5000,Top 5.000,Otros,,Cloudflare,Cloud
 https://okeyrosario.com.ar,okeyrosario.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://old.palermo.com.ar,old.palermo.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://olympus.pages.dev,olympus.pages.dev,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://ometv.chat,ometv.chat,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Google,Otra
+https://ometv.chat,ometv.chat,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Google,Meta (propia)
 https://omg10.com,omg10.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://onboarding.betwarrior.bet.ar,onboarding.betwarrior.bet.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://onboarding.credicuotas.com.ar,onboarding.credicuotas.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -2054,7 +2054,7 @@ https://ouo.press,ouo.press,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflar
 https://outlet.markova.com,outlet.markova.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
 https://outlet.touchesport.com,outlet.touchesport.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
 https://ov.aguassantafesinas.com.ar,ov.aguassantafesinas.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
-https://ov.edesur.com.ar,ov.edesur.com.ar,5000,Top 5.000,Otros,Incapsula,Imperva,Imperva,Google
+https://ov.edesur.com.ar,ov.edesur.com.ar,5000,Top 5.000,Otros,Incapsula,Imperva,Imperva,Google | Meta (propia)
 https://ov.naturgy.com.ar,ov.naturgy.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://pacientes-farmaweb.observer.com.ar,pacientes-farmaweb.observer.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://pacientes.hospitalespanol.org.ar,pacientes.hospitalespanol.org.ar,5000,Top 5.000,Otros,,Otra,Otra,
@@ -2111,7 +2111,7 @@ https://pi.elnorte.com.ar,pi.elnorte.com.ar,5000,Top 5.000,Otros,Cloudflare,Clou
 https://picsel.app,picsel.app,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://pindown.io,pindown.io,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://pirlotv.la,pirlotv.la,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,
-https://pixabay.com,pixabay.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
+https://pixabay.com,pixabay.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://pixelgames.io,pixelgames.io,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://pjn.gov.ar,pjn.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
 https://pkbets.com,pkbets.com,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
@@ -2198,15 +2198,15 @@ https://quinielanacional1.com.ar,quinielanacional1.com.ar,5000,Top 5.000,Apuesta
 https://quinielanacionaln.com.ar,quinielanacionaln.com.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://quinielasya.com.ar,quinielasya.com.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://radioarg.net,radioarg.net,5000,Top 5.000,Otros,,Otra,Otra,
-https://radioconvos.com.ar,radioconvos.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://radioconvos.com.ar,radioconvos.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://radiocut.fm,radiocut.fm,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://radiofonica.com,radiofonica.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
-https://rafaelanoticias.com,rafaelanoticias.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://rafaelanoticias.com,rafaelanoticias.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://raffeperfumerias.com,raffeperfumerias.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://rallbet.net,rallbet.net,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://ranking.bio,ranking.bio,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://rapiboy.com,rapiboy.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
-https://realpolitik.com.ar,realpolitik.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://realpolitik.com.ar,realpolitik.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://recargas.personal.com.ar,recargas.personal.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://recetasdecocina.elmundo.es,recetasdecocina.elmundo.es,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS) | Microsoft (Azure),
 https://recibodigital.cajajper.gov.ar,recibodigital.cajajper.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
@@ -2258,7 +2258,7 @@ https://samsonite.com.ar,samsonite.com.ar,5000,Top 5.000,Otros,Vercel,Vercel,Clo
 https://sancamilo.markey.com.ar,sancamilo.markey.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://sanjose.escuela.site,sanjose.escuela.site,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://sanlorenzo.app,sanlorenzo.app,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://sanluis.jugadon.bet.ar,sanluis.jugadon.bet.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Google
+https://sanluis.jugadon.bet.ar,sanluis.jugadon.bet.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://santabohemia.com,santabohemia.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://saphirus.com.ar,saphirus.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://satcrc.com.ar,satcrc.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -2310,7 +2310,7 @@ https://sicer.educacion.gob.ar,sicer.educacion.gob.ar,5000,Top 5.000,Estado,,Clo
 https://sierrascalientes.com,sierrascalientes.com,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://sifer.sanfernando.gob.ar,sifer.sanfernando.gob.ar,5000,Top 5.000,Estado,,Google,Google,
 https://siferhc.sanfernando.gob.ar,siferhc.sanfernando.gob.ar,5000,Top 5.000,Estado,,Google,Google,
-https://sigedu.barcelo.edu.ar,sigedu.barcelo.edu.ar,5000,Top 5.000,Educación,Cloudflare,Cloudflare,Cloudflare,Google
+https://sigedu.barcelo.edu.ar,sigedu.barcelo.edu.ar,5000,Top 5.000,Educación,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://sigej.ptn.gob.ar,sigej.ptn.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://sigem.sanluislaciudad.gob.ar,sigem.sanluislaciudad.gob.ar,5000,Top 5.000,Estado,,Amazon (AWS),Amazon (AWS),
 https://sigemi.muninqn.gov.ar,sigemi.muninqn.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
@@ -2348,7 +2348,7 @@ https://smartlive.live,smartlive.live,5000,Top 5.000,Otros,,Cloudflare,Cloudflar
 https://snaptik.fi,snaptik.fi,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://socios.belgrano.com.ar,socios.belgrano.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://solicitecartao.com,solicitecartao.com,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Google,
-https://solitarios-online.com,solitarios-online.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://solitarios-online.com,solitarios-online.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://sololatino.net,sololatino.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://somosfarmacity.com,somosfarmacity.com,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Microsoft (Azure),
 https://sosa.geowise.com.ar,sosa.geowise.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -2453,7 +2453,7 @@ https://tracking.naturacosmeticos.com.ar,tracking.naturacosmeticos.com.ar,5000,T
 https://tramites.seguridad.jujuy.gob.ar,tramites.seguridad.jujuy.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare | Google,
 https://tramitesweb.lanus.gob.ar,tramitesweb.lanus.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare | Amazon (AWS),
 https://translate.google.com.ar,translate.google.com.ar,5000,Top 5.000,Buscadores y consulta,Google,Google,Google,
-https://transportemundial.com.ar,transportemundial.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://transportemundial.com.ar,transportemundial.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://transsion-h5.weahunter.com,transsion-h5.weahunter.com,5000,Top 5.000,Otros,Alibaba,Otra,Otra,
 https://trello.com,trello.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://treshermanos.com.ar,treshermanos.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
@@ -2496,7 +2496,7 @@ https://twittervideodownloader.com,twittervideodownloader.com,5000,Top 5.000,Otr
 https://typedeal.com,typedeal.com,5000,Top 5.000,Otros,Google,Google,Cloudflare | Google,
 https://tzqmw.cc,tzqmw.cc,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://uai.edu.ar,uai.edu.ar,5000,Top 5.000,Educación,,Cloudflare,Cloudflare | Amazon (AWS),
-https://uaid.universal-assistance.com:2087,uaid.universal-assistance.com:2087,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://uaid.universal-assistance.com:2087,uaid.universal-assistance.com:2087,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://uca.edu.ar,uca.edu.ar,5000,Top 5.000,Educación,,Cloudflare,Cloudflare,
 https://ugr.edu.ar,ugr.edu.ar,5000,Top 5.000,Educación,,Cloudflare,Cloudflare,
 https://ulp.untrefvirtual.edu.ar,ulp.untrefvirtual.edu.ar,5000,Top 5.000,Educación,,Otra,Otra,
@@ -2515,9 +2515,9 @@ https://unpilar.edu.ar,unpilar.edu.ar,5000,Top 5.000,Educación,Cloudflare,Cloud
 https://unsa.sigeva.gob.ar,unsa.sigeva.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://upc.psi.unc.edu.ar,upc.psi.unc.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
 https://upges.com,upges.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://uquiz.com,uquiz.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://uquiz.com,uquiz.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://urbanaplayfm.com,urbanaplayfm.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://urbantactical.ar,urbantactical.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://urbantactical.ar,urbantactical.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://urgente24.com,urgente24.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://us.bbcollab.com,us.bbcollab.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://uscflix.net,uscflix.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -2618,7 +2618,7 @@ https://www.abc.gob.ar,www.abc.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudfla
 https://www.abchoy.com.ar,www.abchoy.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.abctelefonos.com,www.abctelefonos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.aca.org.ar,www.aca.org.ar,5000,Top 5.000,Otros,Incapsula,Imperva,Google | Imperva,
-https://www.academia.edu,www.academia.edu,5000,Top 5.000,Educación,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
+https://www.academia.edu,www.academia.edu,5000,Top 5.000,Educación,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.aceroblanco.com.ar,www.aceroblanco.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.aciprensa.com,www.aciprensa.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.actron.com.ar,www.actron.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,
@@ -2728,7 +2728,7 @@ https://www.bible.com,www.bible.com,5000,Top 5.000,Otros,Fastly,Fastly,Fastly,Go
 https://www.bibliaon.com,www.bibliaon.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Bunny,
 https://www.bidbit.ar,www.bidbit.ar,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Google,
 https://www.bigbadtoystore.com,www.bigbadtoystore.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://www.bilibili.tv,www.bilibili.tv,5000,Top 5.000,Otros,Alibaba,Otra,Otra,Google
+https://www.bilibili.tv,www.bilibili.tv,5000,Top 5.000,Otros,Alibaba,Otra,Otra,Google | Meta (propia)
 https://www.billabong.com.ar,www.billabong.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.binance.com,www.binance.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://www.biobiochile.cl,www.biobiochile.cl,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS) | Microsoft (Azure),
@@ -2742,7 +2742,7 @@ https://www.bocajuniors.com.ar,www.bocajuniors.com.ar,5000,Top 5.000,Otros,Cloud
 https://www.bocashop.com.ar,www.bocashop.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.boleteriavip.com.ar,www.boleteriavip.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.bpn.com.ar,www.bpn.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,
-https://www.bragadoinforma.com.ar,www.bragadoinforma.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Otra
+https://www.bragadoinforma.com.ar,www.bragadoinforma.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Meta (propia)
 https://www.bravojeans.com.ar,www.bravojeans.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.braz-ino777-k0acz.com,www.braz-ino777-k0acz.com,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://www.braz-ino777-q1p24.net,www.braz-ino777-q1p24.net,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -2752,12 +2752,12 @@ https://www.buenosairescompras.gob.ar,www.buenosairescompras.gob.ar,5000,Top 5.0
 https://www.buenosaireshockey.ar,www.buenosaireshockey.ar,5000,Top 5.000,Otros,Google,Google,Amazon (AWS) | Google,
 https://www.buquebus.com,www.buquebus.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.busbud.com,www.busbud.com,5000,Top 5.000,Otros,Fastly,Fastly,Amazon (AWS) | Fastly,
-https://www.buscadorprop.com.ar,www.buscadorprop.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Google
+https://www.buscadorprop.com.ar,www.buscadorprop.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.buseslep.com.ar,www.buseslep.com.ar,5000,Top 5.000,Otros,Netlify,Netlify,Netlify,Google
 https://www.buzzfeed.com,www.buzzfeed.com,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly,Google
 https://www.byd.com,www.byd.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.caballow.com,www.caballow.com,5000,Top 5.000,Otros,,Microsoft (Azure),Microsoft (Azure),
-https://www.cac.bcr.com.ar,www.cac.bcr.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.cac.bcr.com.ar,www.cac.bcr.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.cadenaheat.com,www.cadenaheat.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.cajajper.gov.ar,www.cajajper.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://www.cajapolicia.gob.ar,www.cajapolicia.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
@@ -2795,14 +2795,14 @@ https://www.cerdas.com,www.cerdas.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.cero26.com.ar,www.cero26.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.cgeonline.com.ar,www.cgeonline.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.chacabuquero.com.ar,www.chacabuquero.com.ar,5000,Top 5.000,Otros,Google,Google,Google,
-https://www.change.org,www.change.org,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
+https://www.change.org,www.change.org,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google | Meta (propia)
 https://www.cheeky.com.ar,www.cheeky.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.chelsea.com.ar,www.chelsea.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.chevrolet.com.ar,www.chevrolet.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Akamai,
 https://www.chimola.com.ar,www.chimola.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.chunkbase.com,www.chunkbase.com,5000,Top 5.000,Otros,BunnyCDN,Bunny,Cloudflare | Amazon (AWS) | Bunny,
 https://www.churchofjesuschrist.org,www.churchofjesuschrist.org,5000,Top 5.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
-https://www.cinecalidad.am,www.cinecalidad.am,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.cinecalidad.am,www.cinecalidad.am,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.cinecalidad.my,www.cinecalidad.my,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.cinemaadrogue.com,www.cinemaadrogue.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.cinemalaplata.com,www.cinemalaplata.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -2832,7 +2832,7 @@ https://www.cooperativaobrera.coop,www.cooperativaobrera.coop,5000,Top 5.000,Otr
 https://www.cooptl.com.ar,www.cooptl.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.copaair.com,www.copaair.com,5000,Top 5.000,Otros,Incapsula,Imperva,Cloudflare | Amazon (AWS) | Imperva,
 https://www.cordiez.com.ar,www.cordiez.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.corrienteshoy.com,www.corrienteshoy.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.corrienteshoy.com,www.corrienteshoy.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.cosmopolitan.com,www.cosmopolitan.com,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly,Google
 https://www.costacruceros.com,www.costacruceros.com,5000,Top 5.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://www.cotilloncasaalberto.com.ar,www.cotilloncasaalberto.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
@@ -2852,8 +2852,8 @@ https://www.ctejidas.co,www.ctejidas.co,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.cuckold.com.ar,www.cuckold.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.cuentorelatos.com,www.cuentorelatos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.cuestablanca.com,www.cuestablanca.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.cutralcoalinstante.com,www.cutralcoalinstante.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Otra
-https://www.cybermonday.com.ar,www.cybermonday.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,Otra
+https://www.cutralcoalinstante.com,www.cutralcoalinstante.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
+https://www.cybermonday.com.ar,www.cybermonday.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,Meta (propia)
 https://www.daewooshop.com.ar,www.daewooshop.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.dashdeportes.com.ar,www.dashdeportes.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.daypo.com,www.daypo.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
@@ -2861,10 +2861,10 @@ https://www.dcshoes.com.ar,www.dcshoes.com.ar,5000,Top 5.000,Otros,Cloudflare,Cl
 https://www.debrown.com.ar,www.debrown.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.deckshop.pro,www.deckshop.pro,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.deepl.com,www.deepl.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
-https://www.defensa.com,www.defensa.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.defensa.com,www.defensa.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.delfos.tur.ar,www.delfos.tur.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.derecho.uba.ar,www.derecho.uba.ar,5000,Top 5.000,Educación,,Cloudflare,Cloudflare,
-https://www.dermaglos.com,www.dermaglos.com,5000,Top 5.000,Otros,,Microsoft (Azure),Microsoft (Azure),Otra
+https://www.dermaglos.com,www.dermaglos.com,5000,Top 5.000,Otros,,Microsoft (Azure),Microsoft (Azure),Meta (propia)
 https://www.desiderata.com.ar,www.desiderata.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.deturista.com,www.deturista.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.devre.la,www.devre.la,5000,Top 5.000,Otros,Fastly,Fastly,Fastly,
@@ -2872,17 +2872,17 @@ https://www.dgrsalta.gov.ar,www.dgrsalta.gov.ar,5000,Top 5.000,Estado,Incapsula,
 https://www.dhl.com,www.dhl.com,5000,Top 5.000,Otros,Akamai,Akamai,Akamai,
 https://www.diagnosticomaipu.com,www.diagnosticomaipu.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.diarco.com.ar,www.diarco.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
-https://www.diariocronica.com.ar,www.diariocronica.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.diariocronica.com.ar,www.diariocronica.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.diariodemocracia.com,www.diariodemocracia.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
-https://www.diariohuarpe.com,www.diariohuarpe.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://www.diariojornada.com.ar,www.diariojornada.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://www.diariohuarpe.com,www.diariohuarpe.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://www.diariojornada.com.ar,www.diariojornada.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://www.diariomendoza.com.ar,www.diariomendoza.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://www.diariomotor.com,www.diariomotor.com,5000,Top 5.000,Otros,BunnyCDN,Bunny,Cloudflare | Bunny,
 https://www.diarioregistrado.com,www.diarioregistrado.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.diezminutos.es,www.diezminutos.es,5000,Top 5.000,Otros,Fastly,Fastly,Amazon (AWS) | Fastly,
 https://www.digestiplan.com,www.digestiplan.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Vercel,
 https://www.digituc.gob.ar,www.digituc.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
-https://www.directoalpaladar.com,www.directoalpaladar.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.directoalpaladar.com,www.directoalpaladar.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.disco.com.ar,www.disco.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.discogs.com,www.discogs.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.distlooktucuman.com.ar,www.distlooktucuman.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -2925,7 +2925,7 @@ https://www.elcohetealaluna.com,www.elcohetealaluna.com,5000,Top 5.000,Otros,Clo
 https://www.eldebate.com,www.eldebate.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.eldiaonline.com,www.eldiaonline.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.eldiarioar.com,www.eldiarioar.com,5000,Top 5.000,Medios,,Cloudflare,Cloudflare | Amazon (AWS),Google
-https://www.eldiariodelarepublica.com,www.eldiariodelarepublica.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Google
+https://www.eldiariodelarepublica.com,www.eldiariodelarepublica.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.eldiarionuevodia.com.ar,www.eldiarionuevodia.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.eldiariosur.com,www.eldiariosur.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.eldorado.gg,www.eldorado.gg,5000,Top 5.000,Otros,"Cloudflare, Microsoft Azure",Cloudflare,Cloudflare | Microsoft (Azure),Otra
@@ -2937,18 +2937,18 @@ https://www.elheraldo.com.ar,www.elheraldo.com.ar,5000,Top 5.000,Otros,Cloudflar
 https://www.elitebabes.com,www.elitebabes.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.eliteguias.com,www.eliteguias.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.elle.com,www.elle.com,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly,Google
-https://www.elmundo.es,www.elmundo.es,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly | Microsoft (Azure),Otra
+https://www.elmundo.es,www.elmundo.es,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly | Microsoft (Azure),Meta (propia)
 https://www.elmundodeljuguete.com.ar,www.elmundodeljuguete.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.elnueve.com,www.elnueve.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.elnueve.com,www.elnueve.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.elobservador.com.uy,www.elobservador.com.uy,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
-https://www.elpais.com.uy,www.elpais.com.uy,5000,Top 5.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),Otra
-https://www.elpatagonico.com,www.elpatagonico.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.elpais.com.uy,www.elpais.com.uy,5000,Top 5.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),Meta (propia)
+https://www.elpatagonico.com,www.elpatagonico.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.eltasador.com.ar,www.eltasador.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.eltiempo.com,www.eltiempo.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
 https://www.eltucumano.com,www.eltucumano.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.embrujojeans.com,www.embrujojeans.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.emicar.com.ar,www.emicar.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
-https://www.emol.com,www.emol.com,5000,Top 5.000,Otros,,Sin CDN detectado,,Otra
+https://www.emol.com,www.emol.com,5000,Top 5.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.emoticonestips.com,www.emoticonestips.com,5000,Top 5.000,Otros,Google,Google,Google,
 https://www.enargas.gob.ar,www.enargas.gob.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare | Microsoft (Azure),
 https://www.encontrarse.com,www.encontrarse.com,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -2960,7 +2960,7 @@ https://www.enterogermina.com,www.enterogermina.com,5000,Top 5.000,Otros,Microso
 https://www.entradafan.com.ar,www.entradafan.com.ar,5000,Top 5.000,Otros,Vercel,Vercel,Cloudflare | Vercel,
 https://www.entradaweb.com.ar,www.entradaweb.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.eqsnotas.com,www.eqsnotas.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.erepublik.com,www.erepublik.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.erepublik.com,www.erepublik.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.escenariomundial.com,www.escenariomundial.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.esco.com.ar,www.esco.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.escuelaespsyc.com.ar,www.escuelaespsyc.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
@@ -2986,7 +2986,7 @@ https://www.farmamix.com.ar,www.farmamix.com.ar,5000,Top 5.000,Otros,Cloudflare,
 https://www.farmaplus.com.ar,www.farmaplus.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.farmatodo.com.ar,www.farmatodo.com.ar,5000,Top 5.000,Otros,Google,Google,Google,
 https://www.fceqyn.unam.edu.ar,www.fceqyn.unam.edu.ar,5000,Top 5.000,Educación,,Sin CDN detectado,,
-https://www.fenix951.com.ar,www.fenix951.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Otra
+https://www.fenix951.com.ar,www.fenix951.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.ferniplast.com,www.ferniplast.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://www.ferreirasport.com,www.ferreirasport.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.fiatplan.com.ar,www.fiatplan.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
@@ -3006,7 +3006,7 @@ https://www.forbesargentina.com,www.forbesargentina.com,5000,Top 5.000,Otros,Clo
 https://www.forg1.com,www.forg1.com,5000,Top 5.000,Otros,Vercel,Vercel,Cloudflare | Vercel,
 https://www.formula1.com,www.formula1.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.forogore.net,www.forogore.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.fororacing.com.ar,www.fororacing.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.fororacing.com.ar,www.fororacing.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.fotogramas.es,www.fotogramas.es,5000,Top 5.000,Otros,Fastly,Fastly,Amazon (AWS) | Fastly,
 https://www.fotoscaserasx.com,www.fotoscaserasx.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.fragrantica.com,www.fragrantica.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3021,7 +3021,7 @@ https://www.fullaventurashop.com,www.fullaventurashop.com,5000,Top 5.000,Otros,,
 https://www.fullcarga-titan.com.ar,www.fullcarga-titan.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Akamai,
 https://www.fuq.com,www.fuq.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.futbolfantasy.com,www.futbolfantasy.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
-https://www.futbolparapobres.com,www.futbolparapobres.com,5000,Top 5.000,Otros,Google,Google,Google,Otra
+https://www.futbolparapobres.com,www.futbolparapobres.com,5000,Top 5.000,Otros,Google,Google,Google,Meta (propia)
 https://www.futbolparatodos.com.ar,www.futbolparatodos.com.ar,5000,Top 5.000,Otros,,Google,Google,
 https://www.g2a.com,www.g2a.com,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Akamai,Google
 https://www.galeno.com.ar,www.galeno.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
@@ -3109,7 +3109,7 @@ https://www.indonesiashop.com.ar,www.indonesiashop.com.ar,5000,Top 5.000,Otros,C
 https://www.infiernorojo.com,www.infiernorojo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.info-data.com.ar,www.info-data.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.infobrisas.com,www.infobrisas.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.infocampo.com.ar,www.infocampo.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.infocampo.com.ar,www.infocampo.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.infocontrol.tech,www.infocontrol.tech,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.infoeme.com,www.infoeme.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.infoleg.gob.ar,www.infoleg.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
@@ -3140,7 +3140,7 @@ https://www.jobleads.com,www.jobleads.com,5000,Top 5.000,Otros,Cloudflare,Cloudf
 https://www.judgeiq.net,www.judgeiq.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.juegosjuegos.ws,www.juegosjuegos.ws,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.jugaygana44.bet,www.jugaygana44.bet,5000,Top 5.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.jujuyalmomento.com,www.jujuyalmomento.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.jujuyalmomento.com,www.jujuyalmomento.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.jumbo.com.ar,www.jumbo.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.jumbomas.com.ar,www.jumbomas.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.jusneuquen.gov.ar,www.jusneuquen.gov.ar,5000,Top 5.000,Estado,,Otra,Otra,
@@ -3151,7 +3151,7 @@ https://www.juvia.com.ar,www.juvia.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudf
 https://www.kaironmusic.com.ar,www.kaironmusic.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.kappastore.com.ar,www.kappastore.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.kayak.com.ar,www.kayak.com.ar,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Fastly,Google
-https://www.kcandystore.com,www.kcandystore.com,5000,Top 5.000,Otros,Google,Google,Cloudflare | Google,Otra
+https://www.kcandystore.com,www.kcandystore.com,5000,Top 5.000,Otros,Google,Google,Cloudflare | Google,Meta (propia)
 https://www.kennedy.edu.ar,www.kennedy.edu.ar,5000,Top 5.000,Educación,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.kevingston.com,www.kevingston.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://www.kilometrounoaereos.com.ar,www.kilometrounoaereos.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -3163,7 +3163,7 @@ https://www.kingtexremeras.com,www.kingtexremeras.com,5000,Top 5.000,Otros,Cloud
 https://www.kiteprop.com,www.kiteprop.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.kosiuko.com,www.kosiuko.com,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Fastly,
 https://www.laamba.ar,www.laamba.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
-https://www.laangosturadigital.com.ar,www.laangosturadigital.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.laangosturadigital.com.ar,www.laangosturadigital.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.labrujulaverde.com,www.labrujulaverde.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.lacartoons.com,www.lacartoons.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
 https://www.lacasadelfitness.com,www.lacasadelfitness.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
@@ -3211,7 +3211,7 @@ https://www.ligaprofesional.ar,www.ligaprofesional.ar,5000,Top 5.000,Otros,,Amaz
 https://www.linguee.es,www.linguee.es,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.litoral-gas.com.ar,www.litoral-gas.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.litoralgas.com.ar,www.litoralgas.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.livegore.com,www.livegore.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.livegore.com,www.livegore.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.liveworksheets.com,www.liveworksheets.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.lmcipolletti.com,www.lmcipolletti.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.lookmovie2.to,www.lookmovie2.to,5000,Top 5.000,Otros,,Otra,Otra,
@@ -3257,12 +3257,12 @@ https://www.menti.com,www.menti.com,5000,Top 5.000,Otros,Vercel,Vercel,Cloudflar
 https://www.merca20.com,www.merca20.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.mercadoagroganadero.com.ar,www.mercadoagroganadero.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.mercadolivre.com.br,www.mercadolivre.com.br,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
-https://www.meta.com,www.meta.com,5000,Top 5.000,Otros,Facebook,Otra,Otra,Otra
+https://www.meta.com,www.meta.com,5000,Top 5.000,Otros,Facebook,Meta (propia),Meta (propia),Otra
 https://www.metal-archives.com,www.metal-archives.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.metapadel.com.ar,www.metapadel.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.meteoblue.com,www.meteoblue.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.metrogas.com.ar,www.metrogas.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
-https://www.mexx.com.ar,www.mexx.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.mexx.com.ar,www.mexx.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.micarrefour.com.ar,www.micarrefour.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.michelin.com.ar,www.michelin.com.ar,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Microsoft (Azure),
 https://www.micobertura.com.ar,www.micobertura.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
@@ -3283,7 +3283,7 @@ https://www.monroeamericana.com.ar,www.monroeamericana.com.ar,5000,Top 5.000,Otr
 https://www.montevideo.com.uy,www.montevideo.com.uy,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Microsoft (Azure),
 https://www.morashop.ar,www.morashop.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.mostazaweb.com.ar,www.mostazaweb.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,
-https://www.motorpasion.com,www.motorpasion.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.motorpasion.com,www.motorpasion.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.mpba.gov.ar,www.mpba.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://www.mpf.gob.ar,www.mpf.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://www.mrturno.com,www.mrturno.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
@@ -3292,7 +3292,7 @@ https://www.mseg.gba.gov.ar,www.mseg.gba.gov.ar,5000,Top 5.000,Estado,,Otra,Otra
 https://www.msm.gov.ar,www.msm.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
 https://www.msn.com,www.msn.com,5000,Top 5.000,Otros,Akamai,Akamai,Akamai | Microsoft (Azure),
 https://www.mujerhoy.com,www.mujerhoy.com,5000,Top 5.000,Otros,Fastly,Fastly,Fastly,
-https://www.multimediosmaldoni.tv,www.multimediosmaldoni.tv,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
+https://www.multimediosmaldoni.tv,www.multimediosmaldoni.tv,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
 https://www.multipay.com.ar,www.multipay.com.ar,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Microsoft (Azure),
 https://www.muluc.com,www.muluc.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.mundodelpijama.com,www.mundodelpijama.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3303,9 +3303,9 @@ https://www.myheritage.es,www.myheritage.es,5000,Top 5.000,Otros,Incapsula,Imper
 https://www.nakaoutdoors.com.ar,www.nakaoutdoors.com.ar,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.narrowjeans.com.ar,www.narrowjeans.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.narvaezbid.com.ar,www.narvaezbid.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.natividad.org.ar,www.natividad.org.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Otra
+https://www.natividad.org.ar,www.natividad.org.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.naturgyban.com.ar,www.naturgyban.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
-https://www.naturgynoa.com.ar,www.naturgynoa.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Google
+https://www.naturgynoa.com.ar,www.naturgynoa.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,Google | Meta (propia)
 https://www.naturgysj.com.ar,www.naturgysj.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.nba.com,www.nba.com,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
 https://www.negociatudeuda.com.ar,www.negociatudeuda.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
@@ -3326,7 +3326,7 @@ https://www.nosotrasonline.com.ar,www.nosotrasonline.com.ar,5000,Top 5.000,Otros
 https://www.noticiasnet.com.ar,www.noticiasnet.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.novelupdates.com,www.novelupdates.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.nuevachevallier.com,www.nuevachevallier.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.nuevodiarioweb.com.ar,www.nuevodiarioweb.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.nuevodiarioweb.com.ar,www.nuevodiarioweb.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.nuskin.com,www.nuskin.com,5000,Top 5.000,Otros,Fastly,Fastly,Amazon (AWS) | Fastly,Otra
 https://www.nutaku.net,www.nutaku.net,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),Google
 https://www.nvidia.com,www.nvidia.com,5000,Top 5.000,Otros,Akamai,Akamai,Cloudflare | Akamai,Otra
@@ -3405,7 +3405,7 @@ https://www.promoglobos.com.ar,www.promoglobos.com.ar,5000,Top 5.000,Otros,Cloud
 https://www.properati.com.ar,www.properati.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,Google
 https://www.provinciamicrocreditos.com.ar,www.provinciamicrocreditos.com.ar,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Amazon (AWS) | Microsoft (Azure),Otra
 https://www.provinciart.com.ar,www.provinciart.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://www.puntal.com.ar,www.puntal.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.puntal.com.ar,www.puntal.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.puntodebreak.com,www.puntodebreak.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.puntodeimpactoshop.com.ar,www.puntodeimpactoshop.com.ar,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.puppis.com.ar,www.puppis.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
@@ -3414,15 +3414,15 @@ https://www.pussyspace.com,www.pussyspace.com,5000,Top 5.000,Otros,Cloudflare,Cl
 https://www.quepasajujuy.com.ar,www.quepasajujuy.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.quepasaweb.com.ar,www.quepasaweb.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.quinielasya.com.ar,www.quinielasya.com.ar,5000,Top 5.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://www.quora.com,www.quora.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.quora.com,www.quora.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.r2820.com,www.r2820.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.racingdealma.com.ar,www.racingdealma.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.raddios.com,www.raddios.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.rae.es,www.rae.es,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.randstad.com.ar,www.randstad.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.rapicuotasonline.com.ar,www.rapicuotasonline.com.ar,5000,Top 5.000,Otros,Google,Google,Google,
-https://www.rappi.com.ar,www.rappi.com.ar,5000,Top 5.000,Compras y delivery,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Otra
-https://www.red43.com.ar,www.red43.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.rappi.com.ar,www.rappi.com.ar,5000,Top 5.000,Compras y delivery,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Meta (propia)
+https://www.red43.com.ar,www.red43.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.redbull.com,www.redbull.com,5000,Top 5.000,Otros,Akamai,Akamai,Akamai,
 https://www.redcolon.com.ar,www.redcolon.com.ar,5000,Top 5.000,Otros,Google,Google,Cloudflare | Google,
 https://www.reef.com.ar,www.reef.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
@@ -3431,7 +3431,7 @@ https://www.region20.com.ar,www.region20.com.ar,5000,Top 5.000,Otros,Cloudflare,
 https://www.registrocivil.misiones.gov.ar,www.registrocivil.misiones.gov.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://www.remove.bg,www.remove.bg,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.renault.com.ar,www.renault.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.renovatuvestidor.com,www.renovatuvestidor.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
+https://www.renovatuvestidor.com,www.renovatuvestidor.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google | Meta (propia)
 https://www.rentastucuman.gob.ar,www.rentastucuman.gob.ar,5000,Top 5.000,Estado,,Sin CDN detectado,,
 https://www.res.com.ar,www.res.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.retrostic.com,www.retrostic.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3443,7 +3443,7 @@ https://www.revistavanityfair.es,www.revistavanityfair.es,5000,Top 5.000,Otros,A
 https://www.reysur.com,www.reysur.com,5000,Top 5.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.rickysarkany.com,www.rickysarkany.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.ripcurlargentina.com,www.ripcurlargentina.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS) | Google,
-https://www.riu.com,www.riu.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Bunny,Google
+https://www.riu.com,www.riu.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Bunny,Google | Meta (propia)
 https://www.riverplate.com,www.riverplate.com,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Cloudflare | Microsoft (Azure),
 https://www.rockstargames.com,www.rockstargames.com,5000,Top 5.000,Otros,Akamai,Akamai,Akamai,Otra
 https://www.rodo.com.ar,www.rodo.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Bunny,Otra
@@ -3508,7 +3508,7 @@ https://www.skyscanner.com.ar,www.skyscanner.com.ar,5000,Top 5.000,Otros,Amazon 
 https://www.skyscrapercity.com,www.skyscrapercity.com,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Fastly,Otra
 https://www.smart-gsm.com,www.smart-gsm.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.smartfit.com.ar,www.smartfit.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.smata.com.ar,www.smata.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Otra
+https://www.smata.com.ar,www.smata.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Meta (propia)
 https://www.smiles.com.ar,www.smiles.com.ar,5000,Top 5.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://www.smsv.com.ar,www.smsv.com.ar,5000,Top 5.000,Otros,,Sin CDN detectado,,
 https://www.snaptube.com,www.snaptube.com,5000,Top 5.000,Otros,,Sin CDN detectado,,
@@ -3552,12 +3552,12 @@ https://www.tgtube.com,www.tgtube.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare
 https://www.theguardian.com,www.theguardian.com,5000,Top 5.000,Otros,Fastly,Fastly,Fastly,Otra
 https://www.themoviedb.org,www.themoviedb.org,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.thenorthface.com.ar,www.thenorthface.com.ar,5000,Top 5.000,Otros,Microsoft Azure,Microsoft (Azure),Microsoft (Azure),
-https://www.thesimsresource.com,www.thesimsresource.com,5000,Top 5.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.thesimsresource.com,www.thesimsresource.com,5000,Top 5.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.thingiverse.com,www.thingiverse.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
-https://www.ticoexpress.com.ar,www.ticoexpress.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Otra
+https://www.ticoexpress.com.ar,www.ticoexpress.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Meta (propia)
 https://www.tiempo.com,www.tiempo.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.tiempoar.com.ar,www.tiempoar.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.tiemposur.com.ar,www.tiemposur.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.tiemposur.com.ar,www.tiemposur.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.tiempoyradar.com.ar,www.tiempoyradar.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.tienda.electrolux.com.ar,www.tienda.electrolux.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.tienda.gafa.com.ar,www.tienda.gafa.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
@@ -3575,13 +3575,13 @@ https://www.tikzet.com,www.tikzet.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare
 https://www.tinkercad.com,www.tinkercad.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.todocolombraro.com.ar,www.todocolombraro.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.todojujuy.com,www.todojujuy.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.todoshowcase.com,www.todoshowcase.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,Otra
+https://www.todoshowcase.com,www.todoshowcase.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,Meta (propia)
 https://www.tokyomotion.net,www.tokyomotion.net,5000,Top 5.000,Otros,,Google,Google,
 https://www.tokyvideo.com,www.tokyvideo.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.tomassa.com.ar,www.tomassa.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.topmega.com.ar,www.topmega.com.ar,5000,Top 5.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly,
 https://www.toprelatos.com,www.toprelatos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.toyotacfa.com.ar,www.toyotacfa.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Otra
+https://www.toyotacfa.com.ar,www.toyotacfa.com.ar,5000,Top 5.000,Otros,,Otra,Otra,Meta (propia)
 https://www.tp-link.com,www.tp-link.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.tradeinn.com,www.tradeinn.com,5000,Top 5.000,Otros,Google,Google,Google,Google
 https://www.tradingview.com,www.tradingview.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
@@ -3657,14 +3657,14 @@ https://www.veraz.com.ar,www.veraz.com.ar,5000,Top 5.000,Otros,Google,Google,Clo
 https://www.verisure.com.ar,www.verisure.com.ar,5000,Top 5.000,Otros,"Cloudflare, Incapsula",Cloudflare,Cloudflare | Amazon (AWS) | Imperva,
 https://www.viagogo.com,www.viagogo.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://www.vicentelopez.gov.ar,www.vicentelopez.gov.ar,5000,Top 5.000,Estado,,Cloudflare,Cloudflare,
-https://www.vidaextra.com,www.vidaextra.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.vidaextra.com,www.vidaextra.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.videosxgays.com,www.videosxgays.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.viki.com,www.viki.com,5000,Top 5.000,Otros,Google,Google,Amazon (AWS) | Google,
 https://www.vintagebsas.com.ar,www.vintagebsas.com.ar,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.violettacosmeticos.com,www.violettacosmeticos.com,5000,Top 5.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.virustotal.com,www.virustotal.com,5000,Top 5.000,Otros,Google,Google,Google,
 https://www.vital.com.ar,www.vital.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
-https://www.vitonica.com,www.vitonica.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.vitonica.com,www.vitonica.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.vivasmoda.com,www.vivasmoda.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.viviendasroca.com.ar,www.viviendasroca.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
 https://www.vlr.gg,www.vlr.gg,5000,Top 5.000,Otros,,Cloudflare,Cloudflare,
@@ -3689,11 +3689,11 @@ https://www.workana.com,www.workana.com,5000,Top 5.000,Otros,Cloudflare,Cloudfla
 https://www.wowhead.com,www.wowhead.com,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.wunderground.com,www.wunderground.com,5000,Top 5.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://www.wurth.com.ar,www.wurth.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.xataka.com.mx,www.xataka.com.mx,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://www.xataka.com.mx,www.xataka.com.mx,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://www.xfree.com,www.xfree.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
 https://www.xleche.com,www.xleche.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.xlshop.com.ar,www.xlshop.com.ar,5000,Top 5.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.xn--lamaanaonline-lkb.com.ar,www.xn--lamaanaonline-lkb.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,Otra
+https://www.xn--lamaanaonline-lkb.com.ar,www.xn--lamaanaonline-lkb.com.ar,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Google,Meta (propia)
 https://www.xnalgas.com,www.xnalgas.com,5000,Top 5.000,Otros,,Otra,Otra,
 https://www.xtrafondos.com,www.xtrafondos.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.xvlivecams.com,www.xvlivecams.com,5000,Top 5.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,
@@ -3732,7 +3732,7 @@ https://zapatillaspuro.com.ar,zapatillaspuro.com.ar,5000,Top 5.000,Otros,Cloudfl
 https://zeuscasino.cloud,zeuscasino.cloud,5000,Top 5.000,Apuestas,Zenedge,Otra,Otra,
 https://zeuscasino.fun,zeuscasino.fun,5000,Top 5.000,Apuestas,Zenedge,Otra,Otra,
 https://zismed.com,zismed.com,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://zolvers.com,zolvers.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://zolvers.com,zolvers.com,5000,Top 5.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://zona.ucalp.edu.ar,zona.ucalp.edu.ar,5000,Top 5.000,Educación,,Google,Google,
 https://zonacraft.net,zonacraft.net,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://zoofilia.us,zoofilia.us,5000,Top 5.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3751,7 +3751,7 @@ http://inventario.panatelcomm.com,inventario.panatelcomm.com,10000,Top 10.000,Ot
 http://kitty.sdeep4.lat,kitty.sdeep4.lat,10000,Top 10.000,Otros,,Otra,Otra,
 http://lachance.com.ar,lachance.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 http://liza.agcontrol.gob.ar,liza.agcontrol.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
-http://loto.ruta1000.com.ar,loto.ruta1000.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+http://loto.ruta1000.com.ar,loto.ruta1000.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 http://oxax.tv,oxax.tv,10000,Top 10.000,Otros,,Otra,Otra,
 http://siprosa.sytes.net,siprosa.sytes.net,10000,Top 10.000,Otros,,Sin CDN detectado,,
 http://tucumansalud.com.ar:7777,tucumansalud.com.ar:7777,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -3788,7 +3788,7 @@ https://24258413931.gpt-appstore.com,24258413931.gpt-appstore.com,10000,Top 10.0
 https://24275310667.quizela.com,24275310667.quizela.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://24online.red,24online.red,10000,Top 10.000,Otros,Zenedge,Otra,Otra,
 https://3523.campusinstituto.com.ar,3523.campusinstituto.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://3dinsumos.com.ar,3dinsumos.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Otra
+https://3dinsumos.com.ar,3dinsumos.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Meta (propia)
 https://3dwarehouse.sketchup.com,3dwarehouse.sketchup.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://43.m.playzen.io,43.m.playzen.io,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://4kwallpapers.com,4kwallpapers.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3907,7 +3907,7 @@ https://answerseguros.com.ar,answerseguros.com.ar,10000,Top 10.000,Otros,Cloudfl
 https://anybunny.org,anybunny.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://anydesk.com,anydesk.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://aogpatagonia.com.ar,aogpatagonia.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://aonorte.gob.ar,aonorte.gob.ar,10000,Top 10.000,Estado,,Otra,Otra,Otra
+https://aonorte.gob.ar,aonorte.gob.ar,10000,Top 10.000,Estado,,Otra,Otra,Meta (propia)
 https://apat.org.ar,apat.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Google,
 https://api-gateway.dsnfd.xyz,api-gateway.dsnfd.xyz,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://apkbomb.com,apkbomb.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -3917,7 +3917,7 @@ https://apostamos.shop,apostamos.shop,10000,Top 10.000,Otros,Cloudflare,Cloudfla
 https://app.aluracursos.com,app.aluracursos.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://app.apoyoescolarrv.com,app.apoyoescolarrv.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://app.base44.com,app.base44.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://app.beturf.bet.ar,app.beturf.bet.ar,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
+https://app.beturf.bet.ar,app.beturf.bet.ar,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://app.billeterapais.com,app.billeterapais.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://app.billeteraqr.com.ar,app.billeteraqr.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Bunny,
 https://app.bristolmedicine.com.ar,app.bristolmedicine.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -3927,7 +3927,7 @@ https://app.cemep.com.ar,app.cemep.com.ar,10000,Top 10.000,Otros,,Sin CDN detect
 https://app.cocos.capital,app.cocos.capital,10000,Top 10.000,Otros,Vercel,Vercel,Cloudflare | Vercel,
 https://app.coderhouse.com,app.coderhouse.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Otra
 https://app.coverweb.com.ar,app.coverweb.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://app.devy.ar,app.devy.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://app.devy.ar,app.devy.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://app.diagnosticarconsultas.com,app.diagnosticarconsultas.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://app.educacionadistancia.org,app.educacionadistancia.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://app.emsetec.com.ar,app.emsetec.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -3990,7 +3990,7 @@ https://arena.ai,arena.ai,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflar
 https://aretoaccesorios.com,aretoaccesorios.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://arg.sika.com,arg.sika.com,10000,Top 10.000,Otros,"Cloudflare, Fastly",Cloudflare,Cloudflare | Fastly,
 https://argentina.realesimples.com.br,argentina.realesimples.com.br,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://argentina.viajando.travel,argentina.viajando.travel,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://argentina.viajando.travel,argentina.viajando.travel,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://argentum.website,argentum.website,10000,Top 10.000,Otros,,Otra,Otra,
 https://arodarpost.com.ar,arodarpost.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://arokaitraducciones.com,arokaitraducciones.com,10000,Top 10.000,Otros,,Otra,Otra,Otra
@@ -4030,7 +4030,7 @@ https://aurora2.isri.edu.ar,aurora2.isri.edu.ar,10000,Top 10.000,Educación,,Clo
 https://auth.ejercito.mil.ar,auth.ejercito.mil.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://auth.genially.com,auth.genially.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://auth.hostinger.com,auth.hostinger.com,10000,Top 10.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://auth.meta.com,auth.meta.com,10000,Top 10.000,Otros,Facebook,Otra,Otra,
+https://auth.meta.com,auth.meta.com,10000,Top 10.000,Otros,Facebook,Meta (propia),Meta (propia),
 https://autoccampen.justucuman.gov.ar,autoccampen.justucuman.gov.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
 https://autocity.com.ar,autocity.com.ar,10000,Top 10.000,Otros,Google,Google,Google,
 https://autoconsulta-policia.rionegro.gov.ar,autoconsulta-policia.rionegro.gov.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
@@ -4092,13 +4092,13 @@ https://baldoargentina.com.ar,baldoargentina.com.ar,10000,Top 10.000,Otros,,Clou
 https://bambulab.com,bambulab.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://bancacredicoop.bancocredicoop.coop,bancacredicoop.bancocredicoop.coop,10000,Top 10.000,Bancos y pagos,,Sin CDN detectado,,
 https://bancorioja.com.ar,bancorioja.com.ar,10000,Top 10.000,Bancos y pagos,Incapsula,Imperva,Amazon (AWS) | Imperva,
-https://barcelo.edu.ar,barcelo.edu.ar,10000,Top 10.000,Educación,Cloudflare,Cloudflare,Cloudflare,Otra
-https://baribache3000.com.ar,baribache3000.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://barcelo.edu.ar,barcelo.edu.ar,10000,Top 10.000,Educación,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://baribache3000.com.ar,baribache3000.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://barilochealacarta.com,barilochealacarta.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://barrabrava.net,barrabrava.net,10000,Top 10.000,Otros,,Otra,Otra,
 https://basquetplus.com,basquetplus.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://bastaonline.net,bastaonline.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://batik.com.ar,batik.com.ar,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://bastaonline.net,bastaonline.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
+https://batik.com.ar,batik.com.ar,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://bbminsumos.com.ar,bbminsumos.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://bc.game,bc.game,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://bcking.org,bcking.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4114,7 +4114,7 @@ https://begup.jujuy.gob.ar,begup.jujuy.gob.ar,10000,Top 10.000,Estado,,Otra,Otra
 https://belgrano.com.ar,belgrano.com.ar,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,
 https://beliplay.com,beliplay.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://benmobile.carrefour.com.ar,benmobile.carrefour.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://berazategui.gob.ar,berazategui.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,Otra
+https://berazategui.gob.ar,berazategui.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,Meta (propia)
 https://berciaba.com,berciaba.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://bersa.com.ar,bersa.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://best365online.com,best365online.com,10000,Top 10.000,Otros,BunnyCDN,Bunny,Bunny,
@@ -4144,7 +4144,7 @@ https://blog.adelantos.com.ar,blog.adelantos.com.ar,10000,Top 10.000,Otros,,Clou
 https://blog.colaborando.net,blog.colaborando.net,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://blog.portalmagnific.com,blog.portalmagnific.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://blogdepelis.net,blogdepelis.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://blowmax.com.ar,blowmax.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://blowmax.com.ar,blowmax.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://blox-fruits.fandom.com,blox-fruits.fandom.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://bloxfruitsvalues.com,bloxfruitsvalues.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://bluefm.com.ar,bluefm.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -4183,7 +4183,7 @@ https://bunkr.cr,bunkr.cr,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflar
 https://busarg.com.ar,busarg.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://buscopsi.com,buscopsi.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://bymichiby.com,bymichiby.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://byvtransportes.com.ar,byvtransportes.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://byvtransportes.com.ar,byvtransportes.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://c1rca.com.ar,c1rca.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://caba.jugadon.bet.ar,caba.jugadon.bet.ar,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://cabletelevisoracolor.com,cabletelevisoracolor.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4283,7 +4283,7 @@ https://catalogo.arbell.com.ar,catalogo.arbell.com.ar,10000,Top 10.000,Otros,,Si
 https://catalogo.bn.gov.ar,catalogo.bn.gov.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
 https://catalogo.expoyerweb.com.ar,catalogo.expoyerweb.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://catalogo.goopen.com.ar,catalogo.goopen.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://catalogo.nucleoencendido.com,catalogo.nucleoencendido.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://catalogo.nucleoencendido.com,catalogo.nucleoencendido.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://catalogo.repuestosjl.com.ar,catalogo.repuestosjl.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://catalogofram.com.ar,catalogofram.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://catalogos.amodil.com,catalogos.amodil.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4423,11 +4423,11 @@ https://contratistas.apelaez.com.ar,contratistas.apelaez.com.ar,10000,Top 10.000
 https://contravenciones.mardelplata.gob.ar,contravenciones.mardelplata.gob.ar,10000,Top 10.000,Estado,Cloudflare,Cloudflare,Cloudflare,
 https://controldocumentario.com,controldocumentario.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://converse.com.ar,converse.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://coolrom.com,coolrom.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
+https://coolrom.com,coolrom.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
 https://copropietarios.i-data.com.ar,copropietarios.i-data.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://cordoba.mitelefe.com,cordoba.mitelefe.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://cordoba.pluspet.com.ar,cordoba.pluspet.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://cordobaturismo.gov.ar,cordobaturismo.gov.ar,10000,Top 10.000,Estado,Google,Google,Google,Otra
+https://cordobaturismo.gov.ar,cordobaturismo.gov.ar,10000,Top 10.000,Estado,Google,Google,Google,Meta (propia)
 https://cordobesitas.tv,cordobesitas.tv,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://corisol.com.ar,corisol.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://corpodigital.webcorporacion.com.ar,corpodigital.webcorporacion.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -4487,7 +4487,7 @@ https://dc.fandom.com,dc.fandom.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare
 https://deas.colproba.org.ar,deas.colproba.org.ar,10000,Top 10.000,Otros,Google,Google,Google,
 https://decafeligiblyhad.com,decafeligiblyhad.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://decine21.com,decine21.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://decoracion.trendencias.com,decoracion.trendencias.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Otra
+https://decoracion.trendencias.com,decoracion.trendencias.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Meta (propia)
 https://defonline.com.ar,defonline.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://dege.com.ar,dege.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://degreesuccesstips.com,degreesuccesstips.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4517,10 +4517,10 @@ https://devilnovels.com,devilnovels.com,10000,Top 10.000,Otros,Cloudflare,Cloudf
 https://dgge.goodkidsgame.com,dgge.goodkidsgame.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://dghpsh.agcontrol.gob.ar,dghpsh.agcontrol.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
 https://diadoraargentina.com,diadoraargentina.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
-https://diarioactualidad.com,diarioactualidad.com,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://diarioactualidad.com,diarioactualidad.com,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://diariocastellanos.com.ar,diariocastellanos.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://diarioelargentino.com,diarioelargentino.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://diariolaopinion.com.ar,diariolaopinion.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://diariolaopinion.com.ar,diariolaopinion.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://diarionecochea.com,diarionecochea.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Amazon (AWS) | Google | Bunny,
 https://didumasajes.com,didumasajes.com,10000,Top 10.000,Otros,Fastly,Fastly,Google | Fastly,
 https://digaloconmatepormayor.com,digaloconmatepormayor.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4537,7 +4537,7 @@ https://distribuidorlacolo.com.ar,distribuidorlacolo.com.ar,10000,Top 10.000,Otr
 https://distrokid.com,distrokid.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
 https://divinoeter.com.ar,divinoeter.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://dj.sag.gob.cl,dj.sag.gob.cl,10000,Top 10.000,Otros,Microsoft Azure,Microsoft (Azure),Microsoft (Azure),
-https://docdownloader.com,docdownloader.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://docdownloader.com,docdownloader.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://dokumen.pub,dokumen.pub,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://domikids.tv,domikids.tv,10000,Top 10.000,Otros,Google,Google,Google,Google
 https://doodles.google,doodles.google,10000,Top 10.000,Otros,,Google,Google,
@@ -4566,7 +4566,7 @@ https://durlock.com,durlock.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://dut.cnrt.gob.ar,dut.cnrt.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
 https://dva.sanluis.gov.ar,dva.sanluis.gov.ar,10000,Top 10.000,Estado,,Amazon (AWS),Amazon (AWS),
 https://dvigi.com.ar,dvigi.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://dydsoft.com,dydsoft.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Otra
+https://dydsoft.com,dydsoft.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),Meta (propia)
 https://dynasty-scans.com,dynasty-scans.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://dynatacphone.com.ar,dynatacphone.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://e-ducativa.psa.gob.ar,e-ducativa.psa.gob.ar,10000,Top 10.000,Estado,,Otra,Otra,
@@ -4585,7 +4585,7 @@ https://economycloud.net,economycloud.net,10000,Top 10.000,Otros,Amazon CloudFro
 https://edenred.com.ar,edenred.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://edge.narto-drama.com,edge.narto-drama.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://edition.cnn.com,edition.cnn.com,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,
-https://educacionales.mendoza.edu.ar,educacionales.mendoza.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Otra
+https://educacionales.mendoza.edu.ar,educacionales.mendoza.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Meta (propia)
 https://educacionartistica.mda.gob.ar,educacionartistica.mda.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
 https://educacionfinancieragrupogalicia.educativa.org,educacionfinancieragrupogalicia.educativa.org,10000,Top 10.000,Otros,,Otra,Otra,
 https://educacionsantacruz.gov.ar,educacionsantacruz.gov.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
@@ -4604,7 +4604,7 @@ https://elarrierocueros.com.ar,elarrierocueros.com.ar,10000,Top 10.000,Otros,Clo
 https://elboyero.com,elboyero.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://elclubdelamilanesa.com,elclubdelamilanesa.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://elclubgreen.com,elclubgreen.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://eldenguee.com,eldenguee.com,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://eldenguee.com,eldenguee.com,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://eldiadeescobar.com.ar,eldiadeescobar.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://elea.com,elea.com,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://electricidadnico.com,electricidadnico.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -4621,7 +4621,7 @@ https://elt.oup.com,elt.oup.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS
 https://eluckar.com,eluckar.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://emesur.sytes.net,emesur.sytes.net,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://emojiterra.com,emojiterra.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://empleo.produccionrosario.gob.ar,empleo.produccionrosario.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,Otra
+https://empleo.produccionrosario.gob.ar,empleo.produccionrosario.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,Meta (propia)
 https://empleos.amia.org.ar,empleos.amia.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://empleos.clasificadoslavoz.com.ar,empleos.clasificadoslavoz.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://empleos.supermercadosdia.com.ar,empleos.supermercadosdia.com.ar,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,
@@ -4637,7 +4637,7 @@ https://enchulate.com.ar,enchulate.com.ar,10000,Top 10.000,Otros,Cloudflare,Clou
 https://encontrandoadios.com,encontrandoadios.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://encripta2.es,encripta2.es,10000,Top 10.000,Otros,Netlify,Netlify,Netlify,
 https://encuestas.psa.com.ar,encuestas.psa.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://enelsubte.com,enelsubte.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://enelsubte.com,enelsubte.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://enersa.azurewebsites.net,enersa.azurewebsites.net,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://enertik.com,enertik.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://enfaf.com,enfaf.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
@@ -4668,7 +4668,7 @@ https://es-us.finanzas.yahoo.com,es-us.finanzas.yahoo.com,10000,Top 10.000,Busca
 https://es-us.vida-estilo.yahoo.com,es-us.vida-estilo.yahoo.com,10000,Top 10.000,Buscadores y consulta,,Cloudflare,Cloudflare,
 https://es.123rf.com,es.123rf.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://es.casino.guru,es.casino.guru,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://es.catholic.net,es.catholic.net,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://es.catholic.net,es.catholic.net,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://es.crazyfriends.site,es.crazyfriends.site,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://es.fapexy.com,es.fapexy.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://es.fapeza.com,es.fapeza.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4699,7 +4699,7 @@ https://esbagomezclara-cba.infd.edu.ar,esbagomezclara-cba.infd.edu.ar,10000,Top 
 https://esbamoodle.campusinstituto.com.ar,esbamoodle.campusinstituto.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://escuela.mpba.gov.ar,escuela.mpba.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,
 https://escueladeoficios.tiendup.com,escueladeoficios.tiendup.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,
-https://esesc.ejercito.mil.ar,esesc.ejercito.mil.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://esesc.ejercito.mil.ar,esesc.ejercito.mil.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://espacioapkks.com,espacioapkks.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://espaciorelax.net,espaciorelax.net,10000,Top 10.000,Otros,Google,Google,Google,
 https://espaciozoom.misactividades.com,espaciozoom.misactividades.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Microsoft (Azure),
@@ -4736,7 +4736,7 @@ https://expresolancioni.com,expresolancioni.com,10000,Top 10.000,Otros,,Otra,Otr
 https://extranet.segurometal.com,extranet.segurometal.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://extranet.ypf.com,extranet.ypf.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),
 https://eyelit.com.ar,eyelit.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://ezectech.com.br,ezectech.com.br,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://ezectech.com.br,ezectech.com.br,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://ezgif.com,ezgif.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://fabricaargentina.com.ar,fabricaargentina.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://faccmatenispadel.com.ar,faccmatenispadel.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -4776,8 +4776,8 @@ https://filehippo.com,filehippo.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://finder.youtest.me,finder.youtest.me,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://finguru.com.ar,finguru.com.ar,10000,Top 10.000,Otros,Vercel,Vercel,Amazon (AWS) | Vercel,
 https://fiter.com,fiter.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://flacso.org.ar,flacso.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
-https://fledni.org,fledni.org,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,Otra
+https://flacso.org.ar,flacso.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
+https://fledni.org,fledni.org,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,Meta (propia)
 https://fleet.cloudfleet.com,fleet.cloudfleet.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://flexsportarg.com.ar,flexsportarg.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://flingster.com,flingster.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -4883,7 +4883,7 @@ https://getcomics.org,getcomics.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare
 https://getmysocial.com,getmysocial.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
 https://gexion.com.ar,gexion.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://gezatek.com.ar,gezatek.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://ggrepuestos.com.ar,ggrepuestos.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://ggrepuestos.com.ar,ggrepuestos.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://gilera.com.ar,gilera.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://ginos-socks.com.ar,ginos-socks.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://gip.procrearte.com,gip.procrearte.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Google,
@@ -4992,7 +4992,7 @@ https://ifdbolson-rng.infd.edu.ar,ifdbolson-rng.infd.edu.ar,10000,Top 10.000,Edu
 https://ifdmercedes-crr.infd.edu.ar,ifdmercedes-crr.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://ifdpujol-crr.infd.edu.ar,ifdpujol-crr.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://ifdroca-rng.infd.edu.ar,ifdroca-rng.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
-https://ifdsao-rng.infd.edu.ar,ifdsao-rng.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Otra
+https://ifdsao-rng.infd.edu.ar,ifdsao-rng.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Meta (propia)
 https://ifdvirasoro-crr.infd.edu.ar,ifdvirasoro-crr.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://ifuxion.com,ifuxion.com,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://iga-la.com,iga-la.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
@@ -5012,7 +5012,7 @@ https://impotekno.com,impotekno.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://incasup.edu.ar,incasup.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
 https://incode.id,incode.id,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://indecar-agro.com.ar,indecar-agro.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
-https://infonegocios.info,infonegocios.info,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://infonegocios.info,infonegocios.info,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://inforama.com.ar,inforama.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://infovaticana.com,infovaticana.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
 https://infractores.padron.gob.ar,infractores.padron.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
@@ -5064,7 +5064,7 @@ https://isfd51-bue.infd.edu.ar,isfd51-bue.infd.edu.ar,10000,Top 10.000,Educació
 https://isfd56-bue.infd.edu.ar,isfd56-bue.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://isfd801-chu.infd.edu.ar,isfd801-chu.infd.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,
 https://isfd802-chu.infd.edu.ar,isfd802-chu.infd.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,
-https://isfd803-chu.infd.edu.ar,isfd803-chu.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Otra
+https://isfd803-chu.infd.edu.ar,isfd803-chu.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Meta (propia)
 https://isfd810-chu.infd.edu.ar,isfd810-chu.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://isfd82-bue.infd.edu.ar,isfd82-bue.infd.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,
 https://isfd84-bue.infd.edu.ar,isfd84-bue.infd.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
@@ -5159,7 +5159,7 @@ https://lapredicadora.com,lapredicadora.com,10000,Top 10.000,Otros,Cloudflare,Cl
 https://lapuissance.com.ar,lapuissance.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://laradiodetotoral.com.ar,laradiodetotoral.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://larepo.com.ar,larepo.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://larioja.jugadon.bet.ar,larioja.jugadon.bet.ar,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
+https://larioja.jugadon.bet.ar,larioja.jugadon.bet.ar,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://lascontas.com,lascontas.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://laserenisimanutricion.com.ar,laserenisimanutricion.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://laslomas.com.ar,laslomas.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -5172,10 +5172,10 @@ https://laubfal.com,laubfal.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://lauradate.com,lauradate.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://laventanasanrafael.com.ar,laventanasanrafael.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://lavidaescomida.com,lavidaescomida.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://lavozdecataratas.com,lavozdecataratas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://lavozdecataratas.com,lavozdecataratas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://lda.ar,lda.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://leakedzone.com,leakedzone.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://learn.digitaladexpert.com,learn.digitaladexpert.com,10000,Top 10.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS) | Google,Google
+https://learn.digitaladexpert.com,learn.digitaladexpert.com,10000,Top 10.000,Otros,"Amazon CloudFront, Cloudflare",Amazon (AWS),Cloudflare | Amazon (AWS) | Google,Google | Meta (propia)
 https://learnenglish.britishcouncil.org,learnenglish.britishcouncil.org,10000,Top 10.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://lectortmo.vip,lectortmo.vip,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://lectura.sanluis.edu.ar,lectura.sanluis.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
@@ -5195,7 +5195,7 @@ https://levelmendoza.misactividades.com,levelmendoza.misactividades.com,10000,To
 https://lewdgames.to,lewdgames.to,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://libgen.li,libgen.li,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://librefutbol.vip,librefutbol.vip,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
-https://librerialasflores.com.ar,librerialasflores.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://librerialasflores.com.ar,librerialasflores.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://libreriaslevalle.com,libreriaslevalle.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://licahome.com.ar,licahome.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://licencias.maipu.gob.ar,licencias.maipu.gob.ar,10000,Top 10.000,Estado,Cloudflare,Cloudflare,Cloudflare,
@@ -5336,7 +5336,7 @@ https://mesavirtual.jussantiago.gov.ar,mesavirtual.jussantiago.gov.ar,10000,Top 
 https://metabet.tv,metabet.tv,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://mffl.youtest.me,mffl.youtest.me,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://mhcomics.com,mhcomics.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://mi.iparatodos.com.ar,mi.iparatodos.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://mi.iparatodos.com.ar,mi.iparatodos.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://mi.sannicolas.gob.ar,mi.sannicolas.gob.ar,10000,Top 10.000,Estado,Netlify,Netlify,Netlify,
 https://mi.uthgra.org.ar,mi.uthgra.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
 https://mi8.com.ar,mi8.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -5370,7 +5370,7 @@ https://misconsultas.com.ar,misconsultas.com.ar,10000,Top 10.000,Otros,,Sin CDN 
 https://misfacturas.strix.com.ar,misfacturas.strix.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://mishkaobjetos.com,mishkaobjetos.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://misionescuatro.com,misionescuatro.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
-https://mispichos.com,mispichos.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://mispichos.com,mispichos.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://missav.live,missav.live,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://missav123.com,missav123.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://mk.marykayintouch.com.ar,mk.marykayintouch.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -5466,7 +5466,7 @@ https://nobis.com.ar,nobis.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Micr
 https://nochesdearabia.com.ar,nochesdearabia.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://noe.ucalp.edu.ar,noe.ucalp.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
 https://nolimitway12.com,nolimitway12.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://normas-apa.org,normas-apa.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://normas-apa.org,normas-apa.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://noticias.santacruz.gob.ar,noticias.santacruz.gob.ar,10000,Top 10.000,Estado,,Otra,Otra,
 https://noticias.uol.com.br,noticias.uol.com.br,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
 https://noticiasdel6.com,noticiasdel6.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -5477,7 +5477,7 @@ https://novoalapar.com.ar,novoalapar.com.ar,10000,Top 10.000,Otros,Microsoft Azu
 https://noxiestore.com,noxiestore.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://nucky-corp.vercel.app,nucky-corp.vercel.app,10000,Top 10.000,Otros,Vercel,Vercel,Cloudflare | Vercel,
 https://nudogram.com,nudogram.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://nuevarioja.com.ar,nuevarioja.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://nuevarioja.com.ar,nuevarioja.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://nunadigital.com.ar,nunadigital.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://nya5.com,nya5.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://nyaa.si,nyaa.si,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -5490,7 +5490,7 @@ https://oficinavirtual.aguasbonaerenses.com.ar,oficinavirtual.aguasbonaerenses.c
 https://oficinavirtual.aguasdecorrientes.com,oficinavirtual.aguasdecorrientes.com,10000,Top 10.000,Otros,,Otra,Otra,Google
 https://oficinavirtual.cnp.com.ar,oficinavirtual.cnp.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://oficinavirtual.edensa.com.ar,oficinavirtual.edensa.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
-https://oficinavirtual.live,oficinavirtual.live,10000,Top 10.000,Otros,,Sin CDN detectado,,Google
+https://oficinavirtual.live,oficinavirtual.live,10000,Top 10.000,Otros,,Sin CDN detectado,,Google | Meta (propia)
 https://oficinavirtual.naturgysj.com.ar,oficinavirtual.naturgysj.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://ofrecimientodocenteregionvi.blogspot.com,ofrecimientodocenteregionvi.blogspot.com,10000,Top 10.000,Otros,Google,Google,Google,
 https://oh-wear.com,oh-wear.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -5529,7 +5529,7 @@ https://ovainjoyasmayorista.com,ovainjoyasmayorista.com,10000,Top 10.000,Otros,,
 https://overframe.gg,overframe.gg,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://p2p.binance.com,p2p.binance.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://pacientes.clinicabreast.com.ar,pacientes.clinicabreast.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://pacientes.grupogamma.com,pacientes.grupogamma.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Google
+https://pacientes.grupogamma.com,pacientes.grupogamma.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Google | Meta (propia)
 https://pacientes.inovadiagnostico.com.ar:3001,pacientes.inovadiagnostico.com.ar:3001,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://pacientes.iradiologico.com.ar:3012,pacientes.iradiologico.com.ar:3012,10000,Top 10.000,Otros,,Otra,Otra,
 https://pacientes.lebensalud.com,pacientes.lebensalud.com,10000,Top 10.000,Otros,,Otra,Otra,
@@ -5783,7 +5783,7 @@ https://rodaemotor.com,rodaemotor.com,10000,Top 10.000,Otros,Cloudflare,Cloudfla
 https://roemmers.com.ar,roemmers.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Microsoft (Azure),
 https://rollercoin.com,rollercoin.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://rollermarket.com.ar,rollermarket.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://rolsol.com,rolsol.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://rolsol.com,rolsol.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://romero-jugueteria.com.ar,romero-jugueteria.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Bunny,
 https://romsenespanol.com,romsenespanol.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://roobet.com,roobet.com,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
@@ -5843,17 +5843,17 @@ https://sde.lotemovil.com.ar,sde.lotemovil.com.ar,10000,Top 10.000,Otros,,Cloudf
 https://sdm.gomedisys.com,sdm.gomedisys.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),
 https://sdtsoftware.com.ar,sdtsoftware.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://seade.seadea.edu.ar,seade.seadea.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
-https://secretariomike.com,secretariomike.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://secretariomike.com,secretariomike.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://secure.bancocolumbia.com.ar,secure.bancocolumbia.com.ar,10000,Top 10.000,Bancos y pagos,,Otra,Otra,
 https://secure.roomcloud.net,secure.roomcloud.net,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,Otra
 https://secure.tarjetalaanonima.com.ar,secure.tarjetalaanonima.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://sede.mjusticia.gob.es,sede.mjusticia.gob.es,10000,Top 10.000,Otros,,Sin CDN detectado,,
-https://sedici.unlp.edu.ar,sedici.unlp.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare | Google,Otra
+https://sedici.unlp.edu.ar,sedici.unlp.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare | Google,Meta (propia)
 https://seeklogo.com,seeklogo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://seguridad-publico.jusrionegro.gov.ar,seguridad-publico.jusrionegro.gov.ar,10000,Top 10.000,Estado,,Amazon (AWS),Amazon (AWS),
 https://selecciondelibros.educacion.gob.ar,selecciondelibros.educacion.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare | Google,
 https://selmadigital.com,selmadigital.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Google
-https://semanariodejunin.com.ar,semanariodejunin.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://semanariodejunin.com.ar,semanariodejunin.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://semblerubbery.cfd,semblerubbery.cfd,10000,Top 10.000,Otros,,Otra,Otra,
 https://send.now,send.now,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
 https://sendero.flexipyme.com.ar,sendero.flexipyme.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -5990,7 +5990,7 @@ https://suats.com.ar,suats.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://sub.astroline.today,sub.astroline.today,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://subastas.scba.gov.ar,subastas.scba.gov.ar,10000,Top 10.000,Estado,,Microsoft (Azure),Microsoft (Azure),
 https://subastaselectronicasjudiciales.csjn.gov.ar,subastaselectronicasjudiciales.csjn.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,
-https://submit.jotform.com,submit.jotform.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Amazon (AWS) | Google,Google
+https://submit.jotform.com,submit.jotform.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Amazon (AWS) | Google,Google | Meta (propia)
 https://substack.com,substack.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://subtaboo.com,subtaboo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://subte.ar,subte.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6085,7 +6085,7 @@ https://tiendacelesteyblanca.com,tiendacelesteyblanca.com,10000,Top 10.000,Otros
 https://tiendaezviz.com.ar,tiendaezviz.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://tiendanewells.com,tiendanewells.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://tiendapincha.com,tiendapincha.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
-https://tiendasantaclara.com,tiendasantaclara.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
+https://tiendasantaclara.com,tiendasantaclara.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google | Meta (propia)
 https://tiendasofia.com.ar,tiendasofia.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://tiendaurbanaonline.com,tiendaurbanaonline.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://tiendavapor.com,tiendavapor.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -6108,7 +6108,7 @@ https://toons18.plus,toons18.plus,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://tophonetics.com,tophonetics.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://topstudiok.mitiendanube.com,topstudiok.mitiendanube.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://tormentasargentinas.com.ar,tormentasargentinas.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://torneodonpedro.com,torneodonpedro.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://torneodonpedro.com,torneodonpedro.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://torneosapa.com.ar,torneosapa.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://torresyliva.com,torresyliva.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://tos.ea.com,tos.ea.com,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
@@ -6159,7 +6159,7 @@ https://tv.sestalgames.com,tv.sestalgames.com,10000,Top 10.000,Otros,Cloudflare,
 https://tvanime.tv,tvanime.tv,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://tvsmotorargentina.com,tvsmotorargentina.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://twittersaver.net,twittersaver.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://ub.edu.ar,ub.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Otra
+https://ub.edu.ar,ub.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Meta (propia)
 https://ubaxxi.uba.ar,ubaxxi.uba.ar,10000,Top 10.000,Educación,Incapsula,Imperva,Imperva,
 https://ubiquo.com.ar,ubiquo.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://uchuujinmangas.com,uchuujinmangas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6348,7 +6348,7 @@ https://www.advanced-adv.com,www.advanced-adv.com,10000,Top 10.000,Otros,Cloudfl
 https://www.afascl.coop,www.afascl.coop,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.afluenta.com,www.afluenta.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.agarratecatalina.ar,www.agarratecatalina.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.agencianova.com,www.agencianova.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
+https://www.agencianova.com,www.agencianova.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
 https://www.agregame.com,www.agregame.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
 https://www.agrositio.com.ar,www.agrositio.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.aguasdesantiago.com.ar,www.aguasdesantiago.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6391,9 +6391,9 @@ https://www.areamasajes.com,www.areamasajes.com,10000,Top 10.000,Otros,,Otra,Otr
 https://www.argencasas.com,www.argencasas.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.argenpapa.com.ar,www.argenpapa.com.ar,10000,Top 10.000,Otros,,Google,Google,
 https://www.argensoft.net,www.argensoft.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
-https://www.armeriamiranda.com.ar,www.armeriamiranda.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://www.armeriamiranda.com.ar,www.armeriamiranda.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://www.arqfinance.com,www.arqfinance.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
-https://www.artstation.com,www.artstation.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.artstation.com,www.artstation.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.aseguratuviaje.com.ar,www.aseguratuviaje.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.asoprofarma.com.ar,www.asoprofarma.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.assal.gov.ar,www.assal.gov.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
@@ -6424,21 +6424,21 @@ https://www.bancopiano.com.ar,www.bancopiano.com.ar,10000,Top 10.000,Bancos y pa
 https://www.bancosanjuan.com,www.bancosanjuan.com,10000,Top 10.000,Bancos y pagos,,Cloudflare,Cloudflare,
 https://www.bancosantacruz.com,www.bancosantacruz.com,10000,Top 10.000,Bancos y pagos,,Cloudflare,Cloudflare,
 https://www.bandlab.com,www.bandlab.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.bandsintown.com,www.bandsintown.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.bandsintown.com,www.bandsintown.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.bariloche.gov.ar,www.bariloche.gov.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
-https://www.baron.com.ar,www.baron.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Google
+https://www.baron.com.ar,www.baron.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Google | Meta (propia)
 https://www.basketcapital.com,www.basketcapital.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.basquetpass.tv,www.basquetpass.tv,10000,Top 10.000,Otros,CDN77,Amazon (AWS),Amazon (AWS),Otra
 https://www.bastaprovidencia.com.ar,www.bastaprovidencia.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.batuk.com.ar,www.batuk.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.bbva.com,www.bbva.com,10000,Top 10.000,Bancos y pagos,Akamai,Akamai,Amazon (AWS) | Akamai,
-https://www.bcr.com.ar,www.bcr.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.bcr.com.ar,www.bcr.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.bdfa.com.ar,www.bdfa.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.behindthevoiceactors.com,www.behindthevoiceactors.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.belgranohome.com.ar,www.belgranohome.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.belleonline.com.ar,www.belleonline.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.bensimon.com.ar,www.bensimon.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.berissociudad.com.ar,www.berissociudad.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
+https://www.berissociudad.com.ar,www.berissociudad.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
 https://www.berrycoshop.com,www.berrycoshop.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.bersashop.com.ar,www.bersashop.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.bet-30.blue,www.bet-30.blue,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
@@ -6446,12 +6446,12 @@ https://www.bet-30.cc,www.bet-30.cc,10000,Top 10.000,Apuestas,,Otra,Otra,
 https://www.bet-30.me,www.bet-30.me,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.bet-30.site,www.bet-30.site,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.betano.com,www.betano.com,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
-https://www.beterstore.com,www.beterstore.com,10000,Top 10.000,Apuestas,,Sin CDN detectado,,Otra
+https://www.beterstore.com,www.beterstore.com,10000,Top 10.000,Apuestas,,Sin CDN detectado,,Meta (propia)
 https://www.bfeexpress.com,www.bfeexpress.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.bhinfo.com.ar,www.bhinfo.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.biblia.es,www.biblia.es,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.bibliocad.com,www.bibliocad.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://www.bienesrosario.com,www.bienesrosario.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.bibliocad.com,www.bibliocad.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
+https://www.bienesrosario.com,www.bienesrosario.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.bigbangnews.com,www.bigbangnews.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.bigoutlet.com.ar,www.bigoutlet.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.bikinisrio.com,www.bikinisrio.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6478,11 +6478,11 @@ https://www.bse.com.ar,www.bse.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,
 https://www.bsfseeds.com.ar,www.bsfseeds.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.buditas.com,www.buditas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.bulgaryshoes.com.ar,www.bulgaryshoes.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.buquebusturismo.com,www.buquebusturismo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
+https://www.buquebusturismo.com,www.buquebusturismo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.busca-datos.com.ar,www.busca-datos.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.buscapina.com,www.buscapina.com,10000,Top 10.000,Otros,Microsoft Azure,Microsoft (Azure),Amazon (AWS) | Microsoft (Azure),
-https://www.buscouniversidad.com.ar,www.buscouniversidad.com.ar,10000,Top 10.000,Otros,Microsoft Azure,Microsoft (Azure),Cloudflare | Amazon (AWS) | Google | Microsoft (Azure),Otra
-https://www.buzzerbeater.com,www.buzzerbeater.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.buscouniversidad.com.ar,www.buscouniversidad.com.ar,10000,Top 10.000,Otros,Microsoft Azure,Microsoft (Azure),Cloudflare | Amazon (AWS) | Google | Microsoft (Azure),Meta (propia)
+https://www.buzzerbeater.com,www.buzzerbeater.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.bycloeshop.com,www.bycloeshop.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.bydpilar.com.ar,www.bydpilar.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.cabal.coop,www.cabal.coop,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6491,7 +6491,7 @@ https://www.cachavacha.com.ar,www.cachavacha.com.ar,10000,Top 10.000,Otros,Cloud
 https://www.cadenanueve.com,www.cadenanueve.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.cafaccess.com,www.cafaccess.com,10000,Top 10.000,Otros,Vercel,Vercel,Vercel,
 https://www.cafemartinez.com,www.cafemartinez.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.cahockey.org.ar,www.cahockey.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Google | Microsoft (Azure),Google
+https://www.cahockey.org.ar,www.cahockey.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Google | Microsoft (Azure),Google | Meta (propia)
 https://www.cajademedicos.com.ar,www.cajademedicos.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.cajaodo.org.ar,www.cajaodo.org.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.calameo.com,www.calameo.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -6507,8 +6507,8 @@ https://www.camioneros-ba.org.ar,www.camioneros-ba.org.ar,10000,Top 10.000,Otros
 https://www.camscanner.com,www.camscanner.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.camvault.to,www.camvault.to,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.canal13sanjuan.com,www.canal13sanjuan.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.canalnet.tv,www.canalnet.tv,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
-https://www.cancioneros.com,www.cancioneros.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.canalnet.tv,www.canalnet.tv,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
+https://www.cancioneros.com,www.cancioneros.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.cannon.com.ar,www.cannon.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS) | Microsoft (Azure),
 https://www.caranddriver.com,www.caranddriver.com,10000,Top 10.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Fastly,Google
 https://www.carlospazvivo.com,www.carlospazvivo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6548,7 +6548,7 @@ https://www.cencoblack.com,www.cencoblack.com,10000,Top 10.000,Otros,Google,Goog
 https://www.cent.utn.edu.ar,www.cent.utn.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
 https://www.centralab.com.ar,www.centralab.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.cerave.com.ar,www.cerave.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Microsoft (Azure),
-https://www.cervantesvirtual.com,www.cervantesvirtual.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.cervantesvirtual.com,www.cervantesvirtual.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.cesop.com.ar,www.cesop.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.cest-fini.com,www.cest-fini.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.cgepm.gov.ar:8889,www.cgepm.gov.ar:8889,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -6588,10 +6588,10 @@ https://www.clubnutri.com.ar,www.clubnutri.com.ar,10000,Top 10.000,Otros,Fastly,
 https://www.clubpatagonia.com.ar,www.clubpatagonia.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.clubsanjorge.com.ar,www.clubsanjorge.com.ar,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,
 https://www.cmm.com.ar,www.cmm.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
-https://www.cnba.uba.ar,www.cnba.uba.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Otra
+https://www.cnba.uba.ar,www.cnba.uba.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Meta (propia)
 https://www.cobrosonline.citibank.com,www.cobrosonline.citibank.com,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
 https://www.cocacoladirecto.com,www.cocacoladirecto.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
-https://www.cocinaconvalentino.com.ar,www.cocinaconvalentino.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.cocinaconvalentino.com.ar,www.cocinaconvalentino.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.coingecko.com,www.coingecko.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.coinglass.com,www.coinglass.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.colegio-escribanos.org.ar,www.colegio-escribanos.org.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6608,7 +6608,7 @@ https://www.conicet.gov.ar,www.conicet.gov.ar,10000,Top 10.000,Estado,,Cloudflar
 https://www.conmebol.com,www.conmebol.com,10000,Top 10.000,Otros,,Google,Google,
 https://www.conquerlanguages.com,www.conquerlanguages.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.continental.com.ar,www.continental.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.control-salud.com.ar,www.control-salud.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.control-salud.com.ar,www.control-salud.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.conversordeletras.com,www.conversordeletras.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.cooljuegos.com,www.cooljuegos.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.coolstuffinc.com,www.coolstuffinc.com,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6623,7 +6623,7 @@ https://www.cotymania.com,www.cotymania.com,10000,Top 10.000,Otros,Cloudflare,Cl
 https://www.cotyshow.com,www.cotyshow.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.couponharbor.net,www.couponharbor.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.cozycozy.com,www.cozycozy.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://www.cpba.com.ar,www.cpba.com.ar,10000,Top 10.000,Otros,Google,Google,Google,Otra
+https://www.cpba.com.ar,www.cpba.com.ar,10000,Top 10.000,Otros,Google,Google,Google,Meta (propia)
 https://www.credilemon.com,www.credilemon.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.credixsa.com,www.credixsa.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.crehana.com,www.crehana.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6661,7 +6661,7 @@ https://www.dgrcorrientes.gob.ar,www.dgrcorrientes.gob.ar,10000,Top 10.000,Estad
 https://www.diagnosticotesla.com,www.diagnosticotesla.com,10000,Top 10.000,Otros,Google,Google,Google,
 https://www.diainternacionalde.com,www.diainternacionalde.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.diario22.ar,www.diario22.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.diario4v.com,www.diario4v.com,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://www.diario4v.com,www.diario4v.com,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://www.diarioandino.com.ar,www.diarioandino.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.diariobitcoin.com,www.diariobitcoin.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Bunny,
 https://www.diarioeltiempo.com.ar,www.diarioeltiempo.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -6693,7 +6693,7 @@ https://www.docturno.com,www.docturno.com,10000,Top 10.000,Otros,,Cloudflare,Clo
 https://www.dominiofutbol.com.ar,www.dominiofutbol.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.dove.com,www.dove.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai | Microsoft (Azure),
 https://www.dpe.com.ar,www.dpe.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
-https://www.dpec.com.ar,www.dpec.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.dpec.com.ar,www.dpec.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.drogueriasumed.com,www.drogueriasumed.com,10000,Top 10.000,Otros,Fastly,Fastly,Cloudflare | Amazon (AWS) | Google | Fastly,Google
 https://www.ds-store.com.ar,www.ds-store.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.dudequiz.com,www.dudequiz.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -6788,7 +6788,7 @@ https://www.faecys.org.ar,www.faecys.org.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.fahce.unlp.edu.ar,www.fahce.unlp.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
 https://www.famousbirthdays.com,www.famousbirthdays.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.fanvue.com,www.fanvue.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS) | Google,
-https://www.faplaconline.com.ar,www.faplaconline.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Otra
+https://www.faplaconline.com.ar,www.faplaconline.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Meta (propia)
 https://www.farenheite.com,www.farenheite.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.farma24.com.ar,www.farma24.com.ar,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,
 https://www.farmaciadelpuente.com.ar,www.farmaciadelpuente.com.ar,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,
@@ -6806,7 +6806,7 @@ https://www.farming-simulator.com,www.farming-simulator.com,10000,Top 10.000,Otr
 https://www.farmotopartes.com.ar,www.farmotopartes.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.fast-cheap.com.ar,www.fast-cheap.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.faunatikos.com.ar,www.faunatikos.com.ar,10000,Top 10.000,Otros,,Google,Google,
-https://www.favaloro.edu.ar,www.favaloro.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Otra
+https://www.favaloro.edu.ar,www.favaloro.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Meta (propia)
 https://www.fcaservices.com.ar,www.fcaservices.com.ar,10000,Top 10.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://www.fedex.com,www.fedex.com,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,Otra
 https://www.femacba.com.ar,www.femacba.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6837,9 +6837,9 @@ https://www.fortemaquinas.com.ar,www.fortemaquinas.com.ar,10000,Top 10.000,Otros
 https://www.fortub.com,www.fortub.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.fortubet30.ws,www.fortubet30.ws,10000,Top 10.000,Apuestas,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.fotorevista.com.ar,www.fotorevista.com.ar,10000,Top 10.000,Otros,,Google,Google,
-https://www.fotorun.com.ar,www.fotorun.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS) | Google,Otra
+https://www.fotorun.com.ar,www.fotorun.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS) | Google,Meta (propia)
 https://www.fourseasons.com,www.fourseasons.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
-https://www.fr9.es,www.fr9.es,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Google
+https://www.fr9.es,www.fr9.es,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Google | Meta (propia)
 https://www.france24.com,www.france24.com,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
 https://www.freeconvert.com,www.freeconvert.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.freefiremania.com.br,www.freefiremania.com.br,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6865,7 +6865,7 @@ https://www.garrahan.gov.ar,www.garrahan.gov.ar,10000,Top 10.000,Estado,Cloudfla
 https://www.gatodumas.com.ar,www.gatodumas.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.gatonplayseries.com,www.gatonplayseries.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.gayharem.com,www.gayharem.com,10000,Top 10.000,Otros,,Google,Google,
-https://www.gazzetta.it,www.gazzetta.it,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,Google
+https://www.gazzetta.it,www.gazzetta.it,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,Google | Meta (propia)
 https://www.genesiohogar.com.ar,www.genesiohogar.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.genuinosoft1.com,www.genuinosoft1.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.genuinosoft2.com,www.genuinosoft2.com,10000,Top 10.000,Otros,,Otra,Otra,
@@ -6891,7 +6891,7 @@ https://www.gpat.com.ar,www.gpat.com.ar,10000,Top 10.000,Otros,,Sin CDN detectad
 https://www.gpro.net,www.gpro.net,10000,Top 10.000,Otros,,Google,Google,Google
 https://www.grammarly.com,www.grammarly.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
 https://www.grandiosassanmiguel.com.ar,www.grandiosassanmiguel.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.granjadelsol.com.ar,www.granjadelsol.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.granjadelsol.com.ar,www.granjadelsol.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.greendeco.com.ar,www.greendeco.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.grupodbp.com.ar,www.grupodbp.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.grupoutopia.com.ar,www.grupoutopia.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6918,7 +6918,7 @@ https://www.hierrosmaldonado.com.ar,www.hierrosmaldonado.com.ar,10000,Top 10.000
 https://www.hikvision.com,www.hikvision.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.hilton.com,www.hilton.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
 https://www.hipersanmartin.com.ar,www.hipersanmartin.com.ar,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,
-https://www.hipoglos.com,www.hipoglos.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),Otra
+https://www.hipoglos.com,www.hipoglos.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),Meta (propia)
 https://www.hipotecarioseguros.com.ar,www.hipotecarioseguros.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.hogarmania.com,www.hogarmania.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.homecollection.com.ar,www.homecollection.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -6957,21 +6957,21 @@ https://www.infocanuelas.com,www.infocanuelas.com,10000,Top 10.000,Otros,,Sin CD
 https://www.infogremiales.com.ar,www.infogremiales.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.infojobs.net,www.infojobs.net,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.infomerlo.com,www.infomerlo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google | Bunny,
-https://www.infoquilmes.com.ar,www.infoquilmes.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.infoquilmes.com.ar,www.infoquilmes.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.informabtl.com,www.informabtl.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.infosalus.com,www.infosalus.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.ingles.com,www.ingles.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.ingreso-colegios.unlp.edu.ar,www.ingreso-colegios.unlp.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
 https://www.inkasex.com,www.inkasex.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
-https://www.inkitt.com,www.inkitt.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.inkitt.com,www.inkitt.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.instant-gaming.com,www.instant-gaming.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.insumossami.com.ar,www.insumossami.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.integritynet.com.ar,www.integritynet.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://www.interactivebrokers.co.uk,www.interactivebrokers.co.uk,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
 https://www.interbanking.com.ar,www.interbanking.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.interflash.ar,www.interflash.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.interflash.ar,www.interflash.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.internationalcupid.com,www.internationalcupid.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Amazon (AWS) | Akamai,Google
-https://www.interpals.net,www.interpals.net,10000,Top 10.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://www.interpals.net,www.interpals.net,10000,Top 10.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://www.investing.com,www.investing.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Google
 https://www.ipap.gba.gob.ar,www.ipap.gba.gob.ar,10000,Top 10.000,Estado,,Otra,Otra,
 https://www.ipsosisay.com,www.ipsosisay.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
@@ -6990,7 +6990,7 @@ https://www.jenniferbeauty.com.ar,www.jenniferbeauty.com.ar,10000,Top 10.000,Otr
 https://www.jobloza.com,www.jobloza.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Google,
 https://www.jobstep.io,www.jobstep.io,10000,Top 10.000,Otros,Vercel,Vercel,Cloudflare | Vercel,
 https://www.johnfoos.com,www.johnfoos.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.jotform.com,www.jotform.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Amazon (AWS) | Google,Google
+https://www.jotform.com,www.jotform.com,10000,Top 10.000,Otros,Google,Google,Cloudflare | Amazon (AWS) | Google,Google | Meta (propia)
 https://www.joyascenter.com.ar,www.joyascenter.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.juegosinfantilespum.com,www.juegosinfantilespum.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.jugaloahora.com,www.jugaloahora.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -6998,7 +6998,7 @@ https://www.juicychat.ai,www.juicychat.ai,10000,Top 10.000,Otros,Cloudflare,Clou
 https://www.juliatours.com.ar,www.juliatours.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.jusentrerios.gov.ar,www.jusentrerios.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,
 https://www.jusmisiones.gov.ar,www.jusmisiones.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,
-https://www.justargentina.com,www.justargentina.com,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://www.justargentina.com,www.justargentina.com,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://www.justucuman.gov.ar,www.justucuman.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,
 https://www.juztina.ai,www.juztina.ai,10000,Top 10.000,Otros,Vercel,Vercel,Amazon (AWS) | Vercel,
 https://www.kachet.com.ar,www.kachet.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -7029,14 +7029,14 @@ https://www.lacomiqueria.com.ar,www.lacomiqueria.com.ar,10000,Top 10.000,Otros,C
 https://www.ladybanana.co.uk,www.ladybanana.co.uk,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.laespumeria.com,www.laespumeria.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.lamartina.com.ar,www.lamartina.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
-https://www.lamatanza.gov.ar,www.lamatanza.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,Otra
+https://www.lamatanza.gov.ar,www.lamatanza.gov.ar,10000,Top 10.000,Estado,,Otra,Otra,Meta (propia)
 https://www.lanus.gob.ar,www.lanus.gob.ar,10000,Top 10.000,Estado,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.lapaulina.com.ar,www.lapaulina.com.ar,10000,Top 10.000,Otros,Incapsula,Imperva,Cloudflare | Microsoft (Azure) | Imperva,
 https://www.laplata1.com,www.laplata1.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.lareynadelazapatilla.com.ar,www.lareynadelazapatilla.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.lasegunda.com.ar,www.lasegunda.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Google,
 https://www.lasegundaonline.com.ar,www.lasegundaonline.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
-https://www.laserenisima.com.ar,www.laserenisima.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.laserenisima.com.ar,www.laserenisima.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.lasjoaquinas.com,www.lasjoaquinas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.laslupes.com,www.laslupes.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.latas.com.ar,www.latas.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
@@ -7070,11 +7070,11 @@ https://www.lollapaloozaar.com,www.lollapaloozaar.com,10000,Top 10.000,Otros,Clo
 https://www.loom.com,www.loom.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS) | Vercel,
 https://www.loteriacorrentina.gob.ar,www.loteriacorrentina.gob.ar,10000,Top 10.000,Apuestas,Cloudflare,Cloudflare,Cloudflare,
 https://www.lsydstore.com.ar,www.lsydstore.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Google
-https://www.lt10.com.ar,www.lt10.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.lt10.com.ar,www.lt10.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.luckycrush.live,www.luckycrush.live,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.ludoteka.com,www.ludoteka.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.luzdemar.com.ar,www.luzdemar.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.lv12.com.ar,www.lv12.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.lv12.com.ar,www.lv12.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.macrosoluciones.macro.com.ar,www.macrosoluciones.macro.com.ar,10000,Top 10.000,Bancos y pagos,,Microsoft (Azure),Microsoft (Azure),
 https://www.macstation.com.ar,www.macstation.com.ar,10000,Top 10.000,Otros,Google,Google,Google,
 https://www.maglfell.com,www.maglfell.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Google
@@ -7089,10 +7089,10 @@ https://www.mangakakalot.gg,www.mangakakalot.gg,10000,Top 10.000,Otros,Cloudflar
 https://www.manhunt.net,www.manhunt.net,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.manual.ar,www.manual.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.manyvids.com,www.manyvids.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS) | Vercel,
-https://www.maracodigital.net,www.maracodigital.net,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.maracodigital.net,www.maracodigital.net,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.marea.com.ar,www.marea.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.marinpistachia.com,www.marinpistachia.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
-https://www.marqueze.net,www.marqueze.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.marqueze.net,www.marqueze.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.marriott.com,www.marriott.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
 https://www.masimpulsoglobal.com,www.masimpulsoglobal.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.maspocovendo.com,www.maspocovendo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
@@ -7119,7 +7119,7 @@ https://www.mendoza.gob.ar,www.mendoza.gob.ar,10000,Top 10.000,Estado,Amazon Clo
 https://www.mentimeter.com,www.mentimeter.com,10000,Top 10.000,Otros,Vercel,Vercel,Cloudflare | Vercel,Otra
 https://www.mercadolibre.cl,www.mercadolibre.cl,10000,Top 10.000,Compras y delivery,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.mercadolibre.com.mx,www.mercadolibre.com.mx,10000,Top 10.000,Compras y delivery,,Amazon (AWS),Amazon (AWS),
-https://www.merceriadellitoral.com.ar,www.merceriadellitoral.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.merceriadellitoral.com.ar,www.merceriadellitoral.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.meridianoturismo.com.ar,www.meridianoturismo.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.merlo.gob.ar,www.merlo.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
 https://www.merrell.com.ar,www.merrell.com.ar,10000,Top 10.000,Otros,Microsoft Azure,Microsoft (Azure),Amazon (AWS) | Microsoft (Azure),
@@ -7133,7 +7133,7 @@ https://www.meubem.com.ar,www.meubem.com.ar,10000,Top 10.000,Otros,Cloudflare,Cl
 https://www.mgeko.cc,www.mgeko.cc,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.mi.com,www.mi.com,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
 https://www.mibus.com.ar,www.mibus.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
-https://www.micocacola-andina.com,www.micocacola-andina.com,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Google
+https://www.micocacola-andina.com,www.micocacola-andina.com,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),Google | Meta (propia)
 https://www.micvideal.es,www.micvideal.es,10000,Top 10.000,Otros,Akamai,Akamai,Akamai,
 https://www.mientrerios.gob.ar,www.mientrerios.gob.ar,10000,Top 10.000,Estado,Google,Google,Cloudflare | Google,
 https://www.migestionweb.app,www.migestionweb.app,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -7167,17 +7167,17 @@ https://www.motogp.com,www.motogp.com,10000,Top 10.000,Otros,Amazon CloudFront,A
 https://www.motomercado.com.ar,www.motomercado.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.motor.es,www.motor.es,10000,Top 10.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.motordil.com,www.motordil.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Vercel,Otra
-https://www.motorpasion.com.mx,www.motorpasion.com.mx,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google
-https://www.motorpasionmoto.com,www.motorpasionmoto.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Otra
+https://www.motorpasion.com.mx,www.motorpasion.com.mx,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Google | Meta (propia)
+https://www.motorpasionmoto.com,www.motorpasionmoto.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),Meta (propia)
 https://www.motosan.es,www.motosan.es,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.movievibe.net,www.movievibe.net,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.mpfcordoba.gob.ar,www.mpfcordoba.gob.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
 https://www.mre.gov.py,www.mre.gov.py,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Microsoft (Azure),
 https://www.msdmanuals.com,www.msdmanuals.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
-https://www.mtggoldfish.com,www.mtggoldfish.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.mtggoldfish.com,www.mtggoldfish.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.muchaspropiedades.com.ar,www.muchaspropiedades.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.mueblesmaschicos.com,www.mueblesmaschicos.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.mundijuegos.com.ar,www.mundijuegos.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Google
+https://www.mundijuegos.com.ar,www.mundijuegos.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Google | Meta (propia)
 https://www.mundodonghua.com,www.mundodonghua.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
 https://www.mundotecnico.info,www.mundotecnico.info,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.mureka.ai,www.mureka.ai,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Otra
@@ -7203,9 +7203,9 @@ https://www.nbastore.com.ar,www.nbastore.com.ar,10000,Top 10.000,Otros,Amazon Cl
 https://www.ncbi.nlm.nih.gov,www.ncbi.nlm.nih.gov,10000,Top 10.000,Otros,Google,Google,Amazon (AWS) | Google,
 https://www.necy.com.ar,www.necy.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.neobux.com,www.neobux.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.neuquen.edu.ar,www.neuquen.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Otra
+https://www.neuquen.edu.ar,www.neuquen.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,Meta (propia)
 https://www.neuqueninforma.gob.ar,www.neuqueninforma.gob.ar,10000,Top 10.000,Estado,Cloudflare,Cloudflare,Cloudflare,
-https://www.newsdigitales.com,www.newsdigitales.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.newsdigitales.com,www.newsdigitales.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.ngfederal.ar,www.ngfederal.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.nicequest.com,www.nicequest.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.nicocalzados.com.ar,www.nicocalzados.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -7245,7 +7245,7 @@ https://www.opera.com,www.opera.com,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.oregonhotel.com.ar,www.oregonhotel.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.oreirolove.com.ar,www.oreirolove.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.orgasmatrix.com,www.orgasmatrix.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.orientacionandujar.es,www.orientacionandujar.es,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.orientacionandujar.es,www.orientacionandujar.es,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.orlandisa.com,www.orlandisa.com,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.oser.gob.ar,www.oser.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare | Google,
 https://www.oslpasteur.com.ar,www.oslpasteur.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
@@ -7306,7 +7306,7 @@ https://www.pointercrate.com,www.pointercrate.com,10000,Top 10.000,Otros,Cloudfl
 https://www.policiadelaciudad.gob.ar,www.policiadelaciudad.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
 https://www.policuyo.com.ar,www.policuyo.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.pomu.com,www.pomu.com,10000,Top 10.000,Otros,Fastly,Fastly,Cloudflare | Fastly,
-https://www.portalmayorista.com,www.portalmayorista.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://www.portalmayorista.com,www.portalmayorista.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://www.portfoliopersonal.com,www.portfoliopersonal.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.poseidonhd2.co,www.poseidonhd2.co,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.ppsspp.org,www.ppsspp.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -7341,11 +7341,11 @@ https://www.racingclub.com.ar,www.racingclub.com.ar,10000,Top 10.000,Otros,Cloud
 https://www.radio10.com.ar,www.radio10.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.radiocanal.com.ar,www.radiocanal.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.radionacional.com.ar,www.radionacional.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
-https://www.radiopopularsanluis.com.ar,www.radiopopularsanluis.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.radiopopularsanluis.com.ar,www.radiopopularsanluis.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.radiosapienza.com.ar,www.radiosapienza.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.radiovale.fm,www.radiovale.fm,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.rafaela.gob.ar,www.rafaela.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,
-https://www.rafaelanoticias.com,www.rafaelanoticias.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.rafaelanoticias.com,www.rafaelanoticias.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.raffintimates.com.ar,www.raffintimates.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.rain-alarm.com,www.rain-alarm.com,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.ral-kar.com.ar,www.ral-kar.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
@@ -7361,10 +7361,10 @@ https://www.redlenic.uno,www.redlenic.uno,10000,Top 10.000,Otros,,Sin CDN detect
 https://www.redsportonline.com.ar,www.redsportonline.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.reloca.com.ar,www.reloca.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.reproduccionasistida.org,www.reproduccionasistida.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.repuestos-noroeste.com.ar,www.repuestos-noroeste.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.repuestos-noroeste.com.ar,www.repuestos-noroeste.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.respaldar.com.ar,www.respaldar.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.resultadosonline.ar,www.resultadosonline.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
-https://www.retrogames.cc,www.retrogames.cc,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Otra
+https://www.resultadosonline.ar,www.resultadosonline.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
+https://www.retrogames.cc,www.retrogames.cc,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,Meta (propia)
 https://www.reuters.com,www.reuters.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.reverpass.com,www.reverpass.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.revistaanfibia.com,www.revistaanfibia.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -7393,7 +7393,7 @@ https://www.ruminastore.com.ar,www.ruminastore.com.ar,10000,Top 10.000,Otros,Clo
 https://www.runandbike.com.ar,www.runandbike.com.ar,10000,Top 10.000,Otros,,Microsoft (Azure),Microsoft (Azure),
 https://www.rus.com.ar,www.rus.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.ryuugames.com,www.ryuugames.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.saavedraonline.com.ar,www.saavedraonline.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
+https://www.saavedraonline.com.ar,www.saavedraonline.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
 https://www.sabadogol.com.ar,www.sabadogol.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.sabrina.com.ar,www.sabrina.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.sac.org.ar,www.sac.org.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
@@ -7494,7 +7494,7 @@ https://www.tecnoprices.com,www.tecnoprices.com,10000,Top 10.000,Otros,,Cloudfla
 https://www.tedbodin.com,www.tedbodin.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.telasargentinas.com,www.telasargentinas.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.telasxmetro.com,www.telasxmetro.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
-https://www.telebajocero.com,www.telebajocero.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.telebajocero.com,www.telebajocero.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.telecentro.com.ar,www.telecentro.com.ar,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.telecentroplay.com.ar,www.telecentroplay.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.telemundo.com,www.telemundo.com,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
@@ -7542,8 +7542,8 @@ https://www.todoenmuebles.com.ar,www.todoenmuebles.com.ar,10000,Top 10.000,Otros
 https://www.todoliso.com.ar,www.todoliso.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.todomayoristaargentina.com,www.todomayoristaargentina.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.todoparachebar.com.ar,www.todoparachebar.com.ar,10000,Top 10.000,Otros,Fastly,Fastly,Fastly,
-https://www.todopeluquerias.com.ar,www.todopeluquerias.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Otra
-https://www.todotango.com,www.todotango.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Otra
+https://www.todopeluquerias.com.ar,www.todopeluquerias.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,Meta (propia)
+https://www.todotango.com,www.todotango.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),Meta (propia)
 https://www.todotusor.com.ar,www.todotusor.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.toluna.com,www.toluna.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.tomy.com.ar,www.tomy.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
@@ -7556,7 +7556,7 @@ https://www.totosceramicos.com.ar,www.totosceramicos.com.ar,10000,Top 10.000,Otr
 https://www.tramitesonline.org.ar,www.tramitesonline.org.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,
 https://www.tramontina.com.ar,www.tramontina.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.transportesargentinos.com.ar,www.transportesargentinos.com.ar,10000,Top 10.000,Otros,Google,Google,Google,
-https://www.trapitos.com.ar,www.trapitos.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Otra
+https://www.trapitos.com.ar,www.trapitos.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,Meta (propia)
 https://www.travistrend.com.ar,www.travistrend.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Google,
 https://www.trensanmartin.com.ar,www.trensanmartin.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
 https://www.tresdefebrero.gov.ar,www.tresdefebrero.gov.ar,10000,Top 10.000,Estado,,Sin CDN detectado,,
@@ -7589,7 +7589,7 @@ https://www.ultimahora.com,www.ultimahora.com,10000,Top 10.000,Otros,Amazon Clou
 https://www.umaza.edu.ar,www.umaza.edu.ar,10000,Top 10.000,Educación,,Sin CDN detectado,,
 https://www.un.org,www.un.org,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.uncomo.com,www.uncomo.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.ungs.edu.ar,www.ungs.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Otra
+https://www.ungs.edu.ar,www.ungs.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare,Meta (propia)
 https://www.unibus.com.ar,www.unibus.com.ar,10000,Top 10.000,Otros,,Amazon (AWS),Amazon (AWS),
 https://www.unicef.org,www.unicef.org,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS) | Microsoft (Azure),
 https://www.unimoron.edu.ar,www.unimoron.edu.ar,10000,Top 10.000,Educación,,Otra,Otra,
@@ -7607,19 +7607,19 @@ https://www.untref.edu.ar,www.untref.edu.ar,10000,Top 10.000,Educación,,Cloudfl
 https://www.uocra.org,www.uocra.org,10000,Top 10.000,Otros,,Otra,Otra,
 https://www.uol.com.br,www.uol.com.br,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Cloudflare | Amazon (AWS),
 https://www.uomax.com.ar,www.uomax.com.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.upcnsfe.com.ar,www.upcnsfe.com.ar,10000,Top 10.000,Otros,,Otra,Otra,Otra
+https://www.upcnsfe.com.ar,www.upcnsfe.com.ar,10000,Top 10.000,Otros,,Otra,Otra,Meta (propia)
 https://www.ups.com,www.ups.com,10000,Top 10.000,Otros,Akamai,Akamai,Amazon (AWS) | Akamai,
 https://www.usaimport.com.ar,www.usaimport.com.ar,10000,Top 10.000,Otros,Vercel,Vercel,Vercel,
 https://www.usal.edu.ar,www.usal.edu.ar,10000,Top 10.000,Educación,,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.utacchultratrail.com,www.utacchultratrail.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.utedyc.org.ar,www.utedyc.org.ar,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,
-https://www.vacunashnrg.com.ar,www.vacunashnrg.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Otra
+https://www.vacunashnrg.com.ar,www.vacunashnrg.com.ar,10000,Top 10.000,Otros,,Sin CDN detectado,,Meta (propia)
 https://www.vademecum.es,www.vademecum.es,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Google,
 https://www.vallejocalzados.com.ar,www.vallejocalzados.com.ar,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),Google
 https://www.valtermotor.com.ar,www.valtermotor.com.ar,10000,Top 10.000,Otros,,Google,Google,
 https://www.vandalia.com.ar,www.vandalia.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.vaqueria.com.ar,www.vaqueria.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
-https://www.varela.gob.ar,www.varela.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,Otra
+https://www.varela.gob.ar,www.varela.gob.ar,10000,Top 10.000,Estado,,Cloudflare,Cloudflare,Meta (propia)
 https://www.veed.io,www.veed.io,10000,Top 10.000,Otros,"Cloudflare, Google",Cloudflare,Cloudflare | Google,
 https://www.veniracristo.org,www.veniracristo.org,10000,Top 10.000,Otros,Akamai,Akamai,Cloudflare | Akamai,
 https://www.verte.tv,www.verte.tv,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
@@ -7651,7 +7651,7 @@ https://www.writing.com,www.writing.com,10000,Top 10.000,Otros,,Sin CDN detectad
 https://www.wtatennis.com,www.wtatennis.com,10000,Top 10.000,Otros,Amazon CloudFront,Amazon (AWS),Amazon (AWS),
 https://www.wuxiabox.com,www.wuxiabox.com,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
 https://www.xbanxia.cc,www.xbanxia.cc,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare,
-https://www.xn--diariocaada-8db.com,www.xn--diariocaada-8db.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Otra
+https://www.xn--diariocaada-8db.com,www.xn--diariocaada-8db.com,10000,Top 10.000,Otros,,Cloudflare,Cloudflare,Meta (propia)
 https://www.xn--lacaa-rta.com.ar,www.xn--lacaa-rta.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.xn--sunio-rta.com.ar,www.xn--sunio-rta.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),
 https://www.yagmour.com.ar,www.yagmour.com.ar,10000,Top 10.000,Otros,Cloudflare,Cloudflare,Cloudflare | Amazon (AWS),

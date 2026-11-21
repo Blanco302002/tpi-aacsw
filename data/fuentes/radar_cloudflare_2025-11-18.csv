@@ -1,4 +1,4 @@
-fuente,timestamp_utc,valor,valor_semana_anterior,dif_pct
+﻿fuente,timestamp_utc,valor,valor_semana_anterior,dif_pct
 http,2025-11-17T12:00:00Z,0.588601,0.596667,-1.4
 http,2025-11-17T12:15:00Z,0.612551,0.618601,-1.0
 http,2025-11-17T12:30:00Z,0.65856,0.651276,1.1

@@ -1,4 +1,4 @@
-evento,fuente,inicio_ar,fin_ar,dif_pct_6h_antes,dif_pct_promedio_caida,dif_pct_peor_momento,peor_momento_ar
+﻿evento,fuente,inicio_ar,fin_ar,dif_pct_6h_antes,dif_pct_promedio_caida,dif_pct_peor_momento,peor_momento_ar
 cloudflare_2025-11-18,http,18/11 08:20,18/11 14:06,1.5,-42.7,-93.7,18/11 11:00
 cloudflare_2025-11-18,netflows,18/11 08:20,18/11 14:06,9.8,-0.5,-19.8,18/11 10:45
 aws_2025-10-20,http,20/10 03:48,20/10 19:00,-5.4,-0.4,-7.1,20/10 04:30

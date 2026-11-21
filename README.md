@@ -1,26 +1,44 @@
 # TPI DATA4QUALITY — ¿Qué se apaga si se cae una sola empresa?
 
 Pipeline de datos para el TPI de Aspectos Avanzados de Calidad de Software (UTN FRRe).
+El resumen de hallazgos está en [`docs/informe_avance.md`](docs/informe_avance.md).
 
-## Qué hace cada archivo
+## Dónde está cada cosa
 
-| Paso | Archivo | Dónde se corre | Qué produce |
+```
+data/
+  fuentes/      lo que se bajó o se armó a mano, tal cual
+  resultados/   lo que generan los scripts (esto es lo que usa la pieza)
+src/            scripts Python (se corren en orden)
+sql/            consulta de BigQuery
+docs/           informe de avance
+```
+
+**Los dos archivos más importantes para la pieza:**
+- `data/resultados/servicios.csv` (y `.json`): **50 servicios conocidos en Argentina** (apps y webs), de qué empresa depende cada uno y si se cayó en cada caída.
+- `data/resultados/dependencias.json`: los ~7.700 sitios más usados desde Argentina y su empresa.
+
+## Qué hace cada script
+
+| Paso | Script | Qué hace | Qué genera |
 |---|---|---|---|
-| 1 | `sql/01_dependencias_top_ar.sql` | Consola de BigQuery (navegador) | `data/dependencias_top_ar.csv`: sitios más usados desde Argentina + su CDN e infraestructura |
-| 2 | `src/02_radar_argentina.py` | Tu compu | Tráfico de Argentina durante las caídas de Cloudflare, AWS y CrowdStrike + cortes registrados |
-| 3 | `src/05_radar_ranking_ar.py` | Tu compu | Top 100 **ordenado** de dominios en Argentina (CrUX solo da tramos) |
-| 4 | `src/03_etl_dependencias.py` | Tu compu | Limpieza + % de sitios por empresa + `dependencias.json` para la pieza + top 100 para revisar |
-| 5 | `src/04_sitios_chaco.py` | Tu compu (opcional) | Lo mismo para sitios locales o del top 100 sin datos |
-| 6 | `src/06_resumen_caidas.py` | Tu compu | `data/resumen_caidas.csv`: cuánto cayó el tráfico de Argentina en cada caída |
-| — | `data/trends/` | A mano en Google Trends | Qué buscó la gente en cada caída (ver `data/trends/LEEME.md`) |
+| 1 | `sql/01_dependencias_top_ar.sql` | En BigQuery: sitios más usados desde Argentina + su CDN y su nube | `fuentes/dependencias_top_ar.csv` |
+| 2 | `src/02_radar_argentina.py` | Le pide a Cloudflare Radar el tráfico de Argentina en las 3 caídas | `fuentes/radar_<caída>.csv`, `fuentes/radar_outages_ar.csv`, `fuentes/radar_anotaciones.csv` |
+| 3 | `src/03_etl_dependencias.py` | Limpia el CSV de BigQuery y calcula de qué empresa depende cada sitio | `resultados/sitios_limpios.csv`, `resultados/resumen_por_empresa.csv`, `resultados/dependencias.json` |
+| 4 | `src/04_sitios_chaco.py` | (Opcional) Pregunta al DNS de qué empresa es el servidor de sitios que no están en BigQuery | `resultados/sitios_chaco_resultado.csv` |
+| 5 | `src/05_radar_ranking_ar.py` | Top 100 de dominios de Radar (solo referencia: la mayoría son dominios técnicos) | `fuentes/radar_top100_ar.csv` |
+| 6 | `src/06_resumen_caidas.py` | Resume cuánto cayó el tráfico argentino en cada caída | `resultados/resumen_caidas.csv` |
+| 7 | `src/07_servicios.py` | Para los 50 servicios de `fuentes/servicios_ar.csv`: de qué empresa depende cada uno (DNS) y si se cayó (noticias) | `resultados/servicios.csv`, `resultados/servicios.json` |
+| — | A mano | Google Trends: qué buscó la gente en cada caída | `fuentes/trends/` (ver su `LEEME.md`) |
+| — | A mano | Revisión del top 100 de Radar: 60 de 100 son dominios técnicos | `fuentes/top100_revision_manual.csv` |
 
 `src/comun.py` no se corre solo: tiene la tabla de empresas y las rutas que usan los demás.
 
 ## Seguridad: qué hace y qué no hace cada script
 
 - **Ningún script escribe en sistemas ajenos.** Solo hacen consultas de lectura (GET) a la API pública de Cloudflare Radar y consultas DNS públicas, y guardan archivos en `data/`.
-- `03` no usa internet: solo lee y escribe CSV/JSON.
-- `04` hace lo mismo que el navegador al abrir un sitio (pregunta el DNS). No escanea puertos ni descarga páginas.
+- `03` y `06` no usan internet: solo leen y escriben CSV/JSON.
+- `04` y `07` hacen lo mismo que el navegador al abrir un sitio (preguntan el DNS). No escanean puertos ni descargan páginas.
 - El token de Cloudflare se lee del archivo `.env`, que está en `.gitignore` y **no se sube** al repo.
 - Dependencias: solo `pandas`, `requests` y `dnspython` (paquetes muy usados, de PyPI).
 
@@ -36,7 +54,7 @@ pip install -r requirements.txt
 2. Creá un proyecto (ej. `tpi-data4quality`). El *sandbox* es gratis y no pide tarjeta: si una consulta superara el límite, falla, no cobra.
 3. Pegá el contenido de `sql/01_dependencias_top_ar.sql`.
 4. **Antes de ejecutar**, mirá el estimado de bytes arriba a la derecha.
-5. Ejecutá → *Guardar resultados* → *CSV (archivo local)* → guardalo como `data/dependencias_top_ar.csv`.
+5. Ejecutá → *Guardar resultados* → *CSV (archivo local)* → guardalo como `data/fuentes/dependencias_top_ar.csv`.
 
 No hace falta descargar HTTP Archive: la tabla completa pesa petabytes, pero BigQuery la procesa del lado de Google y vos te bajás solo el resultado (unos pocos MB).
 
@@ -45,36 +63,24 @@ No hace falta descargar HTTP Archive: la tabla completa pesa petabytes, pero Big
 2. *My Profile → API Tokens → Create Token → Custom token* con **un solo permiso: Radar → Read**. Nada más.
 3. Copiá `.env.example` como `.env` y pegá el token ahí (el `.env` no se sube).
 
-### 3. Radar
+### 3. Scripts, en orden
 ```powershell
 python src/02_radar_argentina.py
 ```
 ```powershell
-python src/05_radar_ranking_ar.py
-```
-
-### 4. ETL
-```powershell
 python src/03_etl_dependencias.py
 ```
-Abrí `data/top100_revision.csv` y completá la columna `revisado_a_mano`.
-
-### 5. (Opcional) Sitios de Chaco o del top 100 sin datos
-Completá `data/sitios_chaco.csv` con los dominios reales (verificalos en el navegador):
-```powershell
-python src/04_sitios_chaco.py
-```
-```powershell
-python src/04_sitios_chaco.py data/top100_sin_datos.csv
-```
-
-### 6. Resumen de las caídas
 ```powershell
 python src/06_resumen_caidas.py
 ```
+```powershell
+python src/07_servicios.py
+```
+Opcionales: `src/04_sitios_chaco.py` (sitios de Chaco) y `src/05_radar_ranking_ar.py` (top 100 de Radar).
 
-### Complemento manual para la perspectiva de Uso
-Google Trends (https://trends.google.com), región Argentina, en las fechas de cada caída: búsquedas como "no anda", "caída", "Cloudflare", "WhatsApp no funciona". Se descarga como CSV desde la misma página. Muestra mejor que Radar qué vivió la gente.
+### Para sumar o sacar servicios
+Editá `data/fuentes/servicios_ar.csv` (una fila por servicio, dominios separados por espacio) y volvé a correr `07`.
+Las columnas `afectado_<caída>` van con una fuente (link) en `fuente_<caída>`.
 
 ## Transformaciones (para la ficha de evidencia)
 1. Se toman los orígenes del tramo top 10.000 de CrUX para Argentina (octubre 2026).
@@ -82,25 +88,30 @@ Google Trends (https://trends.google.com), región Argentina, en las fechas de c
 3. Cada proveedor detectado (CDN, tecnología) se traduce a su empresa madre con la tabla de `src/comun.py`.
 4. Se separan dependencias **duras** (CDN, hosting, nube, proxy: si se caen, el sitio no carga) y **blandas** (login y pagos de terceros: falla una función).
 5. La empresa principal de un sitio es la de su CDN; si no hay CDN, la primera dependencia dura conocida.
-6. El rubro se asigna con patrones sobre el dominio (heurística, se revisa a mano en el top 100).
+6. El rubro se asigna con patrones sobre el dominio (heurística).
 7. Radar: los valores son normalizados entre 0 y 1 dentro de cada serie, no cantidades. Se pide una sola serie continua desde una semana antes del evento, y cada momento se compara con la misma hora de la semana anterior (`dif_pct`). Pedir evento y control como dos series separadas da escalas distintas: se probó y se descartó.
 8. Ventanas de cada caída (en `src/06_resumen_caidas.py`): horarios de inicio y fin según cada postmortem.
-9. Top 100 de Radar: se cruza con HTTP Archive por dominio (`dominio` o `www.dominio`). Los que no cruzan se resuelven por DNS con el script 04 (dueño de la red de la IP).
+9. **Los 50 servicios** (`fuentes/servicios_ar.csv`) son una lista curada: conocidos en Argentina, mezcla de apps y webs, nacionales, globales y locales (Chaco, provincia de Buenos Aires). Se armó así porque el top 100 de Radar resultó mayormente técnico (revisión a mano: 60 de 100).
+10. Para cada servicio, la empresa se obtiene en este orden: el CNAME del dominio (delata la CDN), lo que detectó HTTP Archive (si la web está en el top) y el dueño de la red de la IP (Team Cymru). La empresa principal es la primera del primer dominio.
+11. "¿Se cayó?" sale de noticias y postmortems, con tres valores: **confirmado** (comunicado de la empresa o error observado por el medio), **reportado en medios** (listas de notas, a menudo basadas en quejas de usuarios) y **no reportado**.
 
 ## Licencias y citas
 - **Chrome UX Report** — Google. Dataset público en BigQuery.
 - **HTTP Archive** — dataset público en BigQuery; detección de tecnologías con Wappalyzer.
 - **Cloudflare Radar** — datos de la API bajo CC BY-NC 4.0 (uso no comercial, citar la fuente).
+- **Team Cymru** — servicio público de IP → ASN por DNS.
+- Las noticias usadas para "¿se cayó?" están linkeadas fila por fila en `servicios_ar.csv`.
 
 ## Limitaciones a declarar
-- Mide **sitios web**, no apps móviles.
+- **El DNS de los 50 servicios se consultó hoy (ver `fecha_consulta_dns`), no el día de cada caída.** Un servicio pudo cambiar de proveedor en el medio. Por eso "¿se cayó?" se apoya en noticias y postmortems, no en el DNS.
+- El DNS muestra el servidor **público** de cada servicio (su "puerta de entrada"), no su infraestructura interna: una app puede depender de otras empresas por dentro (login, anti-bots, pagos) sin que se vea.
+- "No reportado" significa que no se encontró una fuente, no que el servicio haya andado bien.
+- Las listas de "afectados" de los medios mezclan fallas reales con quejas de usuarios: hay servicios reportados en la caída de Cloudflare que, según el DNS, no dependen de Cloudflare.
+- Los sitios del top 10.000 son **webs**; las apps solo están en la lista de 50 servicios.
 - CrUX solo cuenta usuarios de Chrome que comparten estadísticas, y su ranking es por tramos.
-- El top 100 de Radar se basa en consultas DNS a 1.1.1.1: es otra población, por eso se usa solo para ordenar y revisar.
-- HTTP Archive rastrea desde EE. UU. y analiza solo la home de cada sitio.
-- La detección de CDN y tecnologías (Wappalyzer) no es perfecta.
+- HTTP Archive rastrea desde EE. UU. y analiza solo la home de cada sitio. La detección de tecnologías (Wappalyzer) no es perfecta.
 - Cada sitio pesa lo mismo en los porcentajes, sea Google o un sitio chico (por eso se informa también el top 1.000 aparte).
-- Que un sitio use una CDN no significa que se caiga entero si esa CDN cae: es una *dependencia*, no una certeza de caída. Los postmortems ayudan a calibrar esto.
+- Que un sitio use una CDN no significa que se caiga entero si esa CDN cae: es una *dependencia*, no una certeza de caída.
 - Radar mide tráfico que pasa por Cloudflare: durante una caída la gente reintenta, así que el tráfico puede no bajar.
-- En la caída de Cloudflare, el propio Radar marca que su medición estuvo afectada entre 11:48 y 14:42 UTC (`data/radar_anotaciones.csv`). La baja del 94 % mezcla tráfico que no llegó y tráfico que no se pudo registrar.
-- El top 100 de Radar incluye dominios técnicos (`googleapis.com`, `fbcdn.net`, `cloudfront.net`) que no son sitios que la gente visita: se usan como contexto, no como sitios.
+- En la caída de Cloudflare, el propio Radar marca que su medición estuvo afectada entre 11:48 y 14:42 UTC (`fuentes/radar_anotaciones.csv`). La baja del 94 % mezcla tráfico que no llegó y tráfico que no se pudo registrar.
 - Se excluyeron del análisis los sitios para adultos (cantidad en `dependencias.json → metadatos`).

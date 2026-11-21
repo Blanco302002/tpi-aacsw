@@ -21,6 +21,14 @@ for _flujo in (sys.stdout, sys.stderr):
 # Rutas absolutas: los scripts andan aunque los corras desde otra carpeta.
 RAIZ = Path(__file__).resolve().parent.parent
 DATOS = RAIZ / "data"
+FUENTES = DATOS / "fuentes"        # lo que se bajó o se armó a mano, tal cual
+RESULTADOS = DATOS / "resultados"  # lo que generan los scripts
+for _carpeta in (FUENTES, RESULTADOS):
+    _carpeta.mkdir(parents=True, exist_ok=True)
+
+# "utf-8-sig" agrega una marca al principio del CSV para que Excel
+# muestre bien los acentos (si no, "mensajería" aparece como "mensajerÃ­a").
+CSV_ENC = "utf-8-sig"
 
 
 def cargar_env():
@@ -57,6 +65,7 @@ EMPRESAS = [
     (r"edgecast|edgio|verizon",                      "Edgio"),
     (r"bunny",                                       "Bunny"),
     (r"oracle",                                      "Oracle"),
+    (r"facebook|fbcdn|meta platforms|whatsapp",      "Meta (propia)"),
 ]
 
 

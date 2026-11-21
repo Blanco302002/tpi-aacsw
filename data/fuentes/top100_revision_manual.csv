@@ -1,0 +1,101 @@
+﻿puesto,dominio,host,rubro,principal,duras,blandas,revisado_a_mano
+1,google.com,www.google.com,Buscadores y consulta,Google,Google,,está bien
+2,googleapis.com,,Otros,SIN DATOS,,,tecnico
+3,gstatic.com,,Otros,SIN DATOS,,,tecnico
+4,facebook.com,,Redes y mensajería,SIN DATOS,,,gente visita
+5,whatsapp.net,,Redes y mensajería,SIN DATOS,,,"en realidad es .com, .net me redirige a .com, pero estaría bien, creo que más abajo leí un whatsapp.com tmb"
+6,fbcdn.net,,Otros,SIN DATOS,,,tecnico
+7,instagram.com,www.instagram.com,Redes y mensajería,Otra,Otra,,gente visita
+8,cloudflare.com,www.cloudflare.com,Infraestructura,Cloudflare,Cloudflare,,gente visita
+9,apple.com,www.apple.com,es apple… ,Akamai,Akamai,,gente visita
+10,microsoft.com,www.microsoft.com,Otros,Akamai,Cloudflare | Akamai | Microsoft (Azure),,gente visita
+11,openai.com,openai.com,Otros,Cloudflare,Cloudflare | Microsoft (Azure) | Vercel,Otra,"no se que tanto, más chatGPT visita la gente creo yo"
+12,cdninstagram.com,,Otros,SIN DATOS,,,tecnico
+13,chatgpt.com,chatgpt.com,Otros,Cloudflare,Cloudflare,,gente visita
+14,tiktokv.com,,Otros,SIN DATOS,,,tecnico
+15,cloudfront.net,,Otros,SIN DATOS,,,"tecnico, tiene .net y nada que ver"
+16,akamai.net,,Otros,SIN DATOS,,,"tecnico, tiene .net y nada que ver"
+17,googlevideo.com,,Otros,SIN DATOS,,,tecnico
+18,mercadolibre.com,www.mercadolibre.com,Compras y delivery,Amazon (AWS),Amazon (AWS),,gente visita
+19,googlesyndication.com,,Otros,SIN DATOS,,,tecnico
+20,tiktokcdn.com,,Otros,SIN DATOS,,,tecnico
+21,doubleclick.net,,Otros,SIN DATOS,,,"tecnico, tiene .net y nada que ver"
+22,withgoogle.com,,Otros,SIN DATOS,,,tecnico 
+23,mercadolibre.com.ar,www.mercadolibre.com.ar,Compras y delivery,Amazon (AWS),Amazon (AWS),,está bien 
+24,youtube.com,,Entretenimiento,SIN DATOS,,,gente visita
+25,mlstatic.com,,Otros,SIN DATOS,,,tecnico
+26,whatsapp.com,www.whatsapp.com,Redes y mensajería,Otra,Otra,,está bien 
+27,akadns.net,,Otros,SIN DATOS,,,tecnico
+28,google.com.ar,,Buscadores y consulta,SIN DATOS,,,"mmm no se, puede ser"
+29,icanhazip.com,,Otros,SIN DATOS,,,tecnico
+30,amazonaws.com,,Otros,SIN DATOS,,,tecnico
+31,ipify.org,,Otros,SIN DATOS,,,tecnico
+32,akamaiedge.net,,Otros,SIN DATOS,,,tecnico
+33,cloudflare-dns.com,,Otros,SIN DATOS,,,tecnico
+34,geoipcheck.com,,Otros,SIN DATOS,,,tecnico
+35,blogspot.com,,Otros,SIN DATOS,,,me redirige a blogger.com creería que está bien
+36,brave.com,brave.com,Otros,Amazon (AWS),Cloudflare | Amazon (AWS),Otra,está bien 
+37,adtrafficquality.google,,Otros,SIN DATOS,,,tecnico
+38,googleusercontent.com,,Otros,SIN DATOS,,,tecnico
+39,aaplimg.com,,Otros,SIN DATOS,,,tecnico
+40,spotify.com,,Entretenimiento,SIN DATOS,,,está bien 
+41,gvt2.com,,Otros,SIN DATOS,,,tecnico
+42,prodregistryv2.org,,Otros,SIN DATOS,,,tecnico
+43,netflix.com,www.netflix.com,Entretenimiento,Amazon (AWS),Amazon (AWS),,está bien 
+44,amazon.com,www.amazon.com,Compras y delivery,Amazon (AWS),Amazon (AWS),Otra,está bien 
+45,adobe.com,www.adobe.com,Otros,Akamai,Cloudflare | Akamai,Otra,está bien 
+46,bing.com,www.bing.com,Buscadores y consulta,Akamai,Akamai | Microsoft (Azure),,está bien 
+47,live.com,,Otros,SIN DATOS,,,tecnico
+48,clinicaltrialrecruiting.com,,Otros,SIN DATOS,,,tecnico
+49,featureassets.org,,Otros,SIN DATOS,,,tecnico
+50,ip-api.com,,Otros,SIN DATOS,,,tecnico
+51,x.com,x.com,Redes y mensajería,Cloudflare,Cloudflare | Amazon (AWS),Otra,está bien 
+52,2mdn.net,,Otros,SIN DATOS,,,tecnico
+53,live-video.net,,Otros,SIN DATOS,,,tecnico
+54,pinterest.com,,Otros,SIN DATOS,,,está bien 
+55,ntp.org,,Otros,SIN DATOS,,,que es esto
+56,apple-dns.net,,Otros,SIN DATOS,,,tecnico
+57,ttvnw.net,,Otros,SIN DATOS,,,tecnico
+58,onelink.me,,Otros,SIN DATOS,,,tecnico
+59,ytimg.com,,Otros,SIN DATOS,,,tecnico
+60,roblox.com,www.roblox.com,Otros,Amazon (AWS),Amazon (AWS),Otra,está bien 
+61,scdn.co,,Otros,SIN DATOS,,,tecnico
+62,mercadopago.com,,Bancos y pagos,SIN DATOS,,,"está bien aunque raro que se entre desde la web, si es, es desde la app."
+63,appsflyersdk.com,,Otros,SIN DATOS,,,tecnico
+64,fast.com,fast.com,Otros,Akamai,Amazon (AWS) | Akamai,,está bien
+65,meli.com,,Otros,SIN DATOS,,,está bien
+66,oxylabs.io,,Otros,SIN DATOS,,,tecnico
+67,fastly-edge.com,,Otros,SIN DATOS,,,tecnico
+68,spotifycdn.com,,Otros,SIN DATOS,,,tecnico
+69,lencr.org,,Otros,SIN DATOS,,,tecnico
+70,apiserp.org,,Otros,SIN DATOS,,,tecnico
+71,epicgames.com,,Otros,SIN DATOS,,,está bien
+72,avcdn.net,,Otros,SIN DATOS,,,tecnico
+73,windowsupdate.com,,Otros,SIN DATOS,,,tecnico
+74,nel.goog,,Otros,SIN DATOS,,,tecnico
+75,akamaized.net,,Otros,SIN DATOS,,,tecnico
+76,scorecardresearch.com,,Otros,SIN DATOS,,,tecnico
+77,icloud.com,www.icloud.com,Otros,Akamai,Akamai,Otra,está bien
+78,mercadoclics.com,,Otros,SIN DATOS,,,tecnico
+79,beyondwickedmapping.org,,Otros,SIN DATOS,,,tecnico
+80,googletagservices.com,,Otros,SIN DATOS,,,tecnico
+81,twimg.com,,Otros,SIN DATOS,,,que es esto
+82,meta.com,www.meta.com,Otros,Otra,Otra,Otra,está bien
+83,awswaf.com,,Otros,SIN DATOS,,,que es esto
+84,googletagmanager.com,,Otros,SIN DATOS,,,"que es esto, tecnico"
+85,opera.com,www.opera.com,Otros,Sin CDN detectado,,,está bien
+86,ttdns2.com,,Otros,SIN DATOS,,,"que es esto, tecnico"
+87,githubusercontent.com,,Otros,SIN DATOS,,,tecnico
+88,office.com,,Otros,SIN DATOS,,,está bien
+89,samsungcloud.com,,Otros,SIN DATOS,,,podría ser
+90,avast.com,,Otros,SIN DATOS,,,está bien
+91,shopifysvc.com,,Otros,SIN DATOS,,,tecnico
+92,cloudflareinsights.com,,Otros,SIN DATOS,,,tecnico
+93,yahoo.com,,Buscadores y consulta,SIN DATOS,,,está bien
+94,jsdelivr.net,,Otros,SIN DATOS,,,tecnico
+95,byteoversea.net,,Otros,SIN DATOS,,,tecnico
+96,steamcommunity.com,steamcommunity.com,Otros,Akamai,Akamai,,puede ser
+97,tiktok.com,www.tiktok.com,Redes y mensajería,Akamai,Amazon (AWS) | Akamai,Google,está bien
+98,app-measurement.com,,Otros,SIN DATOS,,,tecnico
+99,appsflyer.com,,Otros,SIN DATOS,,,tecnico
+100,epicgames.dev,,Otros,SIN DATOS,,,tecnico

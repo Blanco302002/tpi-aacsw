@@ -1,4 +1,4 @@
-fuente,timestamp_utc,valor,valor_semana_anterior,dif_pct
+﻿fuente,timestamp_utc,valor,valor_semana_anterior,dif_pct
 http,2024-07-18T12:00:00Z,0.468983,0.499637,-6.1
 http,2024-07-18T12:15:00Z,0.492964,0.525137,-6.1
 http,2024-07-18T12:30:00Z,0.511396,0.550241,-7.1

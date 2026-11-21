@@ -7,7 +7,7 @@ Para cada caída y fuente (http, netflows) compara el tráfico durante la
 caída contra la misma hora de la semana anterior, y contra las horas
 previas (para saber si ese día ya venía raro).
 
-Salida: data/resumen_caidas.csv
+Salida: data/resultados/resumen_caidas.csv
 
 Uso:
     python src/06_resumen_caidas.py
@@ -15,7 +15,7 @@ Uso:
 
 import pandas as pd
 
-from comun import DATOS
+from comun import CSV_ENC, FUENTES, RESULTADOS
 
 # Ventanas de la caída en UTC (Argentina = UTC-3), según cada postmortem.
 #   Cloudflare: 11:20 empiezan los errores; 17:06 todo normal.
@@ -36,7 +36,7 @@ def hora_ar(ts):
 def main():
     filas = []
     for evento, (ini, fin) in CAIDAS.items():
-        ruta = DATOS / f"radar_{evento}.csv"
+        ruta = FUENTES / f"radar_{evento}.csv"
         if not ruta.exists():
             print(f"Falta {ruta.name}: corré primero 02_radar_argentina.py")
             continue
@@ -58,10 +58,10 @@ def main():
                 "peor_momento_ar": hora_ar(peor["ts"]),
             })
     res = pd.DataFrame(filas)
-    res.to_csv(DATOS / "resumen_caidas.csv", index=False)
+    res.to_csv(RESULTADOS / "resumen_caidas.csv", index=False, encoding=CSV_ENC)
     print("Tráfico de Argentina vs. misma hora de la semana anterior (%):\n")
     print(res.to_string(index=False))
-    print("\nOK data/resumen_caidas.csv")
+    print("\nOK data/resultados/resumen_caidas.csv")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,101 @@
+﻿puesto,dominio,categorias
+1,google.com,Search Engines
+2,googleapis.com,Information Technology | Content Servers
+3,facebook.com,Social Networks
+4,gstatic.com,Content Servers
+5,fbcdn.net,Content Servers
+6,whatsapp.net,Instant Messengers | Internet Phone & VOIP
+7,instagram.com,Social Networks
+8,cloudflare.com,Technology
+9,apple.com,Information Technology | Ecommerce | Technology
+10,cdninstagram.com,Content Servers
+11,microsoft.com,Information Technology | Business
+12,openai.com,Artificial Intelligence | Chat | Technology
+13,googlevideo.com,Search Engines | Video Streaming
+14,akamai.net,Content Servers
+15,tiktokv.com,Social Networks | Video Streaming
+16,chatgpt.com,Artificial Intelligence | Chat
+17,doubleclick.net,Trackers/Analytics | Advertisements
+18,cloudfront.net,Content Servers
+19,tiktokcdn.com,Content Servers | Social Networks
+20,googlesyndication.com,Trackers/Analytics | Search Engines | Advertisements
+21,mercadolibre.com,Auctions & Marketplaces
+22,youtube.com,Video Streaming
+23,whatsapp.com,Instant Messengers | Internet Phone & VOIP
+24,withgoogle.com,Search Engines
+25,mercadolibre.com.ar,Auctions & Marketplaces
+26,akadns.net,Content Servers
+27,mlstatic.com,Content Servers
+28,google.com.ar,Search Engines
+29,geoipcheck.com,Content Servers
+30,akamaiedge.net,Content Servers
+31,amazonaws.com,Technology
+32,cloudflare-dns.com,Content Servers
+33,ipify.org,Trackers/Analytics | Technology
+34,aaplimg.com,Information Technology | Content Servers | Technology
+35,googleusercontent.com,Content Servers
+36,brave.com,Shareware/Freeware
+37,blogspot.com,Personal Blogs
+38,gvt2.com,Content Servers
+39,icanhazip.com,Content Servers | Trackers/Analytics
+40,spotify.com,Audio Streaming
+41,prodregistryv2.org,Content Servers
+42,2mdn.net,Content Servers | Trackers/Analytics
+43,scdn.co,Content Servers
+44,netflix.com,Movies | Video Streaming
+45,bing.com,Search Engines
+46,pinterest.com,Photography | Social Networks
+47,featureassets.org,Content Servers | Trackers/Analytics
+48,roblox.com,Gaming | Safe for Kids
+49,x.com,Social Networks
+50,apple-dns.net,Content Servers
+51,appsflyersdk.com,Content Servers | Trackers/Analytics | APIs
+52,ytimg.com,Content Servers
+53,clinicaltrialrecruiting.com,Health & Fitness
+54,adobe.com,Technology
+55,spotifycdn.com,Content Servers
+56,adtrafficquality.google,Trackers/Analytics
+57,live.com,Technology | Webmail
+58,ntp.org,Technology | Government/Legal
+59,amazon.com,Shopping
+60,mercadopago.com,Personal Finance
+61,fast.com,Information Technology
+62,meta.com,Social Networks
+63,nel.goog,Content Servers
+64,live-video.net,News & Media
+65,avcdn.net,Content Servers
+66,oxylabs.io,Technology
+67,lencr.org,Information Technology
+68,meli.com,Music
+69,fastly-edge.com,Information Technology | Content Servers
+70,apiserp.org,Content Servers
+71,epicgames.com,Gaming | Ecommerce
+72,onelink.me,Business | Technology
+73,scorecardresearch.com,Business | Trackers/Analytics
+74,googletagmanager.com,Content Servers | Trackers/Analytics
+75,go-mpulse.net,Content Servers | Trackers/Analytics
+76,ip-api.com,Technology
+77,ttvnw.net,Video Streaming
+78,icloud.com,File Sharing | Information Technology | Content Servers
+79,yahoo.com,News & Media
+80,twimg.com,Content Servers
+81,windowsupdate.com,Information Technology | Business
+82,opera.com,Information Technology
+83,office.com,Business
+84,googletagservices.com,Content Servers | Trackers/Analytics
+85,ttdns2.com,Content Servers
+86,beyondwickedmapping.org,Content Servers | Trackers/Analytics
+87,akamaized.net,Content Servers
+88,app-measurement.com,Trackers/Analytics | APIs
+89,awswaf.com,Content Servers
+90,jsdelivr.net,Content Servers
+91,cloudflareinsights.com,Trackers/Analytics | Technology
+92,byteoversea.net,Content Servers
+93,avast.com,Technology
+94,tiktok.com,Social Networks | Video Streaming
+95,rbxcdn.com,Content Servers
+96,gvt1.com,Content Servers
+97,qualtrics.com,Business | Trackers/Analytics
+98,shopifysvc.com,Content Servers
+99,amazonvideo.com,Television | Movies | Video Streaming
+100,appsflyer.com,Business | Trackers/Analytics | Technology
