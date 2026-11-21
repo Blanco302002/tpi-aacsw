@@ -15,7 +15,7 @@ docs/           informe de avance
 ```
 
 **Los dos archivos más importantes para la pieza:**
-- `data/resultados/servicios.csv` (y `.json`): **50 servicios conocidos en Argentina** (apps y webs), de qué empresa depende cada uno y si se cayó en cada caída.
+- `data/resultados/servicios.csv` (y `.json`): **57 servicios conocidos en Argentina** (apps y webs), de qué empresa depende cada uno y si se cayó en cada caída.
 - `data/resultados/dependencias.json`: los ~7.700 sitios más usados desde Argentina y su empresa.
 
 ## Qué hace cada script
@@ -28,7 +28,8 @@ docs/           informe de avance
 | 4 | `src/04_sitios_chaco.py` | (Opcional) Pregunta al DNS de qué empresa es el servidor de sitios que no están en BigQuery | `resultados/sitios_chaco_resultado.csv` |
 | 5 | `src/05_radar_ranking_ar.py` | Top 100 de dominios de Radar (solo referencia: la mayoría son dominios técnicos) | `fuentes/radar_top100_ar.csv` |
 | 6 | `src/06_resumen_caidas.py` | Resume cuánto cayó el tráfico argentino en cada caída | `resultados/resumen_caidas.csv` |
-| 7 | `src/07_servicios.py` | Para los 50 servicios de `fuentes/servicios_ar.csv`: de qué empresa depende cada uno (DNS) y si se cayó (noticias) | `resultados/servicios.csv`, `resultados/servicios.json` |
+| 7 | `src/07_servicios.py` | Para los servicios de `fuentes/servicios_ar.csv`: de qué empresa depende cada uno (DNS) y si se cayó (noticias) | `resultados/servicios.csv`, `resultados/servicios.json` |
+| 8 | `sql/08_historial_y_global.sql` + `src/08_historial_y_global.py` | ¿Algún servicio cambió de proveedor después de una caída? ¿Argentina depende más de Cloudflare que el mundo? | `fuentes/historial_global.csv` → `resultados/historial_servicios.csv`, `resultados/comparacion_mundo.csv` |
 | — | A mano | Google Trends: qué buscó la gente en cada caída | `fuentes/trends/` (ver su `LEEME.md`) |
 | — | A mano | Revisión del top 100 de Radar: 60 de 100 son dominios técnicos | `fuentes/top100_revision_manual.csv` |
 
@@ -78,8 +79,17 @@ python src/07_servicios.py
 ```
 Opcionales: `src/04_sitios_chaco.py` (sitios de Chaco) y `src/05_radar_ranking_ar.py` (top 100 de Radar).
 
+### 4. Historial y comparación con el mundo
+1. En BigQuery, corré `sql/08_historial_y_global.sql` (mirá el estimado: unos 400 GB, entra en el TB gratis).
+2. Guardá el resultado como `data/fuentes/historial_global.csv`.
+3. Corré:
+```powershell
+python src/08_historial_y_global.py
+```
+
 ### Para sumar o sacar servicios
 Editá `data/fuentes/servicios_ar.csv` (una fila por servicio, dominios separados por espacio) y volvé a correr `07`.
+Si querés que el paso 8 incluya los nuevos dominios, hay que regenerar la lista de `sql/08_historial_y_global.sql`.
 Las columnas `afectado_<caída>` van con una fuente (link) en `fuente_<caída>`.
 
 ## Transformaciones (para la ficha de evidencia)
@@ -91,7 +101,7 @@ Las columnas `afectado_<caída>` van con una fuente (link) en `fuente_<caída>`.
 6. El rubro se asigna con patrones sobre el dominio (heurística).
 7. Radar: los valores son normalizados entre 0 y 1 dentro de cada serie, no cantidades. Se pide una sola serie continua desde una semana antes del evento, y cada momento se compara con la misma hora de la semana anterior (`dif_pct`). Pedir evento y control como dos series separadas da escalas distintas: se probó y se descartó.
 8. Ventanas de cada caída (en `src/06_resumen_caidas.py`): horarios de inicio y fin según cada postmortem.
-9. **Los 50 servicios** (`fuentes/servicios_ar.csv`) son una lista curada: conocidos en Argentina, mezcla de apps y webs, nacionales, globales y locales (Chaco, provincia de Buenos Aires). Se armó así porque el top 100 de Radar resultó mayormente técnico (revisión a mano: 60 de 100).
+9. **Los 57 servicios** (`fuentes/servicios_ar.csv`) son una lista curada: conocidos en Argentina, mezcla de apps y webs, nacionales, globales y locales (Chaco, provincia de Buenos Aires). Se armó así porque el top 100 de Radar resultó mayormente técnico (revisión a mano: 60 de 100).
 10. Para cada servicio, la empresa se obtiene en este orden: el CNAME del dominio (delata la CDN), lo que detectó HTTP Archive (si la web está en el top) y el dueño de la red de la IP (Team Cymru). La empresa principal es la primera del primer dominio.
 11. "¿Se cayó?" sale de noticias y postmortems, con tres valores: **confirmado** (comunicado de la empresa o error observado por el medio), **reportado en medios** (listas de notas, a menudo basadas en quejas de usuarios) y **no reportado**.
 
@@ -106,6 +116,8 @@ Las columnas `afectado_<caída>` van con una fuente (link) en `fuente_<caída>`.
 - **El DNS de los 50 servicios se consultó hoy (ver `fecha_consulta_dns`), no el día de cada caída.** Un servicio pudo cambiar de proveedor en el medio. Por eso "¿se cayó?" se apoya en noticias y postmortems, no en el DNS.
 - El DNS muestra el servidor **público** de cada servicio (su "puerta de entrada"), no su infraestructura interna: una app puede depender de otras empresas por dentro (login, anti-bots, pagos) sin que se vea.
 - "No reportado" significa que no se encontró una fuente, no que el servicio haya andado bien.
+- Algunas dependencias no se ven en ningún dato de la web: CrowdStrike rompió computadoras con Windows de las empresas (por ejemplo Aerolíneas Argentinas), no sus sitios.
+- **Hipótesis (no probadas):** los servicios nombrados en una caída sin depender de esa empresa pueden ser ruido de reportes, dependencias ocultas o un **cambio de proveedor posterior a la caída** (se prueba con el paso 8).
 - Las listas de "afectados" de los medios mezclan fallas reales con quejas de usuarios: hay servicios reportados en la caída de Cloudflare que, según el DNS, no dependen de Cloudflare.
 - Los sitios del top 10.000 son **webs**; las apps solo están en la lista de 50 servicios.
 - CrUX solo cuenta usuarios de Chrome que comparten estadísticas, y su ranking es por tramos.

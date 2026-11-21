@@ -47,24 +47,37 @@ https://github.com/Blanco302002/tpi-aacsw (SQL + 6 scripts Python + README).
   la gente salió a buscar qué pasaba.
 - En las tres, la gente aprendió el nombre de una empresa invisible **el día que falló**.
 
-**Las apps que usamos todos los días (50 servicios conocidos en Argentina).** Lista curada de apps y
-webs: bancos y billeteras, Estado, compras, transporte, redes, streaming, IA, estudio y trabajo, y medios.
+**Las apps que usamos todos los días (57 servicios conocidos en Argentina).** Lista curada de apps y
+webs: bancos y billeteras, Estado, compras, transporte, viajes, redes, streaming, IA, estudio y trabajo, y medios.
 Incluye servicios de Chaco (Nuevo Banco del Chaco, campus UTN FRRe). Detalle en `data/resultados/servicios.csv`.
 
 | Empresa principal | Servicios | Ejemplos |
 |---|---|---|
-| Cloudflare | 18 | ChatGPT, Claude, X, Discord, Zoom, Uber, Galicia, Naranja X, Brubank, MODO, Mi Argentina, PedidosYa, Rappi, campus UTN FRRe, Clarín, TN |
-| Amazon (AWS) | 8 | Mercado Pago, Mercado Libre, Amazon, Netflix, Prime Video, Cabify, Slack, DeepSeek |
+| Cloudflare | 20 | ChatGPT, Claude, X, Discord, Zoom, Uber, Galicia, Naranja X, Brubank, MODO, Mi Argentina, PedidosYa, Rappi, JetSMART, Flybondi, campus UTN FRRe, Clarín, TN |
+| Amazon (AWS) | 9 | Mercado Pago, Mercado Libre, Mercado Play, Amazon, Netflix, Prime Video, Cabify, Slack, DeepSeek |
 | Akamai | 7 | Santander, BBVA, TikTok, Disney+, HBO Max, Infobae, La Nación |
 | Proveedor argentino | 6 | ARCA, SUBE, Cuenta DNI, Banco Macro, Flow, Nuevo Banco del Chaco |
 | Meta (propia) | 3 | WhatsApp, Instagram, Facebook |
-| Otras | 8 | Google (YouTube, Gemini), Microsoft (Teams), Vercel (Ualá, Granola), Fastly (Spotify), Imperva (ANSES), F5 (Banco Nación) |
+| Google | 4 | YouTube, Gemini, Google Meet, Aerolíneas Argentinas |
+| Otras | 8 | Microsoft (Teams), Vercel (Ualá, Granola), Fastly (Spotify), Imperva (ANSES), propias (DiDi, Telegram), F5 (Banco Nación) |
 
 Cruce entre la dependencia (DNS) y lo que se cayó (noticias):
-- **Cloudflare (18/11/2025):** dependen 19 (en 18 es la principal). Se cayeron, confirmado o en medios, X, ChatGPT, Claude, Uber, Discord y Naranja X.
-- **AWS (20/10/2025):** dependen 22 (en 8 es la principal). Se cayeron Mercado Pago, Mercado Libre, Ualá, Naranja X, Amazon, Prime Video, Netflix y Slack. Naranja X y Ualá lo confirmaron con un comunicado.
-- **CrowdStrike (19/07/2024):** ninguno de los 50. En Argentina afectó sobre todo a aerolíneas (Aerolíneas Argentinas, Iberia, JetSmart), y Bloomberg Línea habló de un impacto "muy limitado".
+- **Cloudflare (18/11/2025):** dependen 21 (en 20 es la principal). Se cayeron, confirmado o en medios, X, ChatGPT, Claude, Uber, Discord y Naranja X.
+- **AWS (20/10/2025):** dependen 23 (en 9 es la principal). Se cayeron Mercado Pago, Mercado Libre, Ualá, Naranja X, Amazon, Prime Video, Netflix y Slack. Naranja X y Ualá lo confirmaron con un comunicado.
+- **CrowdStrike (19/07/2024):** se cayeron **Aerolíneas Argentinas** y **JetSMART**, según fuentes de las empresas. Bloomberg Línea habló de un impacto "muy limitado" en Argentina. CrowdStrike no pasa por la web: rompió las **computadoras con Windows** de las empresas. Por eso el DNS dice que Aerolíneas depende de Google y aun así se cayó con CrowdStrike: es una dependencia que **ningún dato de la web puede ver**.
 - **Un dato curioso:** en la caída de Cloudflare, los medios también nombraron 13 servicios que según el DNS **no dependen** de Cloudflare (Mercado Pago, bancos, WhatsApp). Puede ser ruido (la gente culpa a todo) o una dependencia oculta. El cartel que vio la gente, *"desbloquee challenges.cloudflare.com"*, es un control anti-bots de Cloudflare que otros sitios insertan, por ejemplo en un login, y el DNS no lo ve. Queda como hipótesis.
+
+**Hipótesis abiertas (a confirmar con datos):**
+1. **Dependencias ocultas.** Algunos servicios que el DNS no asocia a Cloudflare fueron nombrados en su caída.
+   Puede que usen Cloudflare *por dentro* (por ejemplo, el control anti-bots en el login).
+2. **Cambio de proveedor después de la caída.** El DNS es de noviembre de 2026. Tal vez un servicio usaba
+   Cloudflare (o AWS) el día de la caída y después **se fue a otro proveedor**, por ejemplo por pérdida de
+   confianza. Se puede comprobar con `sql/08_historial_y_global.sql`: HTTP Archive guarda la CDN de cada web
+   mes a mes, y la consulta compara antes de cada caída contra hoy.
+3. **¿Argentina más concentrada que el mundo?** La misma consulta trae el top 10.000 mundial, para comparar
+   con el 56 % de Argentina.
+4. **¿Y si se cae Akamai?** Akamai es la principal en 7 servicios (Santander, BBVA, TikTok, Disney+, HBO Max,
+   Infobae, La Nación). Akamai ya tuvo caídas globales; falta buscar el precedente y su postmortem.
 
 > **Aviso para mostrar en la pieza:** la infraestructura se consultó por DNS en noviembre de 2026, no el día de cada
 > caída; un servicio pudo cambiar de proveedor en el medio. Además, el DNS ve la "puerta de entrada" de cada
@@ -91,11 +104,11 @@ Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph
 1. **Historia de apertura:** el cartel de error, el gráfico de tráfico del 18/11 que cae 94 % y las
    búsquedas de "qué es cloudflare".
 2. **Explorador:** *"Marcá las apps que usás y elegí qué empresa se cae"*. La persona ve cuáles de
-   *sus* apps se apagan y cuáles se cayeron de verdad. Usa `data/resultados/servicios.json` (50 servicios).
+   *sus* apps se apagan y cuáles se cayeron de verdad. Usa `data/resultados/servicios.json` (57 servicios).
 
 ## 6. Limitaciones (detalle en el README)
-- El ranking de ~7.700 mide sitios web; las apps solo están en la lista curada de 50 servicios.
-- El DNS de los 50 servicios es de noviembre de 2026, no del día de cada caída, y ve solo la puerta de entrada.
+- El ranking de ~7.700 mide sitios web; las apps solo están en la lista curada de 57 servicios.
+- El DNS de los 57 servicios es de noviembre de 2026, no del día de cada caída, y ve solo la puerta de entrada.
 - "Se cayó" sale de noticias: "no reportado" no significa que haya andado bien. CrUX solo cuenta usuarios de Chrome y ordena por tramos, no por puesto.
 - El 21 % del top no está en HTTP Archive. La detección de tecnologías (Wappalyzer) no es perfecta.
 - Depender de una empresa no garantiza caerse con ella: es una dependencia, no una certeza.
@@ -106,7 +119,7 @@ Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph
 ## 7. Próximos pasos
 | Fechas | Tarea |
 |---|---|
-| 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 50). Leer los 3 postmortems y anotar citas. |
+| 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 57 servicios). Leer los 3 postmortems y anotar citas. |
 | 24–27/11 | Pieza visual: historia de apertura + explorador. |
 | 28–29/11 | Ficha de evidencia. |
 | 30/11–2/12 | Guion del pitch (8 min) y ensayos. |

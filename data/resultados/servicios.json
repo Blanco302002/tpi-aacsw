@@ -432,7 +432,8 @@
    "alcance": "global",
    "principal": "Amazon (AWS)",
    "empresas": [
-    "Amazon (AWS)"
+    "Amazon (AWS)",
+    "Fastly"
    ],
    "se_cayo": {
     "cloudflare": {
@@ -1239,6 +1240,176 @@
     "crowdstrike": {
      "afectado": "no reportado",
      "fuente": ""
+    }
+   }
+  },
+  {
+   "servicio": "DiDi",
+   "rubro": "Transporte",
+   "tipo": "app",
+   "alcance": "global",
+   "principal": "Propia u otra (Beijing Xiaoju Science and Technology Co., Ltd.)",
+   "empresas": [
+    "Propia u otra (Beijing Xiaoju Science and Technology Co., Ltd.)"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "no reportado",
+     "fuente": ""
+    }
+   }
+  },
+  {
+   "servicio": "Telegram",
+   "rubro": "Redes y mensajería",
+   "tipo": "app",
+   "alcance": "global",
+   "principal": "Propia u otra (Telegram Messenger Inc)",
+   "empresas": [
+    "Propia u otra (Telegram Messenger Inc)"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "no reportado",
+     "fuente": ""
+    }
+   }
+  },
+  {
+   "servicio": "Mercado Play",
+   "rubro": "Streaming",
+   "tipo": "ambas",
+   "alcance": "nacional",
+   "principal": "Amazon (AWS)",
+   "empresas": [
+    "Amazon (AWS)"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "no reportado",
+     "fuente": ""
+    }
+   }
+  },
+  {
+   "servicio": "Google Meet",
+   "rubro": "Estudio y trabajo",
+   "tipo": "ambas",
+   "alcance": "global",
+   "principal": "Google",
+   "empresas": [
+    "Google"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "no reportado",
+     "fuente": ""
+    }
+   }
+  },
+  {
+   "servicio": "Aerolíneas Argentinas",
+   "rubro": "Viajes",
+   "tipo": "ambas",
+   "alcance": "nacional",
+   "principal": "Google",
+   "empresas": [
+    "Google"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "confirmado",
+     "fuente": "La Nación (fuentes de la empresa: 'se cayó el sistema', resuelto a las 10): https://www.lanacion.com.ar/sociedad/la-caida-de-windows-los-problemas-que-causo-en-la-argentina-la-falla-de-crowdstrike-nid19072024/"
+    }
+   }
+  },
+  {
+   "servicio": "JetSMART",
+   "rubro": "Viajes",
+   "tipo": "ambas",
+   "alcance": "regional",
+   "principal": "Cloudflare",
+   "empresas": [
+    "Cloudflare",
+    "Fastly",
+    "Microsoft (Azure)"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "confirmado",
+     "fuente": "Bloomberg Línea (fuentes de la empresa: intermitencia en sistemas online): https://www.bloomberglinea.com/latinoamerica/argentina/en-argentina-tambien-pego-la-caida-de-microsoft-estos-servicios-fallaron-en-el-pais/"
+    }
+   }
+  },
+  {
+   "servicio": "Flybondi",
+   "rubro": "Viajes",
+   "tipo": "ambas",
+   "alcance": "nacional",
+   "principal": "Cloudflare",
+   "empresas": [
+    "Cloudflare"
+   ],
+   "se_cayo": {
+    "cloudflare": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "aws": {
+     "afectado": "no reportado",
+     "fuente": ""
+    },
+    "crowdstrike": {
+     "afectado": "no reportado",
+     "fuente": "La Nación: sin problemas registrados hasta las 9:30: https://www.lanacion.com.ar/sociedad/la-caida-de-windows-los-problemas-que-causo-en-la-argentina-la-falla-de-crowdstrike-nid19072024/"
     }
    }
   }
