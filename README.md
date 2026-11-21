@@ -117,7 +117,8 @@ Las columnas `afectado_<caída>` van con una fuente (link) en `fuente_<caída>`.
 - El DNS muestra el servidor **público** de cada servicio (su "puerta de entrada"), no su infraestructura interna: una app puede depender de otras empresas por dentro (login, anti-bots, pagos) sin que se vea.
 - "No reportado" significa que no se encontró una fuente, no que el servicio haya andado bien.
 - Algunas dependencias no se ven en ningún dato de la web: CrowdStrike rompió computadoras con Windows de las empresas (por ejemplo Aerolíneas Argentinas), no sus sitios.
-- **Hipótesis (no probadas):** los servicios nombrados en una caída sin depender de esa empresa pueden ser ruido de reportes, dependencias ocultas o un **cambio de proveedor posterior a la caída** (se prueba con el paso 8).
+- Servicios nombrados en una caída sin depender de esa empresa: el paso 8 descartó que hubieran cambiado de proveedor (en noviembre de 2025 tenían la misma infraestructura que hoy). Quedan dos explicaciones que estos datos no distinguen: ruido de reportes o dependencias ocultas.
+- HTTP Archive toma una foto por mes: muestra **que** un servicio cambió de proveedor, no **por qué**.
 - Las listas de "afectados" de los medios mezclan fallas reales con quejas de usuarios: hay servicios reportados en la caída de Cloudflare que, según el DNS, no dependen de Cloudflare.
 - Los sitios del top 10.000 son **webs**; las apps solo están en la lista de 50 servicios.
 - CrUX solo cuenta usuarios de Chrome que comparten estadísticas, y su ranking es por tramos.

@@ -1,0 +1,59 @@
+﻿servicio,dominio,2024-07-01 (antes CrowdStrike),2025-10-01 (antes AWS),2025-11-01 (antes Cloudflare),2026-01-01 (después Cloudflare),2026-10-01 (hoy),cambio_de_proveedor
+ANSES,www.anses.gob.ar,Imperva,Imperva,Imperva,Imperva,Imperva,no
+ARCA (ex AFIP),auth.afip.gob.ar,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,no
+ARCA (ex AFIP),www.arca.gob.ar,sin dato,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,no
+Aerolíneas Argentinas,www.aerolineas.com.ar,Otra,Otra,Otra,Otra,Google,sí
+Amazon,m.media-amazon.com,sin dato,Akamai,Akamai,Amazon (AWS),Amazon (AWS),sí
+Amazon,www.amazon.com,Amazon (AWS),Amazon (AWS),Akamai,Amazon (AWS),Amazon (AWS),sí
+BBVA,www.bbva.com.ar,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Banco Galicia,www.galicia.ar,Fastly,Fastly,Fastly,Fastly,Fastly,no
+Banco Macro,www.macro.com.ar,Otra,Otra,Otra,Otra,Otra,no
+Banco Nación (BNA+),www.bna.com.ar,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Otra,sí
+Brubank,www.brubank.com,Microsoft (Azure),Microsoft (Azure),Cloudflare,Cloudflare,Cloudflare,sí
+Cabify,cabify.com,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Campus virtual UTN FRRe,frre.cvg.utn.edu.ar,Sin CDN detectado,Otra,Otra,Otra,Cloudflare,sí
+ChatGPT,chatgpt.com,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Clarín,www.clarin.com,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Claude,claude.ai,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Cuenta DNI (Banco Provincia),www.bancoprovincia.com.ar,Otra,Otra,Otra,Otra,Otra,no
+DeepSeek,chat.deepseek.com,Otra,Cloudflare,Cloudflare,Amazon (AWS),Amazon (AWS),sí
+DiDi,web.didiglobal.com,Vercel,Vercel,Vercel,Vercel,Sin CDN detectado,sí
+DiDi,www.didiglobal.com,Amazon (AWS),Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,sí
+Discord,discord.com,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Disney+,www.disneyplus.com,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Flow,www.flow.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),sin dato,sin dato,no
+Flybondi,flybondi.com,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),sin dato,no
+Gemini,gemini.google.com,Google,Google,Google,Google,Google,no
+Granola,www.granola.ai,sin dato,Vercel,Vercel,Vercel,Vercel,no
+HBO Max,www.hbomax.com,sin dato,Akamai,Akamai,Akamai,Akamai,no
+Infobae,www.infobae.com,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Instagram,www.instagram.com,Meta (propia),Meta (propia),Meta (propia),Meta (propia),Meta (propia),no
+JetSMART,jetsmart.com,Fastly,Fastly,Fastly,Fastly,Fastly,no
+La Nación,www.lanacion.com.ar,Akamai,Akamai,Akamai,Akamai,Akamai,no
+MODO,www.modo.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Mercado Libre,www.mercadolibre.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Mercado Pago,api.mercadopago.com,Amazon (AWS),sin dato,sin dato,sin dato,sin dato,no
+Mercado Pago,www.mercadopago.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Mercado Play,play.mercadolibre.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Mi Argentina,www.argentina.gob.ar,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Naranja X,www.naranjax.com,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Netflix,www.netflix.com,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Nuevo Banco del Chaco,www.nbch.com.ar,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,Sin CDN detectado,sin dato,no
+Olé,www.ole.com.ar,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Prime Video,www.primevideo.com,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+Rappi,www.rappi.com.ar,Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),Amazon (AWS),no
+SUBE,tarjetasube.sube.gob.ar,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Imperva,sí
+Santander,www.santander.com.ar,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Slack,slack.com,Cloudflare,Cloudflare,Cloudflare,Cloudflare,Cloudflare,no
+Spotify,open.spotify.com,Fastly,Fastly,Fastly,Fastly,Fastly,no
+TN,tn.com.ar,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Telegram,telegram.org,Otra,Otra,Otra,Otra,Otra,no
+Telegram,web.telegram.org,Otra,Otra,Otra,Otra,Otra,no
+Temu,www.temu.com,Microsoft (Azure),sin dato,Microsoft (Azure),Microsoft (Azure),Microsoft (Azure),no
+TikTok,www.tiktok.com,Akamai,Akamai,Akamai,Akamai,Akamai,no
+Ualá,www.uala.com.ar,Imperva,Imperva,Imperva,Imperva,Imperva,no
+Uber,m.uber.com,sin dato,Google,Google,Google,Cloudflare,sí
+Uber,www.uber.com,Google,Cloudflare,Cloudflare,Cloudflare,Cloudflare,sí
+WhatsApp,web.whatsapp.com,sin dato,Meta (propia),Meta (propia),Meta (propia),Meta (propia),no
+X (Twitter),x.com,Amazon (AWS),Cloudflare,Cloudflare,Fastly,Cloudflare,sí
+Zoom,zoom.us,Cloudflare,sin dato,sin dato,sin dato,sin dato,no

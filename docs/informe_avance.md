@@ -67,17 +67,34 @@ Cruce entre la dependencia (DNS) y lo que se cayó (noticias):
 - **CrowdStrike (19/07/2024):** se cayeron **Aerolíneas Argentinas** y **JetSMART**, según fuentes de las empresas. Bloomberg Línea habló de un impacto "muy limitado" en Argentina. CrowdStrike no pasa por la web: rompió las **computadoras con Windows** de las empresas. Por eso el DNS dice que Aerolíneas depende de Google y aun así se cayó con CrowdStrike: es una dependencia que **ningún dato de la web puede ver**.
 - **Un dato curioso:** en la caída de Cloudflare, los medios también nombraron 13 servicios que según el DNS **no dependen** de Cloudflare (Mercado Pago, bancos, WhatsApp). Puede ser ruido (la gente culpa a todo) o una dependencia oculta. El cartel que vio la gente, *"desbloquee challenges.cloudflare.com"*, es un control anti-bots de Cloudflare que otros sitios insertan, por ejemplo en un login, y el DNS no lo ve. Queda como hipótesis.
 
-**Hipótesis abiertas (a confirmar con datos):**
-1. **Dependencias ocultas.** Algunos servicios que el DNS no asocia a Cloudflare fueron nombrados en su caída.
-   Puede que usen Cloudflare *por dentro* (por ejemplo, el control anti-bots en el login).
-2. **Cambio de proveedor después de la caída.** El DNS es de noviembre de 2026. Tal vez un servicio usaba
-   Cloudflare (o AWS) el día de la caída y después **se fue a otro proveedor**, por ejemplo por pérdida de
-   confianza. Se puede comprobar con `sql/08_historial_y_global.sql`: HTTP Archive guarda la CDN de cada web
-   mes a mes, y la consulta compara antes de cada caída contra hoy.
-3. **¿Argentina más concentrada que el mundo?** La misma consulta trae el top 10.000 mundial, para comparar
-   con el 56 % de Argentina.
+**Hipótesis puestas a prueba** (`sql/08_historial_y_global.sql`: HTTP Archive guarda la CDN de cada web mes a mes;
+resultados en `data/resultados/historial_servicios.csv` y `comparacion_mundo.csv`):
+
+1. **¿Los servicios nombrados en la caída de Cloudflare usaban Cloudflare en ese momento?** **No.** Mercado Pago y
+   Mercado Libre (AWS), Santander (Akamai), WhatsApp e Instagram (Meta), Spotify (Fastly), Gemini (Google), ARCA y
+   Banco Nación (sin CDN) tenían la misma infraestructura en noviembre de 2025 que hoy. Lo que queda es **ruido**
+   (la gente culpa a todo, y su propia conexión también podía fallar) o **dependencias ocultas** (usar Cloudflare
+   *por dentro*, como el control anti-bots en un login). No se puede distinguir con estos datos.
+2. **¿Alguien se fue de Cloudflare después de la caída?** **Algunos sí, pero no hubo éxodo.**
+   - Entre noviembre de 2025 y enero de 2026, **DeepSeek** pasó de Cloudflare a AWS. **X** pasó a Fastly y para
+     octubre de 2026 **volvió a Cloudflare**. **SUBE** (recarga) dejó Cloudflare por Imperva durante 2026.
+   - Al mismo tiempo, **Uber** (web móvil) y el **campus de la UTN FRRe** **se sumaron** a Cloudflare.
+   - Dominios de los servicios que usan Cloudflare: 13 antes de la caída, 11 dos meses después y **13 de nuevo hoy**.
+   - **Lectura:** la concentración se recuperó en menos de un año. Un mes de HTTP Archive es una foto: muestra
+     que cambiaron, no **por qué**.
+3. **¿Argentina depende de Cloudflare más que el mundo?** **No: igual o un poco menos.** Top 10.000:
+
+   | Empresa | Argentina | Mundo |
+   |---|---|---|
+   | Cloudflare | 56 % | 60 % |
+   | Amazon (AWS) | 27 % | 32 % |
+   | Akamai | 3 % | 12 % |
+   | Proveedores locales u otros | 13 % | 8 % |
+
+   **No es un problema argentino: es la forma en que está armada internet.** Argentina usa menos Akamai y
+   más proveedores locales que el promedio mundial.
 4. **¿Y si se cae Akamai?** Akamai es la principal en 7 servicios (Santander, BBVA, TikTok, Disney+, HBO Max,
-   Infobae, La Nación). Akamai ya tuvo caídas globales; falta buscar el precedente y su postmortem.
+   Infobae, La Nación). Akamai ya tuvo caídas globales: falta buscar el precedente y su postmortem.
 
 > **Aviso para mostrar en la pieza:** la infraestructura se consultó por DNS en noviembre de 2026, no el día de cada
 > caída; un servicio pudo cambiar de proveedor en el medio. Además, el DNS ve la "puerta de entrada" de cada
