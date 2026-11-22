@@ -94,12 +94,21 @@ def main():
         "aviso_dns": serv["metadatos"]["aviso"],
     }
     bloque = f"{INICIO}\n<script>window.DATOS = {json.dumps(datos, ensure_ascii=False)};</script>\n{FIN}"
-    html = PIEZA.read_text(encoding="utf-8")
     patron = re.compile(re.escape(INICIO) + r".*?" + re.escape(FIN), re.S)
-    if not patron.search(html):
-        raise SystemExit(f"No encuentro los marcadores {INICIO} / {FIN} en {PIEZA}")
-    PIEZA.write_text(patron.sub(lambda _: bloque, html), encoding="utf-8")
-    print(f"OK pieza/index.html actualizada ({len(bloque) // 1024} KB de datos, "
+    # Páginas HTML que llevan los datos adentro (abren sin internet)
+    for pagina in (PIEZA, RAIZ / "explorador" / "index.html"):
+        if not pagina.exists():
+            continue
+        html = pagina.read_text(encoding="utf-8")
+        if not patron.search(html):
+            raise SystemExit(f"No encuentro los marcadores {INICIO} / {FIN} en {pagina}")
+        pagina.write_text(patron.sub(lambda _: bloque, html), encoding="utf-8")
+        print(f"OK {pagina.relative_to(RAIZ)} actualizada")
+    # Datos para el PowerPoint (presentacion/generar_pptx.js)
+    (RAIZ / "presentacion").mkdir(exist_ok=True)
+    with open(RAIZ / "presentacion" / "datos.json", "w", encoding="utf-8") as f:
+        json.dump(datos, f, ensure_ascii=False)
+    print(f"OK presentacion/datos.json ({len(bloque) // 1024} KB, "
           f"{len(datos['servicios'])} servicios, {len(datos['radar'])} puntos de Radar)")
 
 

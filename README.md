@@ -30,13 +30,30 @@ docs/           informe de avance
 | 6 | `src/06_resumen_caidas.py` | Resume cuánto cayó el tráfico argentino en cada caída | `resultados/resumen_caidas.csv` |
 | 7 | `src/07_servicios.py` | Para los servicios de `fuentes/servicios_ar.csv`: de qué empresa depende cada uno (DNS) y si se cayó (noticias) | `resultados/servicios.csv`, `resultados/servicios.json` |
 | 8 | `sql/08_historial_y_global.sql` + `src/08_historial_y_global.py` | ¿Algún servicio cambió de proveedor después de una caída? ¿Argentina depende más de Cloudflare que el mundo? | `fuentes/historial_global.csv` → `resultados/historial_servicios.csv`, `resultados/comparacion_mundo.csv` |
-| 9 | `src/09_datos_pieza.py` | Junta los datos de la pieza y los incrusta en el HTML | `pieza/index.html` |
+| 9 | `src/09_datos_pieza.py` | Junta los datos para la presentación, el explorador y la pieza | `presentacion/datos.json`, `explorador/index.html`, `pieza/index.html` |
 | — | A mano | Google Trends: qué buscó la gente en cada caída | `fuentes/trends/` (ver su `LEEME.md`) |
 | — | A mano | Revisión del top 100 de Radar: 60 de 100 son dominios técnicos | `fuentes/top100_revision_manual.csv` |
 
 `src/comun.py` no se corre solo: tiene la tabla de empresas y las rutas que usan los demás.
 
-## La pieza visual: `pieza/index.html`
+## La presentación (en inglés): `presentacion/what-goes-dark.pptx`
+El pitch es un **PowerPoint en inglés** (17 filminas) que se edita libremente en PowerPoint o en Google Slides
+(subilo a Drive → Abrir con Presentaciones de Google). Los gráficos son nativos (editables).
+- **Memes:** están en `presentacion/memes/`. Arrastralos a cualquier filmina.
+- **Filminas marcadas «TO CHANGE»:** son borradores para rehacer (postmortems, «por qué», simulador, cierre).
+- **Completar:** «[your name / team]» en la portada y en la última filmina.
+- **Regenerar desde los datos:** `cd presentacion`, `npm install` (una vez) y `node generar_pptx.js`.
+  Ojo: regenerar **pisa** los cambios hechos a mano en el .pptx. Si ya lo editaste, no lo regeneres.
+
+## El explorador para el celular: `explorador/index.html`
+Página en inglés, un solo archivo, pensada para abrir desde el **QR** de la filmina «What goes dark for you?».
+1. **Publicarlo en Vercel:** en vercel.com → *Add New → Project* → importá el repo `tpi-aacsw` →
+   **Root Directory: `explorador`** → Framework: *Other* → *Deploy*. Te da una URL `https://….vercel.app`.
+2. **QR:** `python presentacion/qr.py https://….vercel.app` crea `presentacion/qr.png`. Después, o regenerás el
+   PowerPoint (lo pone solo) o pegás `qr.png` a mano en la filmina.
+
+## La pieza HTML original: `pieza/index.html`
+Primera versión de la presentación en HTML (en español). Quedó como respaldo; el pitch usa el PowerPoint.
 Es la presentación del pitch: **13 pantallas**, funciona **sin internet** y sin instalar nada.
 1. Abrí `pieza/index.html` con doble clic (Chrome, Edge o Firefox).
 2. **Hacé un clic en la página** para que tome el teclado.
