@@ -1,5 +1,5 @@
 """
-07_servicios.py
+servicios.py
 ¿De qué empresa depende cada uno de los 50 servicios (apps y webs) más
 conocidos en Argentina? Y ¿se cayó en cada una de las tres caídas?
 
@@ -14,17 +14,21 @@ Salidas:  data/resultados/servicios.csv   50 filas, una por servicio
 
 Uso:
     pip install dnspython
-    python src/07_servicios.py
+    python src/dependencias/servicios.py
 """
 
 import csv
-import importlib
 import json
 from datetime import date
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
+
 from comun import CSV_ENC, FUENTES, RESULTADOS, empresas_en
 
-dns04 = importlib.import_module("04_sitios_chaco")  # reusa ips, cname_chain, asn_de
+from dependencias import dns_sitios as dns04  # reusa ips, cname_chain, asn_de
 dns04.RES.lifetime = 10  # algunos DNS (bancos, universidades) tardan más de 5 s
 
 ENTRADA = FUENTES / "servicios_ar.csv"

@@ -1,5 +1,5 @@
 -- =====================================================================
--- 08_historial_y_global.sql
+-- historial_y_mundo.sql
 -- Dos preguntas en UNA sola consulta (para gastar menos cuota):
 --
 --  A) ¿Los servicios cambiaron de proveedor después de las caídas?

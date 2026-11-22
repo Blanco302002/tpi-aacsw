@@ -1,5 +1,5 @@
 """
-09_datos_pieza.py
+datos_explorador.py
 Junta los datos que usa la pieza visual y los incrusta en pieza/index.html,
 así la pieza abre sin internet y sin servidor. No usa internet.
 
@@ -10,13 +10,18 @@ Entrada:  data/resultados/*  y  data/fuentes/*
 Salida:   pieza/index.html   (reemplaza lo que está entre DATOS:INICIO y DATOS:FIN)
 
 Uso:
-    python src/09_datos_pieza.py
+    python src/explorador/datos_explorador.py
 """
 
 import csv
 import json
 import re
 from datetime import datetime, timedelta
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import FUENTES, RAIZ, RESULTADOS
 

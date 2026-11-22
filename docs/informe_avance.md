@@ -67,7 +67,7 @@ Cruce entre la dependencia (DNS) y lo que se cayó (noticias):
 - **CrowdStrike (19/07/2024):** se cayeron **Aerolíneas Argentinas** y **JetSMART**, según fuentes de las empresas. Bloomberg Línea habló de un impacto "muy limitado" en Argentina. CrowdStrike no pasa por la web: rompió las **computadoras con Windows** de las empresas. Por eso el DNS dice que Aerolíneas depende de Google y aun así se cayó con CrowdStrike: es una dependencia que **ningún dato de la web puede ver**.
 - **Un dato curioso:** en la caída de Cloudflare, los medios también nombraron 13 servicios que según el DNS **no dependen** de Cloudflare (Mercado Pago, bancos, WhatsApp). Puede ser ruido (la gente culpa a todo) o una dependencia oculta. El cartel que vio la gente, *"desbloquee challenges.cloudflare.com"*, es un control anti-bots de Cloudflare que otros sitios insertan, por ejemplo en un login, y el DNS no lo ve. Queda como hipótesis.
 
-**Hipótesis puestas a prueba** (`sql/08_historial_y_global.sql`: HTTP Archive guarda la CDN de cada web mes a mes;
+**Hipótesis puestas a prueba** (`sql/historial_y_mundo.sql`: HTTP Archive guarda la CDN de cada web mes a mes;
 resultados en `data/resultados/historial_servicios.csv` y `comparacion_mundo.csv`):
 
 1. **¿Los servicios nombrados en la caída de Cloudflare usaban Cloudflare en ese momento?** **No.** Mercado Pago y
@@ -126,22 +126,17 @@ resultados en `data/resultados/historial_servicios.csv` y `comparacion_mundo.csv
 
 Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph.
 
-## 5. Pieza visual (modalidad híbrida): `pieza/index.html`
-Un solo archivo que **es la presentación** de 8 minutos: 13 pantallas que se avanzan con el teclado y que abre
-sin internet. Sigue el orden de la consigna (situación → datos → descubrimiento → concepto) y los principios
-de Wilke: un mensaje por pantalla con el título como conclusión, un solo color de acento y gris para el resto,
-barras desde 0 y ordenadas, etiquetas directas, paleta apta para daltonismo y fuente y limitación en cada gráfico.
-
-| Acto | Pantallas |
-|---|---|
-| La situación | 1 portada · 2 el cartel de error del 18/11 · 3 «¿qué es Cloudflare?» (Trends) |
-| Los datos | 4 tráfico de AR cae 94 % (Radar) · 5 las tres caídas |
-| El descubrimiento | 6 % de sitios por empresa · 7 «7 de cada 10» (grilla de 100) · 8 Argentina vs. mundo · **9 explorador** · 10 lo que la web no ve |
-| El concepto | 11 por qué se cayeron (postmortems) · 12 simulador «todo de golpe vs. de a poco» + Producto, Proceso y Persona · 13 cierre y ficha de evidencia |
-
-**Explorador (pantalla 9):** *"Marcá las apps que usás y elegí qué empresa se cae"*. Las fichas que dependen de
-esa empresa se apagan. Con las fechas reales se ve qué falló de verdad: confirmado ●, en medios ◐.
-Así aparece la diferencia entre depender y caerse. Usa `data/resultados/servicios.json` (57 servicios).
+## 5. Pieza visual (modalidad híbrida): presentación + explorador
+- **Historia visual:** presentación de 17 filminas **en inglés** para el pitch, con el orden de la consigna
+  (situación → datos → descubrimiento → concepto). Sigue los principios de Wilke: un mensaje por filmina con el
+  título como conclusión, un color de acento y gris para el resto, barras desde 0 y ordenadas, y fuente y
+  limitación en cada gráfico. Incluye memes de las caídas como momento de humor y conexión con el público.
+- **Exploración interactiva:** `explorador/index.html`, bilingüe (castellano / inglés), que el público abre desde un
+  **QR** en el celular durante el pitch: *"Marcá las apps que usás y elegí qué empresa se cae"*.
+  - Las apps que dependen de esa empresa **se apagan**.
+  - Con las fechas reales se ve qué falló de verdad: confirmado ● o en medios ◐.
+  - Así aparece la diferencia entre depender de una empresa y caerse con ella.
+  - Usa los 57 servicios de `data/resultados/servicios.json`.
 
 ## 6. Limitaciones (detalle en el README)
 - El ranking de ~7.700 mide sitios web; las apps solo están en la lista curada de 57 servicios.
@@ -157,7 +152,7 @@ Así aparece la diferencia entre depender y caerse. Usa `data/resultados/servici
 | Fechas | Tarea |
 |---|---|
 | 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 57 servicios). ~~Leer los 3 postmortems y anotar citas~~ (hecho: `docs/postmortems.md`). |
-| 24–27/11 | ~~Pieza visual~~ (hecha: `pieza/index.html`). Ensayar con la pieza y ajustar textos. |
+| 24–27/11 | ~~Pieza visual~~ (hecha: presentación en inglés + explorador). Publicar el explorador, QR, rehacer filminas «TO CHANGE». |
 | 28–29/11 | Ficha de evidencia. |
 | 30/11–2/12 | Guion del pitch (8 min) y ensayos. |
 | 3/12 | Presentación. |

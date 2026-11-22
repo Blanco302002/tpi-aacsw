@@ -1,8 +1,8 @@
 """
-04_sitios_chaco.py  (OPCIONAL)
+dns_sitios.py  (OPCIONAL)
 Para sitios que no aparecen en los datos de HTTP Archive: sitios locales
 (Moodle de la facultad, ATP, SAMEEP...). Sus funciones DNS también las
-usa 07_servicios.py.
+usa servicios.py.
 
 Hace lo mismo que tu navegador al entrar a un sitio: pregunta el DNS y
 averigua a qué red (empresa) pertenece la IP, usando el servicio público
@@ -11,8 +11,8 @@ sistema y no descarga páginas.
 
 Uso:
     pip install dnspython
-    python src/04_sitios_chaco.py                  # usa data/fuentes/sitios_chaco.csv
-    python src/04_sitios_chaco.py otro_archivo.csv # u otro CSV
+    python src/dependencias/dns_sitios.py                  # usa data/fuentes/sitios_chaco.csv
+    python src/dependencias/dns_sitios.py otro_archivo.csv # u otro CSV
 
 Entrada: CSV con columnas dominio,nombre,rubro
 Salida:  data/resultados/<nombre_entrada>_resultado.csv
@@ -23,6 +23,11 @@ import sys
 from pathlib import Path
 
 import dns.resolver
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import CSV_ENC, FUENTES, RESULTADOS, empresas_en
 

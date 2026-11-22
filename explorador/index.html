@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What goes dark?</title>
-<meta name="description" content="Pick the apps you use in Argentina, pick a company that goes down, and see what goes dark.">
+<title>¿Qué se apaga?</title>
+<meta name="description" content="Marcá las apps que usás en Argentina, elegí qué empresa se cae y mirá qué se te apaga.">
 <!--
-  Explorer for the DATA4QUALITY pitch (opened from a QR code on the phone).
-  Single file, no external resources. Data is embedded by src/09_datos_pieza.py.
+  Explorador del pitch DATA4QUALITY (se abre con un QR desde el celular).
+  Bilingüe: castellano por defecto, inglés con ?lang=en o con el botón EN.
+  Un solo archivo, sin recursos externos. Los datos se incrustan con src/explorador/datos_explorador.py.
 -->
 <style>
   :root {
@@ -21,7 +22,9 @@
     font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px; line-height: 1.4;
   }
-  main { max-width: 880px; margin: 0 auto; padding: 18px 16px 40px; }
+  main { max-width: 880px; margin: 0 auto; padding: 14px 16px 40px; }
+  .idioma { display: flex; justify-content: flex-end; gap: 4px; }
+  .idioma button { padding: 4px 10px; min-height: 30px; font-size: .8rem; }
   h1 { font-size: 1.7rem; line-height: 1.15; margin: 4px 0 6px; }
   h1 span { color: var(--accent); }
   .intro { color: var(--ink2); margin: 0 0 14px; }
@@ -53,6 +56,7 @@
   .ficha.medios { background: var(--soft); border-color: var(--ink2); color: var(--ink); }
   .ficha.tenue { opacity: .4; }
   .ficha .marca { margin-left: 5px; font-weight: 700; display: inline-block; text-decoration: none; }
+  .tachada { background: var(--off); color: #a5a49f; padding: 0 4px; border-radius: 4px; }
   #detalle { margin-top: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: .9rem; display: none; }
   #detalle h3 { margin: 0 0 4px; font-size: 1.05rem; }
   .claves { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--ink2); margin-top: 12px; }
@@ -62,16 +66,19 @@
 </head>
 <body>
 <main>
-  <h1>What goes dark when a <span>single company</span> goes down?</h1>
-  <p class="intro">Well-known apps and websites in Argentina, and the infrastructure companies they depend on.</p>
+  <div class="idioma" role="group" aria-label="Idioma / Language">
+    <button type="button" id="lES">ES</button><button type="button" id="lEN">EN</button>
+  </div>
+  <h1 id="tTitulo"></h1>
+  <p class="intro" id="tIntro"></p>
 
-  <div class="paso">1 · Tap the apps you use</div>
-  <div class="botones"><button id="bUsadas" type="button">Most used</button><button id="bTodas" type="button">All</button><button id="bLimpiar" type="button">Clear</button></div>
+  <div class="paso" id="tPaso1"></div>
+  <div class="botones"><button id="bUsadas" type="button"></button><button id="bTodas" type="button"></button><button id="bLimpiar" type="button"></button></div>
 
-  <div class="paso">2 · What if this company goes down?</div>
+  <div class="paso" id="tPaso2"></div>
   <div class="botones" id="botonesEmpresas"></div>
 
-  <div class="paso">…or see what really happened</div>
+  <div class="paso" id="tPaso3"></div>
   <div class="botones" id="botonesReales"></div>
 
   <div id="resultado" aria-live="polite"></div>
@@ -79,7 +86,7 @@
   <div id="detalle" aria-live="polite"></div>
   <div class="claves" id="claves"></div>
   <p class="nota" id="aviso"></p>
-  <footer>DATA4QUALITY 2026 · UTN FRRe · Sources: public DNS + Team Cymru (infrastructure), HTTP Archive, news reports and official postmortems (outages). Tap an app to see its details.</footer>
+  <footer id="tPie"></footer>
 </main>
 
 <!-- DATOS:INICIO -->
@@ -90,67 +97,146 @@
 (function () {
   "use strict";
   var D = window.DATOS;
-  if (!D) { document.body.innerHTML = "<p style='padding:2em'>Data missing: run <b>python src/09_datos_pieza.py</b>.</p>"; return; }
+  if (!D) { document.body.innerHTML = "<p style='padding:2em'>Faltan los datos: correr <b>python src/explorador/datos_explorador.py</b>.</p>"; return; }
   var S = D.servicios;
   var $ = function (id) { return document.getElementById(id); };
 
-  var NOMBRE = { "X (Twitter)": "X", "Banco Nación (BNA+)": "Banco Nación", "Cuenta DNI (Banco Provincia)": "Cuenta DNI",
-    "ARCA (ex AFIP)": "ARCA (taxes)", "Campus virtual UTN FRRe": "UTN FRRe campus" };
-  var RUBRO = { "Bancos y billeteras": "Banks & wallets", "Estado": "Government", "Compras y delivery": "Shopping & delivery",
-    "Transporte": "Transport", "Redes y mensajería": "Social & messaging", "Streaming": "Streaming", "IA": "AI",
-    "Estudio y trabajo": "Study & work", "Medios": "News", "Viajes": "Travel" };
-  var ESTADO = { "confirmado": "confirmed", "reportado en medios": "reported in the media", "no reportado": "not reported" };
-  function empresaEn(e) {
-    return e.replace("Proveedor argentino", "Argentine provider").replace("Propia u otra", "Own / other").replace(" (propia)", " (own)");
-  }
-  var nombre = function (s) { return NOMBRE[s.servicio] || s.servicio; };
+  /* ---------- Textos en los dos idiomas ---------- */
+  var T = {
+    es: {
+      htmlTitle: "¿Qué se apaga?",
+      titulo: "¿Qué se apaga si se cae <span>una sola empresa</span>?",
+      intro: "Apps y sitios conocidos en Argentina, y las empresas de infraestructura de las que dependen.",
+      paso1: "1 · Tocá las apps que usás", usadas: "Las más usadas", todas: "Todas", limpiar: "Limpiar",
+      paso2: "2 · ¿Y si se cae esta empresa?", paso3: "…o mirá lo que pasó de verdad",
+      reales: { cloudflare: "18/11/2025 · Cloudflare", aws: "20/10/2025 · AWS", crowdstrike: "19/07/2024 · CrowdStrike" },
+      empresas: { "Meta (propia)": "Meta" },
+      inicio: function (n) { return "<b>Tocá tus apps y después elegí una empresa.</b><small>" + n + " servicios conocidos en Argentina.</small>"; },
+      elegiste: function (n) { return "<b>Elegiste " + n + " apps.</b><small>Ahora elegí una empresa (paso 2).</small>"; },
+      apagan: function (a, n, r) { return "<em>Se te apagan " + a + " de tus " + n + " apps</em>" + (r ? " y " + r + " pueden fallar" : ""); },
+      principalSolo: function (e, t, n) { return e + " es la principal de <em>" + t + " de " + n + "</em> servicios"; },
+      principalDe: function (e, t, n) { return e + " es la empresa principal de " + t + " de " + n + " servicios."; },
+      hubo: "Esta se cayó de verdad: compará con su fecha abajo.",
+      simulacion: "Simulación: esta empresa no tuvo una caída en el período del TPI.",
+      claveSim: "<span><b class='tachada'>tachada</b> es la principal: se apaga</span><span><b style='color:var(--accent)'>⚠</b> la usa en algo secundario: puede fallar</span>",
+      fallaron: function (m, n) { return "<em>Te fallaron " + m + " de tus " + n + " apps</em> ese día"; },
+      fallaronTodos: function (c, n) { return "Ese día fallaron <em>" + c + " de " + n + "</em> servicios"; },
+      crowd: "CrowdStrike vive dentro de las computadoras con Windows de las empresas: ningún dato de la web lo ve.",
+      sinDep: function (x, c, e) { return x + " de los " + c + " servicios reportados no dependen de " + e + " según el DNS: ¿ruido o dependencias ocultas?"; },
+      claveReal: "<span><b>●</b> confirmado (empresa o medio)</span><span><b>◐</b> reportado en medios</span><span>sin marca: no reportado (no significa que anduvo bien)</span>",
+      depende: "Depende de", principal: "Empresa principal", sinDato: "sin dato",
+      estado: { "confirmado": "confirmado", "reportado en medios": "reportado en medios", "no reportado": "no reportado" },
+      aviso: "La infraestructura se consultó por DNS público en noviembre de 2026, no el día de cada caída: un servicio pudo cambiar de proveedor en el medio. El DNS ve la «puerta de entrada» de cada servicio, no lo que usa por dentro. Si se cayó o no sale de noticias y postmortems.",
+      pie: "DATA4QUALITY 2026 · UTN FRRe · Fuentes: DNS público + Team Cymru (infraestructura), HTTP Archive, noticias y postmortems oficiales (caídas). Tocá una app para ver el detalle.",
+    },
+    en: {
+      htmlTitle: "What goes dark?",
+      titulo: "What goes dark when a <span>single company</span> goes down?",
+      intro: "Well-known apps and websites in Argentina, and the infrastructure companies they depend on.",
+      paso1: "1 · Tap the apps you use", usadas: "Most used", todas: "All", limpiar: "Clear",
+      paso2: "2 · What if this company goes down?", paso3: "…or see what really happened",
+      reales: { cloudflare: "Nov 18, 2025 · Cloudflare", aws: "Oct 20, 2025 · AWS", crowdstrike: "Jul 19, 2024 · CrowdStrike" },
+      empresas: { "Meta (propia)": "Meta", "Proveedor argentino": "Argentine provider" },
+      inicio: function (n) { return "<b>Tap your apps, then pick a company.</b><small>" + n + " well-known services in Argentina.</small>"; },
+      elegiste: function (n) { return "<b>You picked " + n + " apps.</b><small>Now pick a company (step 2).</small>"; },
+      apagan: function (a, n, r) { return "<em>" + a + " of your " + n + " apps</em> go dark" + (r ? ", " + r + " may fail" : ""); },
+      principalSolo: function (e, t, n) { return e + " is the main provider of <em>" + t + " of " + n + "</em> services"; },
+      principalDe: function (e, t, n) { return e + " is the main provider of " + t + " of " + n + " services."; },
+      hubo: "This one really went down: compare with its date below.",
+      simulacion: "Simulation: no outage of this company in our period.",
+      claveSim: "<span><b class='tachada'>crossed out</b> main provider: goes dark</span><span><b style='color:var(--accent)'>⚠</b> secondary use: may fail</span>",
+      fallaron: function (m, n) { return "<em>" + m + " of your " + n + " apps</em> failed that day"; },
+      fallaronTodos: function (c, n) { return "<em>" + c + " of " + n + "</em> services failed that day"; },
+      crowd: "CrowdStrike lives inside office Windows computers: no web data can see it.",
+      sinDep: function (x, c, e) { return x + " of the " + c + " reported services don’t depend on " + e + " according to DNS: noise, or hidden dependencies?"; },
+      claveReal: "<span><b>●</b> confirmed (company or outlet)</span><span><b>◐</b> reported in the media</span><span>no mark: not reported (doesn’t mean it worked)</span>",
+      depende: "Depends on", principal: "Main provider", sinDato: "no data",
+      estado: { "confirmado": "confirmed", "reportado en medios": "reported in the media", "no reportado": "not reported" },
+      aviso: "Infrastructure was checked via public DNS in November 2026, not on the day of each outage; a service may have changed provider since. DNS sees each service’s front door, not what it uses inside. Whether it went down comes from news and postmortems.",
+      pie: "DATA4QUALITY 2026 · UTN FRRe · Sources: public DNS + Team Cymru (infrastructure), HTTP Archive, news reports and official postmortems (outages). Tap an app to see its details.",
+      nombres: { "X (Twitter)": "X", "Banco Nación (BNA+)": "Banco Nación", "Cuenta DNI (Banco Provincia)": "Cuenta DNI",
+        "ARCA (ex AFIP)": "ARCA (taxes)", "Campus virtual UTN FRRe": "UTN FRRe campus" },
+      rubros: { "Bancos y billeteras": "Banks & wallets", "Estado": "Government", "Compras y delivery": "Shopping & delivery",
+        "Transporte": "Transport", "Redes y mensajería": "Social & messaging", "Streaming": "Streaming", "IA": "AI",
+        "Estudio y trabajo": "Study & work", "Medios": "News", "Viajes": "Travel" },
+      empresa: function (e) { return e.replace("Proveedor argentino", "Argentine provider").replace("Propia u otra", "Own / other").replace(" (propia)", " (own)"); },
+    },
+  };
+  var params = new URLSearchParams(location.search);
+  var lang = params.get("lang") === "en" ? "en" : "es";   // castellano salvo ?lang=en
+  function L() { return T[lang]; }
+  function nombre(s) { return (L().nombres && L().nombres[s.servicio]) || s.servicio.replace(" (Twitter)", ""); }
+  function rubro(r) { return (L().rubros && L().rubros[r]) || r; }
+  function empresa(e) { return L().empresa ? L().empresa(e) : e; }
+  function nombreEmpresa(e) { return L().empresas[e] || e; }
 
+  /* ---------- Lógica ---------- */
   var USADAS = ["WhatsApp", "Instagram", "TikTok", "YouTube", "Mercado Pago", "Mercado Libre", "Spotify", "ChatGPT", "Naranja X", "Campus virtual UTN FRRe"];
-  var EMPRESAS = [["Cloudflare", "Cloudflare"], ["Amazon (AWS)", "Amazon (AWS)"], ["Akamai", "Akamai"], ["Google", "Google"], ["Meta (propia)", "Meta"], ["Proveedor argentino", "Argentine provider"]];
-  var REALES = [["cloudflare", "Nov 18, 2025 · Cloudflare", "Cloudflare"], ["aws", "Oct 20, 2025 · AWS", "Amazon (AWS)"], ["crowdstrike", "Jul 19, 2024 · CrowdStrike", "CrowdStrike"]];
-
+  var EMPRESAS = ["Cloudflare", "Amazon (AWS)", "Akamai", "Google", "Meta (propia)", "Proveedor argentino"];
+  var REALES = [["cloudflare", "Cloudflare"], ["aws", "Amazon (AWS)"], ["crowdstrike", "CrowdStrike"]];
   function coincide(e, clave) { return e === clave || e.indexOf(clave + " (") === 0; }
   function depende(s, clave) { return s.empresas.some(function (e) { return coincide(e, clave); }); }
   function esPrincipal(s, clave) { return coincide(s.principal, clave); }
   function afectado(s, c) { return s.se_cayo[c].afectado; }
 
-  var marcadas = {}, modo = null, eleccion = null, fichas = {};
+  var marcadas = {}, modo = null, eleccion = null, fichas = {}, gruposTit = {}, ultimo = null;
   var rubros = []; S.forEach(function (s) { if (rubros.indexOf(s.rubro) < 0) rubros.push(s.rubro); });
   rubros.forEach(function (r) {
     var g = document.createElement("div"); g.className = "grupo";
-    g.innerHTML = "<span>" + (RUBRO[r] || r) + "</span><div></div>";
+    g.innerHTML = "<span></span><div></div>"; gruposTit[r] = g.firstChild;
     S.filter(function (s) { return s.rubro === r; }).forEach(function (s) {
       var b = document.createElement("button"); b.type = "button"; b.className = "ficha";
-      b.addEventListener("click", function () { marcadas[s.servicio] = !marcadas[s.servicio]; mostrarDetalle(s); pintar(); });
+      b.addEventListener("click", function () { marcadas[s.servicio] = !marcadas[s.servicio]; ultimo = s; pintar(); });
       fichas[s.servicio] = b; g.lastChild.appendChild(b);
     });
     $("grupos").appendChild(g);
   });
-  function boton(padre, texto, fn) { var b = document.createElement("button"); b.type = "button"; b.textContent = texto; b.addEventListener("click", fn); padre.appendChild(b); return b; }
+  function boton(padre, fn) { var b = document.createElement("button"); b.type = "button"; b.addEventListener("click", fn); padre.appendChild(b); return b; }
   var bEmp = {}, bReal = {};
   EMPRESAS.forEach(function (e) {
-    bEmp[e[0]] = boton($("botonesEmpresas"), e[1], function () { if (modo === "sim" && eleccion === e[0]) { modo = eleccion = null; } else { modo = "sim"; eleccion = e[0]; } pintar(); });
+    bEmp[e] = boton($("botonesEmpresas"), function () { if (modo === "sim" && eleccion === e) { modo = eleccion = null; } else { modo = "sim"; eleccion = e; } pintar(); });
   });
   REALES.forEach(function (r) {
-    bReal[r[0]] = boton($("botonesReales"), r[1], function () { if (modo === "real" && eleccion === r[0]) { modo = eleccion = null; } else { modo = "real"; eleccion = r[0]; } pintar(); });
+    bReal[r[0]] = boton($("botonesReales"), function () { if (modo === "real" && eleccion === r[0]) { modo = eleccion = null; } else { modo = "real"; eleccion = r[0]; } pintar(); });
   });
   $("bUsadas").addEventListener("click", function () { marcadas = {}; USADAS.forEach(function (n) { marcadas[n] = true; }); pintar(); });
   $("bTodas").addEventListener("click", function () { S.forEach(function (s) { marcadas[s.servicio] = true; }); pintar(); });
-  $("bLimpiar").addEventListener("click", function () { marcadas = {}; modo = eleccion = null; $("detalle").style.display = "none"; pintar(); });
+  $("bLimpiar").addEventListener("click", function () { marcadas = {}; modo = eleccion = null; ultimo = null; pintar(); });
+  $("lES").addEventListener("click", function () { cambiarIdioma("es"); });
+  $("lEN").addEventListener("click", function () { cambiarIdioma("en"); });
 
-  function mostrarDetalle(s) {
-    var h = "<h3>" + nombre(s) + "</h3>Depends on: <b>" + (s.empresas.length ? s.empresas.map(empresaEn).join(", ") : "no data") + "</b>" +
-      "<br>Main provider: " + empresaEn(s.principal);
+  function cambiarIdioma(l) {
+    lang = l;
+    try { var u = new URL(location.href); u.searchParams.set("lang", l); history.replaceState(null, "", u); } catch (e) { /* file:// u otro: no importa */ }
+    textos(); pintar();
+  }
+  function textos() {
+    var t = L();
+    document.documentElement.lang = lang; document.title = t.htmlTitle;
+    $("tTitulo").innerHTML = t.titulo; $("tIntro").textContent = t.intro;
+    $("tPaso1").textContent = t.paso1; $("tPaso2").textContent = t.paso2; $("tPaso3").textContent = t.paso3;
+    $("bUsadas").textContent = t.usadas; $("bTodas").textContent = t.todas; $("bLimpiar").textContent = t.limpiar;
+    EMPRESAS.forEach(function (e) { bEmp[e].textContent = nombreEmpresa(e); });
+    REALES.forEach(function (r) { bReal[r[0]].textContent = t.reales[r[0]]; });
+    rubros.forEach(function (r) { gruposTit[r].textContent = rubro(r); });
+    $("aviso").textContent = t.aviso; $("tPie").textContent = t.pie;
+    $("lES").className = lang === "es" ? "activo" : ""; $("lEN").className = lang === "en" ? "activo" : "";
+  }
+  function detalle() {
+    var d = $("detalle"), t = L();
+    if (!ultimo) { d.style.display = "none"; return; }
+    var s = ultimo;
+    var h = "<h3>" + nombre(s) + "</h3>" + t.depende + ": <b>" + (s.empresas.length ? s.empresas.map(empresa).join(", ") : t.sinDato) + "</b>" +
+      "<br>" + t.principal + ": " + empresa(s.principal);
     REALES.forEach(function (r) {
       var a = afectado(s, r[0]); if (a === "no reportado") return;
       var f = s.se_cayo[r[0]].fuente.split(": ")[0];
-      h += "<br>" + r[1].split(" · ")[0] + ": <b>" + ESTADO[a] + "</b> <span style='color:var(--muted)'>(" + f + ")</span>";
+      h += "<br>" + t.reales[r[0]].split(" · ")[0] + ": <b>" + t.estado[a] + "</b> <span style='color:var(--muted)'>(" + f + ")</span>";
     });
-    $("detalle").innerHTML = h; $("detalle").style.display = "block";
+    d.innerHTML = h; d.style.display = "block";
   }
-
   function pintar() {
-    var mias = S.filter(function (s) { return marcadas[s.servicio]; });
+    var t = L(), mias = S.filter(function (s) { return marcadas[s.servicio]; });
     Object.keys(bEmp).forEach(function (k) { bEmp[k].className = modo === "sim" && eleccion === k ? "activo" : ""; });
     Object.keys(bReal).forEach(function (k) { bReal[k].className = modo === "real" && eleccion === k ? "activo real" : ""; });
     S.forEach(function (s) {
@@ -170,31 +256,29 @@
     });
     var r = $("resultado"), k = $("claves");
     if (!modo) {
-      r.innerHTML = mias.length ? "<b>You picked " + mias.length + " apps.</b><small>Now pick a company (step 2).</small>"
-        : "<b>Tap your apps, then pick a company.</b><small>" + S.length + " well-known services in Argentina.</small>";
+      r.innerHTML = mias.length ? t.elegiste(mias.length) : t.inicio(S.length);
       k.innerHTML = "";
     } else if (modo === "sim") {
-      var nom = EMPRESAS.filter(function (e) { return e[0] === eleccion; })[0][1];
+      var nom = nombreEmpresa(eleccion);
       var ap = mias.filter(function (s) { return esPrincipal(s, eleccion); }).length;
       var rg = mias.filter(function (s) { return !esPrincipal(s, eleccion) && depende(s, eleccion); }).length;
       var tot = S.filter(function (s) { return esPrincipal(s, eleccion); }).length;
-      r.innerHTML = "<b>" + (mias.length ? "<em>" + ap + " of your " + mias.length + " apps</em> go dark" + (rg ? ", " + rg + " may fail" : "") : nom + " is the main provider of <em>" + tot + " of " + S.length + "</em>") + "</b>" +
-        "<small>" + (mias.length ? nom + " is the main provider of " + tot + " of " + S.length + " services. " : "") +
-        (eleccion === "Cloudflare" || eleccion === "Amazon (AWS)" ? "This one really went down: compare with its date below." : "Simulation: no outage of this company in our period.") + "</small>";
-      k.innerHTML = "<span><b style='background:var(--off);color:#a5a49f;padding:0 4px;border-radius:4px'>crossed out</b> main provider: goes dark</span><span><b style='color:var(--accent)'>⚠</b> secondary use: may fail</span>";
+      var hubo = eleccion === "Cloudflare" || eleccion === "Amazon (AWS)";
+      r.innerHTML = "<b>" + (mias.length ? t.apagan(ap, mias.length, rg) : t.principalSolo(nom, tot, S.length)) + "</b>" +
+        "<small>" + (mias.length ? t.principalDe(nom, tot, S.length) + " " : "") + (hubo ? t.hubo : t.simulacion) + "</small>";
+      k.innerHTML = t.claveSim;
     } else {
       var real = REALES.filter(function (x) { return x[0] === eleccion; })[0];
       var c = S.filter(function (s) { return afectado(s, eleccion) !== "no reportado"; });
       var mc = mias.filter(function (s) { return afectado(s, eleccion) !== "no reportado"; });
-      var sinDep = c.filter(function (s) { return !depende(s, real[2]); }).length;
-      r.innerHTML = "<b>" + (mias.length ? "<em>" + mc.length + " of your " + mias.length + " apps</em> failed that day" : "<em>" + c.length + " of " + S.length + "</em> services failed that day") + "</b><small>" +
-        (eleccion === "crowdstrike" ? "CrowdStrike lives inside office Windows computers: no web data can see it." :
-          sinDep + " of the " + c.length + " reported services don’t depend on " + real[2] + " according to DNS: noise, or hidden dependencies?") + "</small>";
-      k.innerHTML = "<span><b>●</b> confirmed (company or outlet)</span><span><b>◐</b> reported in the media</span><span>no mark: not reported (doesn’t mean it worked)</span>";
+      var sinDep = c.filter(function (s) { return !depende(s, real[1]); }).length;
+      r.innerHTML = "<b>" + (mias.length ? t.fallaron(mc.length, mias.length) : t.fallaronTodos(c.length, S.length)) + "</b><small>" +
+        (eleccion === "crowdstrike" ? t.crowd : t.sinDep(sinDep, c.length, real[1])) + "</small>";
+      k.innerHTML = t.claveReal;
     }
+    detalle();
   }
-  $("aviso").textContent = "Infrastructure was checked via public DNS in November 2026, not on the day of each outage; a service may have changed provider since. DNS sees each service’s front door, not what it uses inside. Whether it went down comes from news and postmortems.";
-  pintar();
+  textos(); pintar();
 })();
 </script>
 </body>

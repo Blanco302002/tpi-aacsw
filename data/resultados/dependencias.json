@@ -4,7 +4,7 @@
    "Chrome UX Report (Google), country_summary, país AR",
    "HTTP Archive, crawl.pages, cliente mobile, solo la home"
   ],
-  "periodo": "CrUX 2026-10 / HTTP Archive crawl 2026-10-01 (ver sql/01)",
+  "periodo": "CrUX 2026-10 / HTTP Archive crawl 2026-10-01 (ver sql/sitios_top_ar.sql)",
   "unidad_de_analisis": "origen web (ej. https://www.ejemplo.com.ar)",
   "sitios_en_top": 9729,
   "excluidos_por_rubro": {

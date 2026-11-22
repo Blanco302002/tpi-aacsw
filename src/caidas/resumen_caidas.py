@@ -1,7 +1,7 @@
 """
-06_resumen_caidas.py
+resumen_caidas.py
 Resume cada caída en pocos números, a partir de los CSV de Radar
-(src/02_radar_argentina.py). No usa internet.
+(src/caidas/radar_trafico.py). No usa internet.
 
 Para cada caída y fuente (http, netflows) compara el tráfico durante la
 caída contra la misma hora de la semana anterior, y contra las horas
@@ -10,10 +10,15 @@ previas (para saber si ese día ya venía raro).
 Salida: data/resultados/resumen_caidas.csv
 
 Uso:
-    python src/06_resumen_caidas.py
+    python src/caidas/resumen_caidas.py
 """
 
 import pandas as pd
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import CSV_ENC, FUENTES, RESULTADOS
 
@@ -38,7 +43,7 @@ def main():
     for evento, (ini, fin) in CAIDAS.items():
         ruta = FUENTES / f"radar_{evento}.csv"
         if not ruta.exists():
-            print(f"Falta {ruta.name}: corré primero 02_radar_argentina.py")
+            print(f"Falta {ruta.name}: corré primero radar_trafico.py")
             continue
         d = pd.read_csv(ruta)
         d["ts"] = pd.to_datetime(d["timestamp_utc"], utc=True)

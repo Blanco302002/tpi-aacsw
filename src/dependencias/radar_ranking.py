@@ -1,5 +1,5 @@
 """
-05_radar_ranking_ar.py
+radar_ranking.py
 Top 100 ORDENADO de dominios más usados desde Argentina, según Cloudflare
 Radar (ranking basado en consultas a su DNS 1.1.1.1; licencia CC BY-NC 4.0).
 
@@ -9,18 +9,22 @@ top 5000...), no puestos.
 Qué hace: solo CONSULTA (GET) la API pública de Radar.
 
 Uso:
-    python src/05_radar_ranking_ar.py
+    python src/dependencias/radar_ranking.py
 Salida:
     data/fuentes/radar_top100_ar.csv   (puesto, dominio, categorias)
 Se usa como referencia para los dominios de las apps (ver servicios_ar.csv).
 """
 
 import csv
-import importlib
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import CSV_ENC, FUENTES
 
-radar = importlib.import_module("02_radar_argentina")  # reusa token y llamada a la API
+from caidas import radar_trafico as radar  # reusa token y llamada a la API
 
 
 def main():

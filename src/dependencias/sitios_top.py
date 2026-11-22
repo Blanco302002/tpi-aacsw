@@ -1,10 +1,10 @@
 """
-03_etl_dependencias.py
+sitios_top.py
 Limpia el CSV de BigQuery y calcula de qué empresa depende cada sitio.
 
 Solo lee y escribe archivos dentro de data/. No usa internet.
 
-Entrada:  data/fuentes/dependencias_top_ar.csv     (resultado de sql/01_dependencias_top_ar.sql)
+Entrada:  data/fuentes/dependencias_top_ar.csv     (resultado de sql/sitios_top_ar.sql)
 Salidas:  data/resultados/sitios_limpios.csv       una fila por sitio, con empresas y rubro
           data/resultados/resumen_por_empresa.csv  % de sitios que dependen de cada empresa
           data/resultados/dependencias.json        datos de los ~7.700 sitios para la pieza
@@ -14,7 +14,7 @@ Dos tipos de dependencia:
     blanda  login y pagos de terceros. Si se cae, falla una función.
 
 Uso:
-    python src/03_etl_dependencias.py
+    python src/dependencias/sitios_top.py
 """
 
 import json
@@ -23,6 +23,11 @@ import sys
 from datetime import date
 
 import pandas as pd
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import CSV_ENC, EMPRESAS, FUENTES, RESULTADOS, empresas_en
 
@@ -181,7 +186,7 @@ def main():
         "metadatos": {
             "fuentes": ["Chrome UX Report (Google), country_summary, país AR",
                         "HTTP Archive, crawl.pages, cliente mobile, solo la home"],
-            "periodo": "CrUX 2026-10 / HTTP Archive crawl 2026-10-01 (ver sql/01)",
+            "periodo": "CrUX 2026-10 / HTTP Archive crawl 2026-10-01 (ver sql/sitios_top_ar.sql)",
             "unidad_de_analisis": "origen web (ej. https://www.ejemplo.com.ar)",
             "sitios_en_top": int(total_top),
             "excluidos_por_rubro": {k: int(v) for k, v in excluidos.items()},

@@ -1,5 +1,5 @@
 -- =====================================================================
--- 01_dependencias_top_ar.sql
+-- sitios_top_ar.sql
 -- ¿De qué empresas de infraestructura dependen los sitios más usados
 -- desde Argentina?
 --
@@ -17,7 +17,7 @@
 --
 -- OJO con "rank": en CrUX no es un puesto (1, 2, 3...) sino un tramo
 -- (1000 = está entre los 1000 primeros, 5000 = entre el 1001 y el 5000...).
--- Para un top 100 ordenado usá src/05_radar_ranking_ar.py.
+-- Para un top 100 ordenado usá src/dependencias/radar_ranking.py.
 -- =====================================================================
 
 DECLARE mes   INT64 DEFAULT 202610;        -- último mes publicado de CrUX (AAAAMM)

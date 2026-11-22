@@ -1,5 +1,5 @@
 """
-02_radar_argentina.py
+radar_trafico.py
 Tráfico de internet en Argentina durante las grandes caídas, según
 Cloudflare Radar (API gratuita, datos bajo licencia CC BY-NC 4.0).
 
@@ -8,7 +8,7 @@ tu cuenta de Cloudflare ni toca ningún otro sistema.
 
 Uso:
     1. Poné tu token en el archivo .env (ver README) o en la terminal.
-    2. python src/02_radar_argentina.py
+    2. python src/caidas/radar_trafico.py
 
 Genera:
     data/fuentes/radar_<evento>.csv     tráfico (15 min) del evento vs. semana anterior
@@ -34,6 +34,11 @@ import os
 from datetime import datetime, timedelta, timezone
 
 import requests
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
 
 from comun import CSV_ENC, FUENTES, cargar_env
 

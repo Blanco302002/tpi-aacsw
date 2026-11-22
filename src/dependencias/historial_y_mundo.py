@@ -1,6 +1,6 @@
 """
-08_historial_y_global.py
-Analiza el resultado de sql/08_historial_y_global.sql. No usa internet.
+historial_y_mundo.py
+Analiza el resultado de sql/historial_y_mundo.sql. No usa internet.
 
 A) ¿Algún servicio cambió de proveedor después de una caída?
    Para cada dominio de los servicios, la empresa principal según HTTP Archive
@@ -15,18 +15,22 @@ Salidas:  data/resultados/historial_servicios.csv   un dominio por fila, una col
           data/resultados/comparacion_mundo.csv     % por empresa: Argentina vs. mundo
 
 Uso:
-    python src/08_historial_y_global.py
+    python src/dependencias/historial_y_mundo.py
 """
 
 import csv
-import importlib
 import sys
 
 import pandas as pd
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # src/: para importar comun y los otros temas
+
 from comun import CSV_ENC, FUENTES, RESULTADOS
 
-etl = importlib.import_module("03_etl_dependencias")  # mismas reglas que para Argentina
+from dependencias import sitios_top as etl  # mismas reglas que para Argentina
 
 ENTRADA = FUENTES / "historial_global.csv"
 FECHAS = {
@@ -87,7 +91,7 @@ def comparacion(df):
 
 def main():
     if not ENTRADA.exists():
-        sys.exit(f"No encuentro {ENTRADA}. Corré sql/08_historial_y_global.sql en BigQuery (ver README).")
+        sys.exit(f"No encuentro {ENTRADA}. Corré sql/historial_y_mundo.sql en BigQuery (ver README).")
     df = pd.read_csv(ENTRADA)
     df["date"] = df["date"].astype(str).str[:10]
     df["es_servicio"] = etl.a_bool(df["es_servicio"])
