@@ -34,7 +34,7 @@ https://github.com/Blanco302002/tpi-aacsw (SQL + 6 scripts Python + README).
 - El 11 % no usa ningún intermediario detectable. Muchos son sitios del Estado y de Chaco (UTN FRRe,
   Nuevo Banco del Chaco, Gobierno del Chaco), alojados en proveedores locales.
 
-**Lo que vivió la gente (Uso).** Tráfico web de Argentina contra la misma hora de la semana anterior:
+**Lo que vivió la gente (Persona).** Tráfico web de Argentina contra la misma hora de la semana anterior:
 
 | Caída | Hora en Argentina | Tráfico web (Radar) | Búsquedas en Google (Trends) |
 |---|---|---|---|
@@ -120,17 +120,28 @@ resultados en `data/resultados/historial_servicios.csv` y `comparacion_mundo.csv
 - **Proceso:** despliegue gradual (*canary*), presupuesto de error y postmortems sin culpables
   (*Site Reliability Engineering*; *Software Engineering at Google*). Lo que habría frenado el
   cambio antes de llegar a todos.
-- **Uso:** la calidad en uso la paga quien no eligió al proveedor ni sabía que existía.
+- **Persona:** la calidad la paga quien no eligió al proveedor ni sabía que existía.
 - **Cierre:** *"El producto falló, la causa estaba en el proceso, y lo pagaron las personas"*
   (Principios de Calidad Total).
 
 Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph.
 
-## 5. Pieza visual (modalidad híbrida, a construir)
-1. **Historia de apertura:** el cartel de error, el gráfico de tráfico del 18/11 que cae 94 % y las
-   búsquedas de "qué es cloudflare".
-2. **Explorador:** *"Marcá las apps que usás y elegí qué empresa se cae"*. La persona ve cuáles de
-   *sus* apps se apagan y cuáles se cayeron de verdad. Usa `data/resultados/servicios.json` (57 servicios).
+## 5. Pieza visual (modalidad híbrida): `pieza/index.html`
+Un solo archivo que **es la presentación** de 8 minutos: 13 pantallas que se avanzan con el teclado y que abre
+sin internet. Sigue el orden de la consigna (situación → datos → descubrimiento → concepto) y los principios
+de Wilke: un mensaje por pantalla con el título como conclusión, un solo color de acento y gris para el resto,
+barras desde 0 y ordenadas, etiquetas directas, paleta apta para daltonismo y fuente y limitación en cada gráfico.
+
+| Acto | Pantallas |
+|---|---|
+| La situación | 1 portada · 2 el cartel de error del 18/11 · 3 «¿qué es Cloudflare?» (Trends) |
+| Los datos | 4 tráfico de AR cae 94 % (Radar) · 5 las tres caídas |
+| El descubrimiento | 6 % de sitios por empresa · 7 «7 de cada 10» (grilla de 100) · 8 Argentina vs. mundo · **9 explorador** · 10 lo que la web no ve |
+| El concepto | 11 por qué se cayeron (postmortems) · 12 simulador «todo de golpe vs. de a poco» + Producto, Proceso y Persona · 13 cierre y ficha de evidencia |
+
+**Explorador (pantalla 9):** *"Marcá las apps que usás y elegí qué empresa se cae"*. Las fichas que dependen de
+esa empresa se apagan. Con las fechas reales se ve qué falló de verdad: confirmado ●, en medios ◐.
+Así aparece la diferencia entre depender y caerse. Usa `data/resultados/servicios.json` (57 servicios).
 
 ## 6. Limitaciones (detalle en el README)
 - El ranking de ~7.700 mide sitios web; las apps solo están en la lista curada de 57 servicios.
@@ -146,7 +157,7 @@ Contexto, no eje: DORA 2025, Stack Overflow Survey 2025, GitHub Innovation Graph
 | Fechas | Tarea |
 |---|---|
 | 21–23/11 | ~~Revisar a mano el top 100~~ (hecho: 60 de 100 eran técnicos → lista curada de 57 servicios). ~~Leer los 3 postmortems y anotar citas~~ (hecho: `docs/postmortems.md`). |
-| 24–27/11 | Pieza visual: historia de apertura + explorador. |
+| 24–27/11 | ~~Pieza visual~~ (hecha: `pieza/index.html`). Ensayar con la pieza y ajustar textos. |
 | 28–29/11 | Ficha de evidencia. |
 | 30/11–2/12 | Guion del pitch (8 min) y ensayos. |
 | 3/12 | Presentación. |

@@ -7,7 +7,7 @@ y no se comparan entre archivos distintos.
 | Archivo | Términos comparados | Región | Rango | Para qué sirve |
 |---|---|---|---|---|
 | `cloudflare_regiones_AR.csv` | Cloudflare, no anda, ChatGPT, se cayó | Argentina, por provincia | 17/11/2025 → 18/11/2026 | Poco: "ChatGPT" tapa a los demás términos. |
-| `cloudflare_busquedas_en_alza_AR.csv` | Consultas relacionadas con "Cloudflare" | Argentina | 17/11/2025 → 18/11/2026 | **Mucho (perspectiva de Uso).** La gente buscó el mensaje de error que veía ("por favor, desbloquee challenges.cloudflare.com para continuar"), "que es cloudflare", "cloudflare buenos aires", "chatgpt cloudflare". |
+| `cloudflare_busquedas_en_alza_AR.csv` | Consultas relacionadas con "Cloudflare" | Argentina | 17/11/2025 → 18/11/2026 | **Mucho (perspectiva de Persona).** La gente buscó el mensaje de error que veía ("por favor, desbloquee challenges.cloudflare.com para continuar"), "que es cloudflare", "cloudflare buenos aires", "chatgpt cloudflare". |
 | `cloudflare_busquedas_top_AR.csv` | Ídem, ordenadas por volumen | Argentina | Ídem | Casi igual al anterior. |
 | `crowdstrike_regiones_AR.csv` | CrowdStrike, Pantalla azul de la muerte, windows, Microsoft | Argentina, por provincia | 01/07/2024 → 18/11/2026 | No sirve para el pico: "windows" tapa todo y el rango es de más de 2 años. |
 | `crowdstrike_regiones_mundo.csv` | Ídem | Mundo, por país | Ídem | Ídem. "Pantalla azul" pesa más en Japón y el sudeste asiático. |

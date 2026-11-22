@@ -30,10 +30,21 @@ docs/           informe de avance
 | 6 | `src/06_resumen_caidas.py` | Resume cuánto cayó el tráfico argentino en cada caída | `resultados/resumen_caidas.csv` |
 | 7 | `src/07_servicios.py` | Para los servicios de `fuentes/servicios_ar.csv`: de qué empresa depende cada uno (DNS) y si se cayó (noticias) | `resultados/servicios.csv`, `resultados/servicios.json` |
 | 8 | `sql/08_historial_y_global.sql` + `src/08_historial_y_global.py` | ¿Algún servicio cambió de proveedor después de una caída? ¿Argentina depende más de Cloudflare que el mundo? | `fuentes/historial_global.csv` → `resultados/historial_servicios.csv`, `resultados/comparacion_mundo.csv` |
+| 9 | `src/09_datos_pieza.py` | Junta los datos de la pieza y los incrusta en el HTML | `pieza/index.html` |
 | — | A mano | Google Trends: qué buscó la gente en cada caída | `fuentes/trends/` (ver su `LEEME.md`) |
 | — | A mano | Revisión del top 100 de Radar: 60 de 100 son dominios técnicos | `fuentes/top100_revision_manual.csv` |
 
 `src/comun.py` no se corre solo: tiene la tabla de empresas y las rutas que usan los demás.
+
+## La pieza visual: `pieza/index.html`
+Es la presentación del pitch: **13 pantallas**, funciona **sin internet** y sin instalar nada.
+1. Abrí `pieza/index.html` con doble clic (Chrome, Edge o Firefox).
+2. **Hacé un clic en la página** para que tome el teclado.
+3. Navegación: `→` `↓` `espacio` `Re Pág` para avanzar; `←` `↑` `Av Pág` para volver; `Inicio` y `Fin`; `F` para pantalla completa.
+4. En la pantalla 9 (explorador): «Las más usadas» marca 10 apps típicas. Después elegí una empresa o una fecha real.
+
+Si cambian los datos, corré `python src/09_datos_pieza.py` y la pieza se actualiza sola.
+Falta completar el nombre del presentador o del equipo en la portada (buscar «completar» en el HTML).
 
 ## Seguridad: qué hace y qué no hace cada script
 

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Qué se apaga?</title>
+<!--
+  Pieza visual del TPI DATA4QUALITY — "¿Qué se apaga si se cae una sola empresa?"
+  Un solo archivo: anda sin internet. Los datos se incrustan con src/09_datos_pieza.py.
+  Navegación: → ↓ espacio Re Pág = avanzar · ← ↑ Av Pág = volver · F = pantalla completa.
+-->
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #fcfcfb;
+    --card: #ffffff;
+    --ink: #0b0b0b;
+    --ink2: #52514e;
+    --muted: #8a8984;
+    --grid: #e6e5e1;
+    --line: #d9d8d3;
+    --accent: #eb6834;      /* Cloudflare / lo que importa en cada pantalla */
+    --accent-soft: #fbe3d8;
+    --blue: #2a78d6;        /* Argentina en la comparación con el mundo */
+    --world: #5f5e5a;       /* Mundo */
+    --off: #2b2b2a;         /* servicio apagado */
+    --ok: #1baf7a;          /* estado: funciona */
+    --bad: #e34948;         /* estado: con error */
+  }
+  * { box-sizing: border-box; }
+  html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    font-size: clamp(16px, 1.25vw, 21px); line-height: 1.4;
+  }
+  .pantalla {
+    min-height: 100vh; padding: 4vh 6vw 5vh; scroll-snap-align: start;
+    display: flex; flex-direction: column; justify-content: center; gap: 1.8vh;
+    border-bottom: 1px solid var(--grid); position: relative;
+  }
+  .acto {
+    font-size: .78em; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600;
+  }
+  h1 { font-size: clamp(2.4rem, 5.2vw, 5rem); line-height: 1.05; margin: 0; letter-spacing: -.02em; }
+  h2 { font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.12; margin: 0; letter-spacing: -.01em; max-width: 36ch; }
+  h2 .num { color: var(--accent); }
+  p { margin: 0; max-width: 62ch; }
+  .sub { color: var(--ink2); font-size: 1.1em; }
+  .nota { color: var(--muted); font-size: .8em; max-width: 90ch; }
+  .nota b { color: var(--ink2); font-weight: 600; }
+  .fila { display: flex; gap: 4vw; align-items: flex-start; flex-wrap: wrap; }
+  .fila > .grafico { flex: 1 1 560px; min-width: 0; }
+  .fila > .lateral { flex: 0 1 340px; display: flex; flex-direction: column; gap: 1.2vh; }
+  svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .grafico svg { max-height: 48vh; }
+  svg text { font-family: inherit; fill: var(--ink2); font-size: 15px; }
+  svg .eje text { fill: var(--muted); font-size: 14px; }
+  svg .eje line { stroke: var(--grid); stroke-width: 1; }
+  .leyenda { display: flex; gap: 1.6em; color: var(--ink2); font-size: .9em; flex-wrap: wrap; }
+  .leyenda span::before {
+    content: ""; display: inline-block; width: 1.6em; height: 4px; border-radius: 2px;
+    background: var(--c); vertical-align: middle; margin-right: .5em;
+  }
+  .leyenda span.punto::before { width: .8em; height: .8em; border-radius: 50%; }
+  .chip {
+    display: inline-block; padding: .25em .7em; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--card); margin: 0 .35em .45em 0; font-size: .92em;
+  }
+  .chip.fuerte { border-color: var(--ink); font-weight: 600; }
+  .cita { font-style: italic; color: var(--ink2); }
+  details { color: var(--ink2); font-size: .85em; }
+  details summary { cursor: pointer; color: var(--muted); }
+  table { border-collapse: collapse; margin-top: .6em; }
+  th, td { padding: .25em 1em .25em 0; text-align: left; border-bottom: 1px solid var(--grid); }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Portada */
+  #p1 h1 { max-width: 16ch; }
+  .tecla { border: 1px solid var(--line); border-radius: 6px; padding: .05em .45em; background: var(--card); font-size: .9em; }
+
+  /* Pantalla de error (genérica, sin marcas) */
+  .ventana {
+    max-width: 760px; border: 1px solid var(--line); border-radius: 12px; background: var(--card);
+    box-shadow: 0 10px 40px rgba(0,0,0,.08); overflow: hidden;
+  }
+  .ventana .barra { display: flex; gap: 8px; padding: 12px 16px; background: #f1f0ec; border-bottom: 1px solid var(--line); }
+  .ventana .barra i { width: 12px; height: 12px; border-radius: 50%; background: var(--line); }
+  .ventana .cuerpo { padding: 4.5vh 3vw; }
+  .ventana .codigo { font-size: .9em; color: var(--muted); letter-spacing: .08em; }
+  .ventana .msg { font-size: clamp(1.3rem, 2.3vw, 2.1rem); font-weight: 600; margin-top: .4em; line-height: 1.2; }
+
+  /* Tarjetas */
+  .tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2vw; }
+  .tarjeta { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.4em 1.5em; }
+  .tarjeta h3 { margin: 0 0 .2em; font-size: 1.35em; }
+  .tarjeta .fecha { color: var(--muted); font-size: .9em; }
+  .tarjeta .grande { font-size: 2.4em; font-weight: 700; line-height: 1.1; margin: .4em 0 .1em; font-variant-numeric: tabular-nums; }
+  .tarjeta .grande.acento { color: var(--accent); }
+  .tarjeta dl { margin: .8em 0 0; display: grid; grid-template-columns: auto 1fr; gap: .25em 1em; font-size: .92em; }
+  .tarjeta dt { color: var(--muted); }
+  .tarjeta dd { margin: 0; }
+
+  /* Explorador */
+  #p9 { justify-content: flex-start; gap: 1vh; padding-top: 3vh; }
+  #p9 h2 { font-size: clamp(1.5rem, 2.4vw, 2.4rem); }
+  .controles { display: flex; flex-wrap: wrap; gap: .5em 1.4em; align-items: center; }
+  #p9 .controles { font-size: .92em; }
+  .controles .paso { font-weight: 700; color: var(--ink); margin-right: .3em; }
+  button {
+    font: inherit; font-size: .92em; cursor: pointer; border-radius: 999px; padding: .35em .95em;
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  }
+  button:hover { border-color: var(--ink2); }
+  button.activo { background: var(--ink); color: #fff; border-color: var(--ink); }
+  button.activo.real { background: var(--accent); border-color: var(--accent); }
+  button:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .resultado { font-size: clamp(1.2rem, 2vw, 1.9rem); font-weight: 700; min-height: 1.4em; }
+  .resultado small { font-size: .55em; font-weight: 400; color: var(--ink2); display: block; margin-top: .15em; }
+  .grupos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1vh 1.2vw; align-items: start; }
+  .grupo { display: flex; flex-direction: column; gap: 3px; }
+  .grupo.ancho { grid-column: span 2; }
+  .grupo > span { font-size: .68em; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .grupo > div { display: flex; flex-wrap: wrap; gap: 4px; }
+  .ficha {
+    border-radius: 8px; padding: .25em .6em; font-size: .78em; border: 1px solid var(--line);
+    background: var(--card); color: var(--ink2); position: relative; transition: all .25s;
+  }
+  .ficha.marcada { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+  .ficha.marcada::before { content: "✓ "; }
+  .ficha.apagada { background: var(--off); color: #9a9994; border-color: var(--off); text-decoration: line-through; }
+  .ficha.riesgo { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .ficha.riesgo::after { content: " ⚠"; color: var(--accent); }
+  .ficha.medios { background: #e9e8e3; border-color: var(--ink2); color: var(--ink); }
+  .ficha.tenue { opacity: .42; }
+  .ficha .marca { margin-left: .35em; font-weight: 700; text-decoration: none; display: inline-block; }
+  .claves { display: flex; gap: 1.4em; flex-wrap: wrap; font-size: .8em; color: var(--ink2); }
+  .claves b { display: inline-block; padding: 0 .4em; border-radius: 4px; }
+
+  /* Postmortems */
+  .pm { display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: .8vh 1.2vw; align-items: stretch; }
+  .pm .cab { font-size: .75em; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .pm .emp { font-weight: 700; font-size: 1.1em; align-self: center; }
+  .pm .paso { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .6em .8em; font-size: .9em; position: relative; }
+  .pm .paso.golpe { border-color: var(--accent); }
+  .pm .cita { grid-column: 2 / -1; font-size: .82em; margin: -.2vh 0 1vh; }
+
+  /* Canario */
+  .canario { display: flex; gap: 4vw; flex-wrap: wrap; align-items: flex-start; }
+  .canario .sim { flex: 0 1 340px; }
+  .canario .sim svg { max-height: 40vh; }
+  .canario .conceptos { flex: 1 1 420px; display: flex; flex-direction: column; gap: 1.2vh; }
+  .concepto { border-left: 4px solid var(--line); padding: .2em 0 .2em 1em; }
+  .concepto .t { display: block; font-size: 1.05em; font-weight: 700; }
+  .concepto.on { border-color: var(--accent); }
+  #simMsg { min-height: 2.6em; font-weight: 600; margin-top: .6em; }
+
+  /* Cierre */
+  #p13 blockquote { margin: 0; font-size: clamp(1.8rem, 3.6vw, 3.4rem); font-weight: 700; line-height: 1.15; max-width: 24ch; }
+  #p13 blockquote span { color: var(--accent); }
+  .ficha-evidencia { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1vh 3vw; font-size: .8em; color: var(--ink2); }
+  .ficha-evidencia h4 { margin: 0 0 .3em; color: var(--ink); font-size: 1em; }
+  .ficha-evidencia ul { margin: 0; padding-left: 1.1em; }
+
+  /* Navegación */
+  #contador {
+    position: fixed; right: 1.4vw; bottom: 1.2vh; font-size: .8em; color: var(--muted);
+    font-variant-numeric: tabular-nums; background: rgba(252,252,251,.85); padding: .1em .5em; border-radius: 6px;
+  }
+  #progreso { position: fixed; left: 0; top: 0; height: 3px; background: var(--accent); width: 0; transition: width .3s; z-index: 5; }
+  #tip {
+    position: fixed; pointer-events: none; background: var(--ink); color: #fff; font-size: .8em;
+    padding: .45em .7em; border-radius: 8px; max-width: 320px; opacity: 0; transition: opacity .1s; z-index: 10;
+    line-height: 1.35;
+  }
+  @media (max-width: 1000px) {
+    .grupos { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 700px) {
+    .grupos { grid-template-columns: 1fr; }
+    .grupo.ancho { grid-column: auto; }
+    .pm { grid-template-columns: 1fr; }
+    .pm .cita { grid-column: 1; }
+    .grupo > div { max-width: none; }
+  }
+</style>
+</head>
+<body>
+<div id="progreso"></div>
+<div id="contador"></div>
+<div id="tip"></div>
+
+<!-- ============ ACTO 1: LA SITUACIÓN ============ -->
+<section class="pantalla" id="p1">
+  <div class="acto">DATA4QUALITY 2026 · Aspectos Avanzados de Calidad de Software · UTN FRRe</div>
+  <h1>¿Qué se apaga si se cae una sola empresa?</h1>
+  <p class="sub">Una historia de calidad de software contada con datos.</p>
+  <p class="nota">Presenta: <b>(completar nombre / equipo)</b> · 3 de diciembre de 2026</p>
+  <p class="nota">Avanzá con <span class="tecla">→</span> o <span class="tecla">espacio</span> · volvé con <span class="tecla">←</span> · <span class="tecla">F</span> pantalla completa</p>
+</section>
+
+<section class="pantalla" id="p2">
+  <div class="acto">La situación</div>
+  <h2>Martes 18 de noviembre de 2025, 10 de la mañana.</h2>
+  <p class="sub">Abrís ChatGPT, X, la app de tu billetera… y aparece esto:</p>
+  <div class="ventana" role="img" aria-label="Pantalla de error con el mensaje: Por favor, desbloquee challenges.cloudflare.com para continuar">
+    <div class="barra"><i></i><i></i><i></i></div>
+    <div class="cuerpo">
+      <div class="codigo">ERROR 500 · INTERNAL SERVER ERROR</div>
+      <div class="msg">Por favor, desbloquee challenges.cloudflare.com para continuar.</div>
+    </div>
+  </div>
+  <p class="nota">Recreación sin marcas. El texto es el que miles de personas copiaron en Google ese día (Google Trends, búsquedas en alza en Argentina).</p>
+  <div id="fallaron"></div>
+</section>
+
+<section class="pantalla" id="p3">
+  <div class="acto">La situación</div>
+  <h2>Ese día, la Argentina le preguntó a Google: <span class="num">«¿qué es Cloudflare?»</span></h2>
+  <div class="fila">
+    <div class="grafico"><svg id="gTrends" viewBox="0 0 1000 400" role="img" aria-label="Búsquedas de Cloudflare en Argentina, noviembre de 2025"></svg></div>
+    <div class="lateral">
+      <p class="sub">Lo que se buscó ese día, textual:</p>
+      <div id="busquedas"></div>
+    </div>
+  </div>
+  <p class="nota"><b>Fuente:</b> Google Trends, Argentina, 1 al 30/11/2025, búsqueda «cloudflare». Valores relativos: 100 = el día de más búsquedas del mes (no son cantidades).</p>
+</section>
+
+<!-- ============ ACTO 2: LOS DATOS ============ -->
+<section class="pantalla" id="p4">
+  <div class="acto">Los datos</div>
+  <h2 id="tRadar">A las 11, el tráfico web de la Argentina cayó un 94 %</h2>
+  <div class="leyenda">
+    <span style="--c: var(--accent)">Martes 18/11/2025</span>
+    <span style="--c: var(--muted)">El martes anterior, misma hora</span>
+  </div>
+  <div class="grafico"><svg id="gRadar" viewBox="0 0 1000 400" role="img" aria-label="Tráfico web de Argentina el 18 de noviembre de 2025 comparado con el martes anterior"></svg></div>
+  <p class="nota"><b>Fuente:</b> Cloudflare Radar (CC BY-NC 4.0), tráfico web de Argentina que pasa por Cloudflare, cada 15 minutos, hora argentina. Escala relativa, no cantidad de visitas. Durante la caída la propia medición de Cloudflare estuvo afectada: la baja mezcla tráfico que no llegó y tráfico que no se pudo registrar.</p>
+</section>
+
+<section class="pantalla" id="p5">
+  <div class="acto">Los datos</div>
+  <h2>No fue la única: tres caídas en 16 meses</h2>
+  <div class="tarjetas" id="tarjetasCaidas"></div>
+  <p class="nota">Duración según cada postmortem oficial. Tráfico: Cloudflare Radar, peor momento contra la misma hora de la semana anterior. Servicios: de nuestra lista de servicios conocidos en Argentina, los que las noticias reportaron con fallas (con link en el repositorio).</p>
+</section>
+
+<!-- ============ ACTO 3: EL DESCUBRIMIENTO ============ -->
+<section class="pantalla" id="p6">
+  <div class="acto">El descubrimiento</div>
+  <h2>Más de la mitad de los sitios que más usamos depende de <span class="num">una sola empresa</span></h2>
+  <p class="sub" id="subEmpresas"></p>
+  <div class="grafico"><svg id="gEmpresas" viewBox="0 0 1000 360" role="img" aria-label="Porcentaje de sitios que depende de cada empresa"></svg></div>
+  <details><summary>Ver los datos en tabla</summary><div id="tEmpresas"></div></details>
+  <p class="nota"><b>Fuente:</b> Chrome UX Report (sitios más usados desde Argentina, oct. 2026) + HTTP Archive (CDN y nube de cada sitio, 1/10/2026). Un sitio puede depender de más de una empresa. Se excluyen sitios para adultos.</p>
+</section>
+
+<section class="pantalla" id="p7">
+  <div class="acto">El descubrimiento</div>
+  <h2 id="tWaffle">7 de cada 10 dependen de alguna de tres empresas</h2>
+  <div class="fila">
+    <div class="grafico" style="flex: 0 1 460px"><svg id="gWaffle" viewBox="0 0 400 400" role="img" aria-label="Grilla de 100 cuadrados"></svg></div>
+    <div class="lateral" style="flex: 1 1 360px">
+      <p class="sub">Cada cuadradito es el <b>1 %</b> de los sitios más usados desde Argentina.</p>
+      <p class="sub" id="waffleTexto"></p>
+      <p class="sub" id="waffleSin"></p>
+    </div>
+  </div>
+</section>
+
+<section class="pantalla" id="p8">
+  <div class="acto">El descubrimiento</div>
+  <h2>No es un problema argentino: <span class="num">así está armada internet</span></h2>
+  <div class="leyenda">
+    <span class="punto" style="--c: var(--blue)">Argentina (top 10.000 desde AR)</span>
+    <span class="punto" style="--c: var(--world)">Mundo (top 10.000 global)</span>
+  </div>
+  <div class="grafico"><svg id="gMundo" viewBox="0 0 1000 340" role="img" aria-label="Comparación Argentina contra el mundo"></svg></div>
+  <details><summary>Ver los datos en tabla</summary><div id="tMundo"></div></details>
+  <p class="nota"><b>Fuente:</b> HTTP Archive, 1/10/2026, mismo método para los dos. Argentina usa menos Akamai y más proveedores locales que el promedio mundial.</p>
+</section>
+
+<section class="pantalla" id="p9">
+  <div class="acto">Explorá</div>
+  <h2>¿Qué se te apaga a vos?</h2>
+  <div class="controles">
+    <span class="paso">1. Marcá las apps que usás</span>
+    <button id="bUsadas">Las más usadas</button>
+    <button id="bTodas">Todas</button>
+    <button id="bLimpiar">Limpiar</button>
+  </div>
+  <div class="controles">
+    <span class="paso">2. ¿Y si se cae…?</span>
+    <span id="botonesEmpresas"></span>
+  </div>
+  <div class="controles">
+    <span class="paso">o mirá lo que pasó de verdad:</span>
+    <span id="botonesReales"></span>
+  </div>
+  <div class="resultado" id="resultado"></div>
+  <div class="grupos" id="grupos"></div>
+  <div class="claves" id="claves"></div>
+  <p class="nota" id="avisoDns"></p>
+</section>
+
+<section class="pantalla" id="p10">
+  <div class="acto">El descubrimiento</div>
+  <h2>Lo que los datos de la web <span class="num">no ven</span></h2>
+  <div class="tarjetas">
+    <div class="tarjeta">
+      <h3>Aerolíneas Argentinas</h3>
+      <div class="fecha">19/07/2024 · CrowdStrike</div>
+      <p style="margin-top:.7em">Su web depende de <b>Google</b>. Pero ese día <b>«se cayó el sistema»</b>: CrowdStrike es un programa que corre <b>dentro</b> de las computadoras con Windows de las empresas. Ningún dato de la web lo muestra.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>El cartel del 18/11</h3>
+      <div class="fecha">Cloudflare · Turnstile</div>
+      <p style="margin-top:.7em">Es un control anti-bots de Cloudflare que <b>otros sitios ponen dentro de su login</b>. Según el postmortem, estuvo caído de 8:30 a 10:10 y de 11:40 a 12:30 (hora argentina). Un sitio puede fallar por Cloudflare aunque su dirección diga otra empresa.</p>
+    </div>
+    <div class="tarjeta">
+      <h3 id="culpaNum">13 servicios</h3>
+      <div class="fecha">Cloudflare · reportes en medios</div>
+      <p style="margin-top:.7em" id="culpaTexto">fueron nombrados como caídos el 18/11 sin depender de Cloudflare, ni ese día ni hoy (HTTP Archive). ¿Ruido —la gente culpa a todo— o dependencias ocultas como la de al lado? Con estos datos no se puede saber.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTO 4: RECIÉN ACÁ, EL CONCEPTO DE CALIDAD ============ -->
+<section class="pantalla" id="p11">
+  <div class="acto">¿Por qué?</div>
+  <h2>Ninguna fue un hackeo: fueron <span class="num">cambios de rutina que llegaron a todos de golpe</span></h2>
+  <div class="pm">
+    <div></div><div class="cab">El cambio</div><div class="cab">Cómo se propagó</div><div class="cab">El costo</div>
+
+    <div class="emp">Cloudflare</div>
+    <div class="paso">Un cambio de permisos en una base de datos</div>
+    <div class="paso golpe">Un archivo automático, el doble de grande, se copió a <b>toda la red</b></div>
+    <div class="paso">~6 horas</div>
+    <div class="cita">«The software had a limit on the size of the feature file»</div>
+
+    <div class="emp">AWS</div>
+    <div class="paso">Una automatización de DNS con una falla latente</div>
+    <div class="paso golpe">En <b>una región</b> de la que depende media nube; cayeron otros servicios en cadena</div>
+    <div class="paso">~14 horas y media</div>
+    <div class="cita">«The race condition involves an unlikely interaction between two of the DNS Enactors.»</div>
+
+    <div class="emp">CrowdStrike</div>
+    <div class="paso">Una actualización de contenido de rutina</div>
+    <div class="paso golpe">A <b>todas</b> las computadoras conectadas, sin etapas</div>
+    <div class="paso">78 min de envío; 8,5 millones de PC arregladas a mano</div>
+    <div class="cita">«a Rapid Response Content update with an undetected error»</div>
+  </div>
+  <p class="nota"><b>Fuentes:</b> postmortems oficiales de Cloudflare (18/11/2025), AWS (us-east-1, oct. 2025) y CrowdStrike (PIR y análisis de causa raíz, 2024); cifra de PC: Microsoft. Resumen y links en <b>docs/postmortems.md</b>.</p>
+</section>
+
+<section class="pantalla" id="p12">
+  <div class="acto">Recién acá, el concepto</div>
+  <h2>¿Y si el cambio hubiera llegado <span class="num">de a poco</span>?</h2>
+  <div class="canario">
+    <div class="sim">
+      <svg id="gSim" viewBox="0 0 400 400" role="img" aria-label="100 computadoras"></svg>
+      <div class="controles" style="margin-top:.6em">
+        <button id="bGolpe">Mandar a todas de golpe</button>
+        <button id="bPoco">Mandar de a poco</button>
+        <button id="bReset">Reiniciar</button>
+      </div>
+      <div id="simMsg">Cada punto es una computadora. La actualización trae un error.</div>
+      <div class="claves"><span><b style="background:var(--ok);color:#fff">●</b> funciona</span><span><b style="background:var(--bad);color:#fff">●</b> con error</span></div>
+    </div>
+    <div class="conceptos">
+      <p class="sub">Esto, en calidad de software, tiene nombre:</p>
+      <div class="concepto" id="c1"><span class="t">Producto · Fiabilidad</span>ISO/IEC 25010:2023: disponibilidad, tolerancia a fallos, recuperabilidad. Miles de sitios distintos con <b>un mismo punto único de falla</b>.</div>
+      <div class="concepto" id="c2"><span class="t">Proceso · Despliegue gradual («canario»)</span>Probar el cambio primero en unos pocos y frenar si falla. Junto con el <b>presupuesto de error</b> y los <b>postmortems sin culpables</b> (Site Reliability Engineering; Software Engineering at Google).</div>
+      <div class="concepto" id="c3"><span class="t">Persona · Quién paga la falla</span>La paga quien no eligió al proveedor y ni sabía que existía: la persona que no pudo pagar, viajar o trabajar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="pantalla" id="p13">
+  <blockquote>El producto falló, la causa estaba en el proceso, <span>y lo pagaron las personas.</span></blockquote>
+  <div class="ficha-evidencia">
+    <div>
+      <h4>Fuentes (públicas)</h4>
+      <ul>
+        <li>Chrome UX Report: sitios más usados desde AR (oct. 2026)</li>
+        <li>HTTP Archive: CDN y nube de cada sitio (2024–2026)</li>
+        <li>Cloudflare Radar: tráfico de AR en cada caída (CC BY-NC 4.0)</li>
+        <li>Google Trends: búsquedas en AR</li>
+        <li>DNS público + Team Cymru: servicios conocidos (nov. 2026)</li>
+        <li>Noticias y postmortems oficiales (con links)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Unidad de análisis</h4>
+      <ul>
+        <li id="fUnidad">Sitio web (origen) más usado desde Argentina</li>
+        <li id="fServ">Servicio conocido (app o web)</li>
+        <li>Caída: Cloudflare 18/11/2025, AWS 20/10/2025, CrowdStrike 19/07/2024</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Limitaciones</h4>
+      <ul>
+        <li>Depender de una empresa no es caerse con ella.</li>
+        <li>El DNS ve la «puerta de entrada», no lo de adentro; es de nov. 2026.</li>
+        <li>«No reportado» no significa que anduvo bien.</li>
+        <li>CrUX cuenta usuarios de Chrome; HTTP Archive mira solo la home.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Datos, código y método</h4>
+      <ul>
+        <li>github.com/Blanco302002/tpi-aacsw</li>
+        <li>README: transformaciones y limitaciones completas</li>
+        <li id="fGenerado"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DATOS:INICIO -->
+<script>window.DATOS = {"generado": "2026-11-21", "trends": {"serie": [{"d": "2025-11-01", "v": 2}, {"d": "2025-11-02", "v": 2}, {"d": "2025-11-03", "v": 2}, {"d": "2025-11-04", "v": 1}, {"d": "2025-11-05", "v": 2}, {"d": "2025-11-06", "v": 2}, {"d": "2025-11-07", "v": 2}, {"d": "2025-11-08", "v": 2}, {"d": "2025-11-09", "v": 2}, {"d": "2025-11-10", "v": 2}, {"d": "2025-11-11", "v": 2}, {"d": "2025-11-12", "v": 1}, {"d": "2025-11-13", "v": 1}, {"d": "2025-11-14", "v": 2}, {"d": "2025-11-15", "v": 2}, {"d": "2025-11-16", "v": 1}, {"d": "2025-11-17", "v": 2}, {"d": "2025-11-18", "v": 100}, {"d": "2025-11-19", "v": 16}, {"d": "2025-11-20", "v": 4}, {"d": "2025-11-21", "v": 3}, {"d": "2025-11-22", "v": 2}, {"d": "2025-11-23", "v": 1}, {"d": "2025-11-24", "v": 2}, {"d": "2025-11-25", "v": 2}, {"d": "2025-11-26", "v": 2}, {"d": "2025-11-27", "v": 2}, {"d": "2025-11-28", "v": 2}, {"d": "2025-11-29", "v": 0}, {"d": "2025-11-30", "v": 1}], "busquedas": ["que es cloudflare", "por favor, desbloquee challenges.cloudflare.com para continuar.", "chatgpt cloudflare", "cloudflare buenos aires", "se cayo cloudflare", "cloudflare error 500"]}, "radar": [{"h": 0.0, "v": 0.713086, "c": 0.705062, "d": 1.1}, {"h": 0.25, "v": 0.660123, "c": 0.651605, "d": 1.3}, {"h": 0.5, "v": 0.603951, "c": 0.611481, "d": -1.2}, {"h": 0.75, "v": 0.562634, "c": 0.571728, "d": -1.6}, {"h": 1.0, "v": 0.513045, "c": 0.535802, "d": -4.2}, {"h": 1.25, "v": 0.459383, "c": 0.465761, "d": -1.4}, {"h": 1.5, "v": 0.41893, "c": 0.409794, "d": 2.2}, {"h": 1.75, "v": 0.380123, "c": 0.382016, "d": -0.5}, {"h": 2.0, "v": 0.339383, "c": 0.350247, "d": -3.1}, {"h": 2.25, "v": 0.320412, "c": 0.32679, "d": -2.0}, {"h": 2.5, "v": 0.28823, "c": 0.293704, "d": -1.9}, {"h": 2.75, "v": 0.271687, "c": 0.270658, "d": 0.4}, {"h": 3.0, "v": 0.243169, "c": 0.242675, "d": 0.2}, {"h": 3.25, "v": 0.221646, "c": 0.251893, "d": -12.0}, {"h": 3.5, "v": 0.211687, "c": 0.205514, "d": 3.0}, {"h": 3.75, "v": 0.198807, "c": 0.192387, "d": 3.3}, {"h": 4.0, "v": 0.197778, "c": 0.194115, "d": 1.9}, {"h": 4.25, "v": 0.176708, "c": 0.181564, "d": -2.7}, {"h": 4.5, "v": 0.168189, "c": 0.169465, "d": -0.8}, {"h": 4.75, "v": 0.163909, "c": 0.168724, "d": -2.9}, {"h": 5.0, "v": 0.175967, "c": 0.174856, "d": 0.6}, {"h": 5.25, "v": 0.189877, "c": 0.172881, "d": 9.8}, {"h": 5.5, "v": 0.174774, "c": 0.168519, "d": 3.7}, {"h": 5.75, "v": 0.182716, "c": 0.188724, "d": -3.2}, {"h": 6.0, "v": 0.236132, "c": 0.205432, "d": 14.9}, {"h": 6.25, "v": 0.236461, "c": 0.236543, "d": -0.0}, {"h": 6.5, "v": 0.260947, "c": 0.248107, "d": 5.2}, {"h": 6.75, "v": 0.28358, "c": 0.28716, "d": -1.2}, {"h": 7.0, "v": 0.360041, "c": 0.340329, "d": 5.8}, {"h": 7.25, "v": 0.356955, "c": 0.337407, "d": 5.8}, {"h": 7.5, "v": 0.397572, "c": 0.386296, "d": 2.9}, {"h": 7.75, "v": 0.419671, "c": 0.416214, "d": 0.8}, {"h": 8.0, "v": 0.488642, "c": 0.482058, "d": 1.4}, {"h": 8.25, "v": 0.528601, "c": 0.519177, "d": 1.8}, {"h": 8.5, "v": 0.405062, "c": 0.534321, "d": -24.2}, {"h": 8.75, "v": 0.269959, "c": 0.558519, "d": -51.7}, {"h": 9.0, "v": 0.392963, "c": 0.646461, "d": -39.2}, {"h": 9.25, "v": 0.329753, "c": 0.615062, "d": -46.4}, {"h": 9.5, "v": 0.358354, "c": 0.648642, "d": -44.8}, {"h": 9.75, "v": 0.627613, "c": 0.656132, "d": -4.3}, {"h": 10.0, "v": 0.083128, "c": 0.678354, "d": -87.7}, {"h": 10.25, "v": 0.062798, "c": 0.692469, "d": -90.9}, {"h": 10.5, "v": 0.053786, "c": 0.72642, "d": -92.6}, {"h": 10.75, "v": 0.050082, "c": 0.733621, "d": -93.2}, {"h": 11.0, "v": 0.045967, "c": 0.731687, "d": -93.7}, {"h": 11.25, "v": 0.048354, "c": 0.74177, "d": -93.5}, {"h": 11.5, "v": 0.560247, "c": 0.748436, "d": -25.1}, {"h": 11.75, "v": 0.57465, "c": 0.733333, "d": -21.6}, {"h": 12.0, "v": 0.528477, "c": 0.729465, "d": -27.6}, {"h": 12.25, "v": 0.565885, "c": 0.738025, "d": -23.3}, {"h": 12.5, "v": 0.58284, "c": 0.721317, "d": -19.2}, {"h": 12.75, "v": 0.560535, "c": 0.716008, "d": -21.7}, {"h": 13.0, "v": 0.564074, "c": 0.720453, "d": -21.7}, {"h": 13.25, "v": 0.577078, "c": 0.737654, "d": -21.8}, {"h": 13.5, "v": 0.619835, "c": 0.760782, "d": -18.5}, {"h": 13.75, "v": 0.675597, "c": 0.743128, "d": -9.1}, {"h": 14.0, "v": 0.693704, "c": 0.780535, "d": -11.1}, {"h": 14.25, "v": 0.722634, "c": 0.803374, "d": -10.1}, {"h": 14.5, "v": 0.714115, "c": 0.791523, "d": -9.8}, {"h": 14.75, "v": 0.729547, "c": 0.803621, "d": -9.2}, {"h": 15.0, "v": 0.734609, "c": 0.808313, "d": -9.1}, {"h": 15.25, "v": 0.730658, "c": 0.801317, "d": -8.8}, {"h": 15.5, "v": 0.697942, "c": 0.805185, "d": -13.3}, {"h": 15.75, "v": 0.621934, "c": 0.79177, "d": -21.5}, {"h": 16.0, "v": 0.695021, "c": 0.78572, "d": -11.5}, {"h": 16.25, "v": 0.721975, "c": 0.796708, "d": -9.4}, {"h": 16.5, "v": 0.703416, "c": 0.803374, "d": -12.4}, {"h": 16.75, "v": 0.720782, "c": 0.779506, "d": -7.5}, {"h": 17.0, "v": 0.676749, "c": 0.771564, "d": -12.3}, {"h": 17.25, "v": 0.693992, "c": 0.748354, "d": -7.3}, {"h": 17.5, "v": 0.685926, "c": 0.767407, "d": -10.6}, {"h": 17.75, "v": 0.66321, "c": 0.757901, "d": -12.5}, {"h": 18.0, "v": 0.683704, "c": 0.801811, "d": -14.7}, {"h": 18.25, "v": 0.680864, "c": 0.763416, "d": -10.8}, {"h": 18.5, "v": 0.675844, "c": 0.757325, "d": -10.8}, {"h": 18.75, "v": 0.701687, "c": 0.759259, "d": -7.6}, {"h": 19.0, "v": 0.662593, "c": 0.777695, "d": -14.8}, {"h": 19.25, "v": 0.691029, "c": 0.798765, "d": -13.5}, {"h": 19.5, "v": 0.677984, "c": 0.801605, "d": -15.4}, {"h": 19.75, "v": 0.650617, "c": 0.800494, "d": -18.7}, {"h": 20.0, "v": 0.650741, "c": 0.819918, "d": -20.6}, {"h": 20.25, "v": 0.676667, "c": 0.807819, "d": -16.2}, {"h": 20.5, "v": 0.69535, "c": 0.812428, "d": -14.4}, {"h": 20.75, "v": 0.6907, "c": 0.810165, "d": -14.7}, {"h": 21.0, "v": 0.706584, "c": 0.800864, "d": -11.8}, {"h": 21.25, "v": 0.696173, "c": 0.798971, "d": -12.9}, {"h": 21.5, "v": 0.690823, "c": 0.819177, "d": -15.7}, {"h": 21.75, "v": 0.707325, "c": 0.823457, "d": -14.1}, {"h": 22.0, "v": 0.720082, "c": 0.820947, "d": -12.3}, {"h": 22.25, "v": 0.731399, "c": 0.797984, "d": -8.3}, {"h": 22.5, "v": 0.740082, "c": 0.808436, "d": -8.5}, {"h": 22.75, "v": 0.74037, "c": 0.806872, "d": -8.2}, {"h": 23.0, "v": 0.766749, "c": 0.791852, "d": -3.2}, {"h": 23.25, "v": 0.738765, "c": 0.763909, "d": -3.3}, {"h": 23.5, "v": 0.761111, "c": 0.740041, "d": 2.8}, {"h": 23.75, "v": 0.734733, "c": 0.723663, "d": 1.5}, {"h": 24.0, "v": 0.684198, "c": 0.703128, "d": -2.7}], "caidas": [{"evento": "cloudflare_2025-11-18", "fuente": "http", "inicio_ar": "18/11 08:20", "fin_ar": "18/11 14:06", "dif_pct_promedio_caida": "-42.7", "dif_pct_peor_momento": "-93.7", "peor_momento_ar": "18/11 11:00"}, {"evento": "cloudflare_2025-11-18", "fuente": "netflows", "inicio_ar": "18/11 08:20", "fin_ar": "18/11 14:06", "dif_pct_promedio_caida": "-0.5", "dif_pct_peor_momento": "-19.8", "peor_momento_ar": "18/11 10:45"}, {"evento": "aws_2025-10-20", "fuente": "http", "inicio_ar": "20/10 03:48", "fin_ar": "20/10 19:00", "dif_pct_promedio_caida": "-0.4", "dif_pct_peor_momento": "-7.1", "peor_momento_ar": "20/10 04:30"}, {"evento": "aws_2025-10-20", "fuente": "netflows", "inicio_ar": "20/10 03:48", "fin_ar": "20/10 19:00", "dif_pct_promedio_caida": "-3.1", "dif_pct_peor_momento": "-15.7", "peor_momento_ar": "20/10 12:45"}, {"evento": "crowdstrike_2024-07-19", "fuente": "http", "inicio_ar": "19/07 01:09", "fin_ar": "19/07 13:09", "dif_pct_promedio_caida": "5.4", "dif_pct_peor_momento": "-5.4", "peor_momento_ar": "19/07 08:00"}, {"evento": "crowdstrike_2024-07-19", "fuente": "netflows", "inicio_ar": "19/07 01:09", "fin_ar": "19/07 13:09", "dif_pct_promedio_caida": "1.5", "dif_pct_peor_momento": "-14.3", "peor_momento_ar": "19/07 09:15"}], "empresas": [{"empresa": "Cloudflare", "pct": 56.4, "pct1000": 56.3}, {"empresa": "Amazon (AWS)", "pct": 27.4, "pct1000": 32.0}, {"empresa": "Otra", "pct": 13.2, "pct1000": 9.2}, {"empresa": "Google", "pct": 11.7, "pct1000": 9.1}, {"empresa": "Microsoft (Azure)", "pct": 3.0, "pct1000": 5.3}, {"empresa": "Akamai", "pct": 3.0, "pct1000": 6.4}, {"empresa": "Fastly", "pct": 2.0, "pct1000": 3.5}, {"empresa": "Vercel", "pct": 1.2, "pct1000": 0.4}, {"empresa": "Bunny", "pct": 0.9, "pct1000": 0.6}, {"empresa": "Imperva", "pct": 0.6, "pct1000": 1.0}, {"empresa": "Netlify", "pct": 0.2, "pct1000": 0.0}, {"empresa": "Meta (propia)", "pct": 0.1, "pct1000": 1.0}], "sitios": {"con_datos": 7713, "en_top": 9729, "excluidos": {"Adultos": 271}}, "concentracion": {"empresas": ["Cloudflare", "Amazon (AWS)", "Google"], "pct_sitios": 71.9, "pct_sin_cdn": 10.9}, "mundo": [{"empresa": "Cloudflare", "ar": 56.4, "mundo": 59.6}, {"empresa": "Amazon (AWS)", "ar": 27.4, "mundo": 31.7}, {"empresa": "Otra", "ar": 13.2, "mundo": 7.9}, {"empresa": "Google", "ar": 11.7, "mundo": 9.0}, {"empresa": "Microsoft (Azure)", "ar": 3.0, "mundo": 2.1}, {"empresa": "Akamai", "ar": 3.0, "mundo": 12.0}, {"empresa": "Fastly", "ar": 2.0, "mundo": 3.7}, {"empresa": "Vercel", "ar": 1.2, "mundo": 0.8}, {"empresa": "Bunny", "ar": 0.9, "mundo": 1.0}, {"empresa": "Imperva", "ar": 0.6, "mundo": 0.8}, {"empresa": "Netlify", "ar": 0.2, "mundo": 0.1}, {"empresa": "Meta (propia)", "ar": 0.1, "mundo": 0.2}], "servicios": [{"servicio": "Mercado Pago", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Banco Galicia", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Fastly"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Santander", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Akamai", "empresas": ["Akamai"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "BBVA", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Akamai", "empresas": ["Akamai", "Amazon (AWS)", "Proveedor argentino (Telecom Argentina S.A.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Banco Nación (BNA+)", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Propia u otra (F5 Networks SARL)", "empresas": ["Propia u otra (F5 Networks SARL)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Cuenta DNI (Banco Provincia)", "rubro": "Bancos y billeteras", "tipo": "app", "alcance": "provincial (Buenos Aires)", "principal": "Proveedor argentino (BANCO DE LA PROVINCIA DE BUENOS AIRES)", "empresas": ["Proveedor argentino (BANCO DE LA PROVINCIA DE BUENOS AIRES)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Banco Macro", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Proveedor argentino (Telecom Argentina S.A.)", "empresas": ["Proveedor argentino (Telecom Argentina S.A.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Brubank", "rubro": "Bancos y billeteras", "tipo": "app", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Google"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Ualá", "rubro": "Bancos y billeteras", "tipo": "app", "alcance": "nacional", "principal": "Vercel", "empresas": ["Vercel", "Amazon (AWS)", "Imperva"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "confirmado", "fuente": "El Economista (comunicado de Ualá): https://eleconomista.com.ar/actualidad/cayo-amazon-colapsaron-billeteras-dijeron-naranja-x-uala-mercado-pago-n89640"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Naranja X", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "confirmado", "fuente": "El Economista (comunicado de Naranja X): https://eleconomista.com.ar/actualidad/cayo-amazon-colapsaron-billeteras-dijeron-naranja-x-uala-mercado-pago-n89640"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "MODO", "rubro": "Bancos y billeteras", "tipo": "app", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Nuevo Banco del Chaco", "rubro": "Bancos y billeteras", "tipo": "ambas", "alcance": "local (Chaco)", "principal": "Proveedor argentino (Techtel LMDS Comunicaciones Interactivas S.A.)", "empresas": ["Proveedor argentino (Techtel LMDS Comunicaciones Interactivas S.A.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Mi Argentina", "rubro": "Estado", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "ARCA (ex AFIP)", "rubro": "Estado", "tipo": "web", "alcance": "nacional", "principal": "Proveedor argentino (AGENCIA DE RECAUDACION Y CONTROL ADUANERO (ARCA))", "empresas": ["Proveedor argentino (AGENCIA DE RECAUDACION Y CONTROL ADUANERO (ARCA))"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "ANSES", "rubro": "Estado", "tipo": "ambas", "alcance": "nacional", "principal": "Imperva", "empresas": ["Imperva"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "SUBE", "rubro": "Estado", "tipo": "ambas", "alcance": "nacional", "principal": "Proveedor argentino (NACION SERVICIOS S.A.)", "empresas": ["Proveedor argentino (NACION SERVICIOS S.A.)", "Imperva", "Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Mercado Libre", "rubro": "Compras y delivery", "tipo": "ambas", "alcance": "nacional", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)", "Google"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "reportado en medios", "fuente": "iProUP: https://www.iproup.com/innovacion/61153-mercado-libre-y-mas-el-apagon-mundial-de-aws-que-paralizo-empresas-y-apps"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Amazon", "rubro": "Compras y delivery", "tipo": "ambas", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)", "Fastly"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Business Today: https://www.businesstoday.in/world/story/aws-outage-triggers-widespread-issues-on-alexa-prime-video-perplexity-signal-other-apps-and-websites-498980-2025-10-20"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "PedidosYa", "rubro": "Compras y delivery", "tipo": "app", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Rappi", "rubro": "Compras y delivery", "tipo": "app", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Temu", "rubro": "Compras y delivery", "tipo": "app", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare", "Microsoft (Azure)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Uber", "rubro": "Transporte", "tipo": "app", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "confirmado", "fuente": "PCWorld: https://www.pcworld.com/article/2976097/worldwide-cloudflare-outage-disrupts-x-chatgpt-paypal-uber-and-other-sites.html"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Cabify", "rubro": "Transporte", "tipo": "app", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "WhatsApp", "rubro": "Redes y mensajería", "tipo": "app", "alcance": "global", "principal": "Meta (propia)", "empresas": ["Meta (propia)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Instagram", "rubro": "Redes y mensajería", "tipo": "app", "alcance": "global", "principal": "Meta (propia)", "empresas": ["Meta (propia)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Facebook", "rubro": "Redes y mensajería", "tipo": "ambas", "alcance": "global", "principal": "Meta (propia)", "empresas": ["Meta (propia)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "TikTok", "rubro": "Redes y mensajería", "tipo": "app", "alcance": "global", "principal": "Akamai", "empresas": ["Akamai", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "X (Twitter)", "rubro": "Redes y mensajería", "tipo": "ambas", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)", "Fastly"], "se_cayo": {"cloudflare": {"afectado": "confirmado", "fuente": "Forbes Argentina (error observado): https://www.forbesargentina.com/innovacion/caida-masiva-cloudflare-millones-usuarios-afectados-spotify-x-starbucks-chatgpt-mientras-accion-cae-3-n81897"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Netflix", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)", "Propia u otra (Netflix Streaming Services Inc.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Flow", "rubro": "Streaming", "tipo": "ambas", "alcance": "nacional", "principal": "Proveedor argentino (Telecom Argentina S.A.)", "empresas": ["Proveedor argentino (Telecom Argentina S.A.)", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Disney+", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Akamai", "empresas": ["Akamai"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "HBO Max", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Akamai", "empresas": ["Akamai", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Prime Video", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "Business Today: https://www.businesstoday.in/world/story/aws-outage-triggers-widespread-issues-on-alexa-prime-video-perplexity-signal-other-apps-and-websites-498980-2025-10-20"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "YouTube", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Google", "empresas": ["Google"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Spotify", "rubro": "Streaming", "tipo": "ambas", "alcance": "global", "principal": "Fastly", "empresas": ["Fastly", "Google", "Akamai", "Proveedor argentino (Telecom Argentina S.A.)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Forbes Argentina: https://www.forbesargentina.com/innovacion/caida-masiva-cloudflare-millones-usuarios-afectados-spotify-x-starbucks-chatgpt-mientras-accion-cae-3-n81897"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "ChatGPT", "rubro": "IA", "tipo": "ambas", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "confirmado", "fuente": "Forbes Argentina (error observado): https://www.forbesargentina.com/innovacion/caida-masiva-cloudflare-millones-usuarios-afectados-spotify-x-starbucks-chatgpt-mientras-accion-cae-3-n81897"}, "aws": {"afectado": "reportado en medios", "fuente": "Cadena 3: https://www.cadena3.com/noticia/sociedad/que-paso-con-los-servicios-de-mercado-pago-naranja-x-uala-netflix-y-disney_476635"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Gemini", "rubro": "IA", "tipo": "ambas", "alcance": "global", "principal": "Google", "empresas": ["Google"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Claude", "rubro": "IA", "tipo": "ambas", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare", "Propia u otra (Anthropic, PBC)"], "se_cayo": {"cloudflare": {"afectado": "confirmado", "fuente": "SiliconANGLE: https://siliconangle.com/2025/11/18/cloudflare-outage-briefly-takes-chatgpt-claude-services-offline/"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "DeepSeek", "rubro": "IA", "tipo": "ambas", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Zoom", "rubro": "Estudio y trabajo", "tipo": "ambas", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "ITPro: https://www.itpro.com/infrastructure/live/amazon-web-services-outage-live-hundreds-of-apps-including-slack-mobile-carriers-banking-services-down"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Microsoft Teams", "rubro": "Estudio y trabajo", "tipo": "ambas", "alcance": "global", "principal": "Microsoft (Azure)", "empresas": ["Microsoft (Azure)"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Discord", "rubro": "Estudio y trabajo", "tipo": "ambas", "alcance": "global", "principal": "Cloudflare", "empresas": ["Cloudflare", "Google"], "se_cayo": {"cloudflare": {"afectado": "reportado en medios", "fuente": "Cadena 3 (reportes de usuarios): https://www.cadena3.com/noticia/sociedad/apagon-masivo-de-internet-afecto-a-bancos-x-whatsapp-instagram-y-chatgpt_487887"}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Slack", "rubro": "Estudio y trabajo", "tipo": "ambas", "alcance": "global", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "reportado en medios", "fuente": "ITPro: https://www.itpro.com/infrastructure/live/amazon-web-services-outage-live-hundreds-of-apps-including-slack-mobile-carriers-banking-services-down"}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Granola", "rubro": "Estudio y trabajo", "tipo": "app", "alcance": "global", "principal": "Vercel", "empresas": ["Vercel", "Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Campus virtual UTN FRRe", "rubro": "Estudio y trabajo", "tipo": "web", "alcance": "local (Chaco)", "principal": "Cloudflare", "empresas": ["Cloudflare", "Microsoft (Azure)", "Proveedor argentino (Universidad Tecnologica Nacional)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Clarín", "rubro": "Medios", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)", "Google"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Infobae", "rubro": "Medios", "tipo": "ambas", "alcance": "nacional", "principal": "Akamai", "empresas": ["Akamai", "Proveedor argentino (Telecom Argentina S.A.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "La Nación", "rubro": "Medios", "tipo": "ambas", "alcance": "nacional", "principal": "Akamai", "empresas": ["Akamai", "Amazon (AWS)", "Proveedor argentino (Telecom Argentina S.A.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Olé", "rubro": "Medios", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Amazon (AWS)", "Google"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "TN", "rubro": "Medios", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Akamai"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "DiDi", "rubro": "Transporte", "tipo": "app", "alcance": "global", "principal": "Propia u otra (Beijing Xiaoju Science and Technology Co., Ltd.)", "empresas": ["Propia u otra (Beijing Xiaoju Science and Technology Co., Ltd.)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Telegram", "rubro": "Redes y mensajería", "tipo": "app", "alcance": "global", "principal": "Propia u otra (Telegram Messenger Inc)", "empresas": ["Propia u otra (Telegram Messenger Inc)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Mercado Play", "rubro": "Streaming", "tipo": "ambas", "alcance": "nacional", "principal": "Amazon (AWS)", "empresas": ["Amazon (AWS)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Google Meet", "rubro": "Estudio y trabajo", "tipo": "ambas", "alcance": "global", "principal": "Google", "empresas": ["Google"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": ""}}}, {"servicio": "Aerolíneas Argentinas", "rubro": "Viajes", "tipo": "ambas", "alcance": "nacional", "principal": "Google", "empresas": ["Google"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "confirmado", "fuente": "La Nación (fuentes de la empresa: 'se cayó el sistema', resuelto a las 10): https://www.lanacion.com.ar/sociedad/la-caida-de-windows-los-problemas-que-causo-en-la-argentina-la-falla-de-crowdstrike-nid19072024/"}}}, {"servicio": "JetSMART", "rubro": "Viajes", "tipo": "ambas", "alcance": "regional", "principal": "Cloudflare", "empresas": ["Cloudflare", "Fastly", "Microsoft (Azure)"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "confirmado", "fuente": "Bloomberg Línea (fuentes de la empresa: intermitencia en sistemas online): https://www.bloomberglinea.com/latinoamerica/argentina/en-argentina-tambien-pego-la-caida-de-microsoft-estos-servicios-fallaron-en-el-pais/"}}}, {"servicio": "Flybondi", "rubro": "Viajes", "tipo": "ambas", "alcance": "nacional", "principal": "Cloudflare", "empresas": ["Cloudflare"], "se_cayo": {"cloudflare": {"afectado": "no reportado", "fuente": ""}, "aws": {"afectado": "no reportado", "fuente": ""}, "crowdstrike": {"afectado": "no reportado", "fuente": "La Nación: sin problemas registrados hasta las 9:30: https://www.lanacion.com.ar/sociedad/la-caida-de-windows-los-problemas-que-causo-en-la-argentina-la-falla-de-crowdstrike-nid19072024/"}}}], "aviso_dns": "La infraestructura se consultó por DNS el 2026-11-21, no el día de cada caída: un servicio pudo cambiar de proveedor en el medio. Por eso la columna '¿se cayó?' se apoya en noticias y postmortems, no en el DNS. Además, el DNS muestra el servidor público de cada servicio, no su infraestructura interna."};</script>
+<!-- DATOS:FIN -->
+
+<script>
+(function () {
+  "use strict";
+  var D = window.DATOS;
+  if (!D) { document.body.insertAdjacentHTML("afterbegin", "<p style='padding:2em;color:#e34948'>Faltan los datos: correr <b>python src/09_datos_pieza.py</b>.</p>"); return; }
+
+  var NS = "http://www.w3.org/2000/svg";
+  var fmt = function (x, d) { return Number(x).toLocaleString("es-AR", { maximumFractionDigits: d === undefined ? 0 : d, minimumFractionDigits: d === undefined ? 0 : d }); };
+  function svgEl(tag, attrs, padre) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (padre) padre.appendChild(e);
+    return e;
+  }
+  function texto(padre, x, y, t, attrs) {
+    var a = attrs || {}; a.x = x; a.y = y;
+    var e = svgEl("text", a, padre); e.textContent = t; return e;
+  }
+  function $(id) { return document.getElementById(id); }
+  function tabla(cont, cabeza, filas) {
+    var h = "<table><tr>" + cabeza.map(function (c, i) { return "<th" + (i ? " class='n'" : "") + ">" + c + "</th>"; }).join("") + "</tr>";
+    filas.forEach(function (f) { h += "<tr>" + f.map(function (c, i) { return "<td" + (i ? " class='n'" : "") + ">" + c + "</td>"; }).join("") + "</tr>"; });
+    cont.innerHTML = h + "</table>";
+  }
+
+  /* ---------- Tooltip ---------- */
+  var tip = $("tip");
+  function mostrarTip(html, ev) {
+    tip.innerHTML = html; tip.style.opacity = 1;
+    var x = ev.clientX + 16, y = ev.clientY + 16;
+    var r = tip.getBoundingClientRect();
+    if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 16;
+    if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 16;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  function ocultarTip() { tip.style.opacity = 0; }
+  document.addEventListener("mousemove", function (ev) {
+    var t = ev.target.closest && ev.target.closest("[data-tip]");
+    if (t) mostrarTip(t.getAttribute("data-tip"), ev);
+    else if (!ev.target.closest("[data-cross]")) ocultarTip();
+  });
+
+  /* ---------- Servicios: ayudas ---------- */
+  var S = D.servicios;
+  var REAL = { cloudflare: "Cloudflare", aws: "Amazon (AWS)", crowdstrike: "CrowdStrike" };
+  function afectado(s, caida) { return s.se_cayo[caida].afectado; }
+  function caidos(caida) { return S.filter(function (s) { return afectado(s, caida) !== "no reportado"; }); }
+  function coincide(empresa, clave) { return empresa === clave || empresa.indexOf(clave + " (") === 0 || (clave === "Propia" && empresa.indexOf("Propia u otra") === 0); }
+  function depende(s, clave) { return s.empresas.some(function (e) { return coincide(e, clave); }); }
+  function esPrincipal(s, clave) { return coincide(s.principal, clave); }
+
+  /* ---------- P2: quién falló ---------- */
+  (function () {
+    var cf = caidos("cloudflare");
+    var conf = cf.filter(function (s) { return afectado(s, "cloudflare") === "confirmado"; });
+    var med = cf.filter(function (s) { return afectado(s, "cloudflare") !== "confirmado"; });
+    $("fallaron").innerHTML = "<p class='sub' style='margin-bottom:.5em'>Ese día fallaron, entre otros:</p>" +
+      conf.map(function (s) { return "<span class='chip fuerte'>" + s.servicio + "</span>"; }).join("") +
+      med.slice(0, 8).map(function (s) { return "<span class='chip'>" + s.servicio + "</span>"; }).join("") +
+      "<p class='nota'>En negrita: falla confirmada por el medio o la empresa. El resto: reportado en medios.</p>";
+  })();
+
+  /* ---------- P3: Trends ---------- */
+  (function () {
+    var g = $("gTrends"), serie = D.trends.serie;
+    var M = { l: 60, r: 30, t: 30, b: 46 }, W = 1000, H = 400;
+    var x = function (i) { return M.l + i * (W - M.l - M.r) / (serie.length - 1); };
+    var y = function (v) { return H - M.b - v * (H - M.t - M.b) / 100; };
+    var eje = svgEl("g", { "class": "eje" }, g);
+    [0, 25, 50, 75, 100].forEach(function (v) {
+      svgEl("line", { x1: M.l, x2: W - M.r, y1: y(v), y2: y(v) }, eje);
+      texto(eje, M.l - 10, y(v) + 5, v, { "text-anchor": "end" });
+    });
+    serie.forEach(function (p, i) {
+      var dia = +p.d.slice(8, 10);
+      if ([1, 8, 15, 18, 22, 30].indexOf(dia) >= 0)
+        texto(eje, x(i), H - M.b + 26, dia + "/11", { "text-anchor": "middle", "font-weight": dia === 18 ? 700 : 400 });
+    });
+    var d = serie.map(function (p, i) { return (i ? "L" : "M") + x(i) + "," + y(p.v); }).join("");
+    svgEl("path", { d: d, fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-linejoin": "round" }, g);
+    var iMax = 0; serie.forEach(function (p, i) { if (p.v > serie[iMax].v) iMax = i; });
+    svgEl("circle", { cx: x(iMax), cy: y(serie[iMax].v), r: 7, fill: "var(--accent)", stroke: "var(--bg)", "stroke-width": 2 }, g);
+    texto(g, x(iMax) + 14, y(serie[iMax].v) + 6, "18/11: 100 — el día de la caída", { fill: "var(--ink)", "font-weight": 700, "font-size": 17 });
+    var normal = serie.filter(function (p, i) { return i < iMax; }).map(function (p) { return p.v; });
+    var prom = normal.reduce(function (a, b) { return a + b; }, 0) / normal.length;
+    texto(g, x(2), y(prom) - 14, "un día normal: ~" + fmt(prom), { "font-size": 16 });
+    var cross = svgEl("line", { y1: M.t, y2: H - M.b, stroke: "var(--ink2)", "stroke-width": 1, opacity: 0 }, g);
+    var hit = svgEl("rect", { x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b, fill: "transparent", "data-cross": 1 }, g);
+    hit.addEventListener("mousemove", function (ev) {
+      var pt = g.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+      var p = pt.matrixTransform(g.getScreenCTM().inverse());
+      var i = Math.max(0, Math.min(serie.length - 1, Math.round((p.x - M.l) / ((W - M.l - M.r) / (serie.length - 1)))));
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", .5);
+      mostrarTip("<b>" + serie[i].d.split("-").reverse().join("/") + "</b><br>Interés de búsqueda: " + serie[i].v, ev);
+    });
+    hit.addEventListener("mouseleave", function () { cross.setAttribute("opacity", 0); ocultarTip(); });
+    $("busquedas").innerHTML = D.trends.busquedas.map(function (q) { return "<span class='chip'>«" + q + "»</span>"; }).join("");
+  })();
+
+  /* ---------- P4: Radar ---------- */
+  (function () {
+    var g = $("gRadar"), s = D.radar;
+    var M = { l: 70, r: 170, t: 40, b: 46 }, W = 1000, H = 400;
+    var ymax = Math.max.apply(null, s.map(function (p) { return Math.max(p.v, p.c || 0); })) * 1.1;
+    var x = function (h) { return M.l + h * (W - M.l - M.r) / 24; };
+    var y = function (v) { return H - M.b - v * (H - M.t - M.b) / ymax; };
+    var hhmm = function (h) { var hh = Math.floor(h), mm = Math.round((h - hh) * 60); return hh + ":" + (mm < 10 ? "0" : "") + mm; };
+    var eje = svgEl("g", { "class": "eje" }, g);
+    [0, .25, .5, .75, 1].forEach(function (f) { svgEl("line", { x1: M.l, x2: W - M.r, y1: y(f * ymax / 1.1), y2: y(f * ymax / 1.1) }, eje); });
+    texto(eje, M.l - 10, y(0) + 5, "0", { "text-anchor": "end" });
+    texto(eje, M.l - 10, y(ymax / 1.1) + 5, "máx.", { "text-anchor": "end" });
+    [0, 3, 6, 9, 12, 15, 18, 21, 24].forEach(function (h) { texto(eje, x(h), H - M.b + 26, h + " h", { "text-anchor": "middle" }); });
+    /* ventana de la caída: 8:20 a 14:06 (hora argentina) */
+    var a = 8 + 20 / 60, b = 14 + 6 / 60;
+    svgEl("rect", { x: x(a), y: M.t, width: x(b) - x(a), height: H - M.t - M.b, fill: "var(--accent-soft)", opacity: .7 }, g);
+    texto(g, (x(a) + x(b)) / 2, M.t - 12, "Caída de Cloudflare (8:20 a 14:06)", { "text-anchor": "middle", "font-size": 15, fill: "var(--ink2)" });
+    function linea(campo, color, ancho) {
+      var d = "", pen = false;
+      s.forEach(function (p) { if (p[campo] == null) { pen = false; return; } d += (pen ? "L" : "M") + x(p.h) + "," + y(p[campo]); pen = true; });
+      svgEl("path", { d: d, fill: "none", stroke: color, "stroke-width": ancho, "stroke-linejoin": "round" }, g);
+    }
+    linea("c", "var(--muted)", 2);
+    linea("v", "var(--accent)", 3);
+    var ult = s[s.length - 1];
+    texto(g, x(ult.h) + 10, y(ult.v) + 5, "18/11/2025", { fill: "var(--ink)", "font-weight": 700 });
+    texto(g, x(ult.h) + 10, y(ult.c) + (ult.c > ult.v ? -6 : 22), "martes anterior", {});
+    var peor = s.filter(function (p) { return p.d != null && p.h >= a && p.h <= b; })
+                .reduce(function (m, p) { return p.d < m.d ? p : m; });
+    svgEl("circle", { cx: x(peor.h), cy: y(peor.v), r: 7, fill: "var(--accent)", stroke: "var(--bg)", "stroke-width": 2 }, g);
+    texto(g, x(peor.h) + 14, y(peor.v) + 5, hhmm(peor.h) + " · " + fmt(peor.d) + " % vs. el martes anterior", { fill: "var(--ink)", "font-weight": 700, "font-size": 17 });
+    $("tRadar").innerHTML = "A las " + hhmm(peor.h).replace(":00", "") + ", el tráfico web de la Argentina cayó <span class='num'>un " + fmt(-peor.d) + " %</span>";
+    var cross = svgEl("line", { y1: M.t, y2: H - M.b, stroke: "var(--ink2)", "stroke-width": 1, opacity: 0 }, g);
+    var hit = svgEl("rect", { x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b, fill: "transparent", "data-cross": 1 }, g);
+    hit.addEventListener("mousemove", function (ev) {
+      var pt = g.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+      var q = pt.matrixTransform(g.getScreenCTM().inverse());
+      var h = (q.x - M.l) * 24 / (W - M.l - M.r);
+      var p = s.reduce(function (m, z) { return Math.abs(z.h - h) < Math.abs(m.h - h) ? z : m; });
+      cross.setAttribute("x1", x(p.h)); cross.setAttribute("x2", x(p.h)); cross.setAttribute("opacity", .5);
+      mostrarTip("<b>" + hhmm(p.h) + " h</b><br>Diferencia con el martes anterior: <b>" + (p.d == null ? "s/d" : (p.d > 0 ? "+" : "") + fmt(p.d) + " %") + "</b>", ev);
+    });
+    hit.addEventListener("mouseleave", function () { cross.setAttribute("opacity", 0); ocultarTip(); });
+  })();
+
+  /* ---------- P5: tres caídas ---------- */
+  (function () {
+    function peorHttp(ev) { var r = D.caidas.filter(function (c) { return c.evento.indexOf(ev) === 0 && c.fuente === "http"; })[0]; return r ? +r.dif_pct_peor_momento : null; }
+    var info = [
+      { clave: "cloudflare", nombre: "Cloudflare", fecha: "Martes 18/11/2025", dur: "~6 h", que: "Red que protege y acelera sitios web" },
+      { clave: "aws", nombre: "Amazon Web Services", fecha: "Lunes 20/10/2025", dur: "~14,5 h", que: "Nube donde corren apps y sitios" },
+      { clave: "crowdstrike", nombre: "CrowdStrike", fecha: "Viernes 19/07/2024", dur: "78 min + días", que: "Antivirus de empresas, dentro de Windows" }
+    ];
+    $("tarjetasCaidas").innerHTML = info.map(function (c, i) {
+      var t = peorHttp(c.clave), n = caidos(c.clave), conf = n.filter(function (s) { return afectado(s, c.clave) === "confirmado"; }).length;
+      return "<div class='tarjeta'><h3>" + c.nombre + "</h3><div class='fecha'>" + c.fecha + " · " + c.que + "</div>" +
+        "<div class='grande" + (i === 0 ? " acento" : "") + "'>" + (t == null ? "s/d" : fmt(t) + " %") + "</div>" +
+        "<div class='fecha'>tráfico web de AR en el peor momento</div>" +
+        "<dl><dt>Duración</dt><dd>" + c.dur + "</dd><dt>Servicios con fallas</dt><dd><b>" + n.length + "</b> de " + S.length + " (" + conf + " confirmados)</dd></dl></div>";
+    }).join("");
+  })();
+
+  /* ---------- P6: barras por empresa ---------- */
+  (function () {
+    var g = $("gEmpresas");
+    var datos = D.empresas.filter(function (e) { return e.empresa !== "Otra"; }).sort(function (a, b) { return b.pct - a.pct; }).slice(0, 6);
+    $("subEmpresas").textContent = "De los " + fmt(D.sitios.con_datos) + " sitios más usados desde Argentina, % que depende de cada empresa para funcionar.";
+    var M = { l: 210, r: 60, t: 10, b: 36 }, W = 1000, fila = 52, bar = 30;
+    var H = M.t + datos.length * fila + M.b; g.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var x = function (v) { return M.l + v * (W - M.l - M.r) / 100; };
+    var eje = svgEl("g", { "class": "eje" }, g);
+    [0, 25, 50, 75, 100].forEach(function (v) {
+      svgEl("line", { x1: x(v), x2: x(v), y1: M.t, y2: H - M.b + 4 }, eje);
+      texto(eje, x(v), H - 8, v + " %", { "text-anchor": "middle" });
+    });
+    datos.forEach(function (e, i) {
+      var y0 = M.t + i * fila + (fila - bar) / 2, w = x(e.pct) - x(0), r = Math.min(4, w);
+      var color = i === 0 ? "var(--accent)" : "#b9b8b2";
+      var d = "M" + x(0) + "," + y0 + "h" + (w - r) + "a" + r + "," + r + " 0 0 1 " + r + "," + r + "v" + (bar - 2 * r) + "a" + r + "," + r + " 0 0 1 -" + r + "," + r + "h-" + (w - r) + "z";
+      var tipHtml = "<b>" + e.empresa + "</b><br>" + fmt(e.pct, 1) + " % de los sitios<br>Entre los 1.000 más usados: " + fmt(e.pct1000, 1) + " %";
+      svgEl("path", { d: d, fill: color, "data-tip": tipHtml }, g);
+      texto(g, M.l - 14, y0 + bar / 2 + 6, e.empresa, { "text-anchor": "end", fill: "var(--ink)", "font-size": 17, "font-weight": i === 0 ? 700 : 400 });
+      texto(g, x(e.pct) + 10, y0 + bar / 2 + 6, fmt(e.pct) + " %", { fill: "var(--ink)", "font-size": 17, "font-weight": i === 0 ? 700 : 400 });
+    });
+    tabla($("tEmpresas"), ["Empresa", "% de sitios", "% en el top 1.000"], D.empresas.map(function (e) { return [e.empresa, fmt(e.pct, 1), fmt(e.pct1000, 1)]; }));
+  })();
+
+  /* ---------- P7: grilla de 100 ---------- */
+  (function () {
+    var g = $("gWaffle"), c = D.concentracion, n = Math.round(c.pct_sitios), lado = 34, gap = 6;
+    for (var i = 0; i < 100; i++) {
+      var fila = Math.floor(i / 10), col = i % 10;
+      svgEl("rect", { x: col * (lado + gap) + 3, y: fila * (lado + gap) + 3, width: lado, height: lado, rx: 4,
+        fill: i < n ? "var(--accent)" : "var(--grid)", "data-tip": i < n ? "Depende de Cloudflare, Amazon o Google" : "No depende de ninguna de las tres" }, g);
+    }
+    var nombres = c.empresas.map(function (e) { return e.replace(" (AWS)", ""); });
+    $("tWaffle").innerHTML = "<span class='num'>" + fmt(n / 10) + " de cada 10</span> dependen de alguna de tres empresas";
+    $("waffleTexto").innerHTML = "<b>" + n + " de 100</b> dependen de " + nombres.slice(0, -1).join(", ") + " o " + nombres[nombres.length - 1] + ".";
+    $("waffleSin").innerHTML = "El <b>" + fmt(c.pct_sin_cdn) + " %</b> no usa ningún intermediario que se pueda detectar: muchos son sitios del Estado y de Chaco.";
+  })();
+
+  /* ---------- P8: Argentina vs. mundo ---------- */
+  (function () {
+    var g = $("gMundo");
+    var orden = ["Cloudflare", "Amazon (AWS)", "Google", "Akamai", "Fastly", "Microsoft (Azure)"];
+    var datos = orden.map(function (n) { return D.mundo.filter(function (m) { return m.empresa === n; })[0]; }).filter(Boolean);
+    var M = { l: 210, r: 60, t: 16, b: 36 }, W = 1000, fila = 48;
+    var H = M.t + datos.length * fila + M.b; g.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var x = function (v) { return M.l + v * (W - M.l - M.r) / 100; };
+    var eje = svgEl("g", { "class": "eje" }, g);
+    [0, 25, 50, 75, 100].forEach(function (v) {
+      svgEl("line", { x1: x(v), x2: x(v), y1: M.t, y2: H - M.b + 4 }, eje);
+      texto(eje, x(v), H - 8, v + " %", { "text-anchor": "middle" });
+    });
+    datos.forEach(function (m, i) {
+      var yy = M.t + i * fila + fila / 2;
+      texto(g, M.l - 14, yy + 6, m.empresa, { "text-anchor": "end", fill: "var(--ink)", "font-size": 17 });
+      svgEl("line", { x1: x(Math.min(m.ar, m.mundo)), x2: x(Math.max(m.ar, m.mundo)), y1: yy, y2: yy, stroke: "var(--line)", "stroke-width": 4, "stroke-linecap": "round" }, g);
+      var tipHtml = "<b>" + m.empresa + "</b><br>Argentina: " + fmt(m.ar, 1) + " %<br>Mundo: " + fmt(m.mundo, 1) + " %";
+      svgEl("circle", { cx: x(m.mundo), cy: yy, r: 10, fill: "var(--world)", stroke: "var(--bg)", "stroke-width": 2, "data-tip": tipHtml }, g);
+      svgEl("circle", { cx: x(m.ar), cy: yy, r: 10, fill: "var(--blue)", stroke: "var(--bg)", "stroke-width": 2, "data-tip": tipHtml }, g);
+      if (m.empresa === "Cloudflare" || m.empresa === "Akamai") {
+        var izq = m.ar < m.mundo;
+        texto(g, x(m.ar) + (izq ? -16 : 16), yy - 14, "AR " + fmt(m.ar) + " %", { "text-anchor": izq ? "end" : "start", fill: "var(--ink)", "font-size": 15 });
+        texto(g, x(m.mundo) + (izq ? 16 : -16), yy - 14, "Mundo " + fmt(m.mundo) + " %", { "text-anchor": izq ? "start" : "end", fill: "var(--ink)", "font-size": 15 });
+      }
+    });
+    tabla($("tMundo"), ["Empresa", "Argentina %", "Mundo %"], D.mundo.map(function (m) { return [m.empresa, fmt(m.ar, 1), fmt(m.mundo, 1)]; }));
+  })();
+
+  /* ---------- P9: explorador ---------- */
+  (function () {
+    var USADAS = ["WhatsApp", "Instagram", "TikTok", "YouTube", "Mercado Pago", "Mercado Libre", "Spotify", "ChatGPT", "Naranja X", "Campus virtual UTN FRRe"];
+    var EMPRESAS = ["Cloudflare", "Amazon (AWS)", "Akamai", "Google", "Meta (propia)", "Proveedor argentino"];
+    var marcadas = {}, modo = null, eleccion = null;
+    var rubros = [];
+    S.forEach(function (s) { if (rubros.indexOf(s.rubro) < 0) rubros.push(s.rubro); });
+    var cont = $("grupos"), fichas = {};
+    rubros.forEach(function (r) {
+      var gr = document.createElement("div");
+      gr.className = S.filter(function (s) { return s.rubro === r; }).length > 7 ? "grupo ancho" : "grupo";
+      gr.innerHTML = "<span>" + r + "</span><div></div>";
+      S.filter(function (s) { return s.rubro === r; }).forEach(function (s) {
+        var b = document.createElement("button"); b.className = "ficha"; b.type = "button";
+        b.textContent = s.servicio.replace(" (Twitter)", "");
+        b.setAttribute("aria-pressed", "false");
+        b.addEventListener("click", function () { marcadas[s.servicio] = !marcadas[s.servicio]; pintar(); });
+        fichas[s.servicio] = b; gr.lastChild.appendChild(b);
+      });
+      cont.appendChild(gr);
+    });
+    function boton(padre, txt, fn, real) {
+      var b = document.createElement("button"); b.type = "button"; b.textContent = txt;
+      if (real) b.dataset.real = 1;
+      b.addEventListener("click", fn); padre.appendChild(b); padre.appendChild(document.createTextNode(" ")); return b;
+    }
+    var bEmp = {}, bReal = {};
+    EMPRESAS.forEach(function (e) {
+      bEmp[e] = boton($("botonesEmpresas"), e.replace(" (propia)", "").replace(" (AWS)", " (AWS)"), function () {
+        if (modo === "sim" && eleccion === e) { modo = null; eleccion = null; } else { modo = "sim"; eleccion = e; } pintar();
+      });
+    });
+    [["cloudflare", "18/11/2025 · Cloudflare"], ["aws", "20/10/2025 · AWS"], ["crowdstrike", "19/07/2024 · CrowdStrike"]].forEach(function (c) {
+      bReal[c[0]] = boton($("botonesReales"), c[1], function () {
+        if (modo === "real" && eleccion === c[0]) { modo = null; eleccion = null; } else { modo = "real"; eleccion = c[0]; } pintar();
+      }, true);
+    });
+    $("bUsadas").addEventListener("click", function () { marcadas = {}; USADAS.forEach(function (n) { marcadas[n] = true; }); pintar(); });
+    $("bTodas").addEventListener("click", function () { S.forEach(function (s) { marcadas[s.servicio] = true; }); pintar(); });
+    $("bLimpiar").addEventListener("click", function () { marcadas = {}; modo = null; eleccion = null; pintar(); });
+
+    function pintar() {
+      var mias = S.filter(function (s) { return marcadas[s.servicio]; });
+      Object.keys(bEmp).forEach(function (e) { bEmp[e].className = modo === "sim" && eleccion === e ? "activo" : ""; });
+      Object.keys(bReal).forEach(function (c) { bReal[c].className = modo === "real" && eleccion === c ? "activo real" : ""; });
+      S.forEach(function (s) {
+        var b = fichas[s.servicio], m = !!marcadas[s.servicio], cls = "ficha", marca = "";
+        b.setAttribute("aria-pressed", m ? "true" : "false");
+        if (m) cls += " marcada";
+        var tipTxt = "<b>" + s.servicio + "</b><br>Depende de: " + (s.empresas.length ? s.empresas.join(", ") : "sin dato") + "<br>Principal: " + s.principal;
+        if (modo === "sim") {
+          if (esPrincipal(s, eleccion)) cls += " apagada";
+          else if (depende(s, eleccion)) cls += " riesgo";
+          if (!m) cls += " tenue";
+        } else if (modo === "real") {
+          var a = afectado(s, eleccion);
+          if (a === "confirmado") { cls += " apagada"; marca = "●"; }
+          else if (a === "reportado en medios") { cls += " medios"; marca = "◐"; }
+          if (!m) cls += " tenue";
+          tipTxt += "<br>El " + ({ cloudflare: "18/11/2025", aws: "20/10/2025", crowdstrike: "19/07/2024" })[eleccion] + ": <b>" + a + "</b>";
+          var f = s.se_cayo[eleccion].fuente; if (f) tipTxt += "<br><span style='opacity:.75'>" + f.split(":")[0] + "</span>";
+        }
+        b.className = cls;
+        b.setAttribute("data-tip", tipTxt);
+        b.innerHTML = "";
+        b.appendChild(document.createTextNode(s.servicio.replace(" (Twitter)", "")));
+        if (marca) { var sp = document.createElement("span"); sp.className = "marca"; sp.textContent = marca; b.appendChild(sp); }
+      });
+      var r = $("resultado"), k = $("claves");
+      if (!mias.length && !modo) {
+        r.innerHTML = "Marcá tus apps y elegí una empresa.<small>Las fichas muestran " + S.length + " servicios conocidos en Argentina (apps y webs).</small>";
+        k.innerHTML = "";
+      } else if (!modo) {
+        r.innerHTML = "Marcaste " + mias.length + " apps. Ahora elegí qué empresa se cae.<small>&nbsp;</small>";
+        k.innerHTML = "";
+      } else if (modo === "sim") {
+        var ap = mias.filter(function (s) { return esPrincipal(s, eleccion); }).length;
+        var rg = mias.filter(function (s) { return !esPrincipal(s, eleccion) && depende(s, eleccion); }).length;
+        var totAp = S.filter(function (s) { return esPrincipal(s, eleccion); }).length;
+        var hubo = eleccion === "Cloudflare" || eleccion === "Amazon (AWS)";
+        r.innerHTML = (mias.length ? "Se te apagan <span style='color:var(--accent)'>" + ap + " de tus " + mias.length + " apps</span>" + (rg ? " y " + rg + " pueden fallar" : "") : "Elegí tus apps para ver cuáles se te apagan") +
+          "<small>En toda la lista, " + eleccion + " es la empresa principal de " + totAp + " de " + S.length + " servicios. " +
+          (hubo ? "Esta empresa tuvo una caída real: tocá su fecha abajo para comparar." : "Simulación: no hubo una caída de esta empresa en el período del TPI.") + "</small>";
+        k.innerHTML = "<span><b style='background:var(--off);color:#9a9994'>tachada</b> depende de " + eleccion + " como principal: se apaga</span><span><b style='color:var(--accent)'>⚠</b> la usa en algo secundario: puede fallar</span>";
+      } else {
+        var c = caidos(eleccion), mc = mias.filter(function (s) { return afectado(s, eleccion) !== "no reportado"; });
+        var conf = mc.filter(function (s) { return afectado(s, eleccion) === "confirmado"; }).length;
+        var emp = REAL[eleccion], sinDep = c.filter(function (s) { return !depende(s, emp); }).length;
+        r.innerHTML = (mias.length ? "Te fallaron " + mc.length + " de tus " + mias.length + " apps" + (mc.length ? " (" + conf + " confirmado" + (conf === 1 ? "" : "s") + ")" : "") : "Ese día fallaron " + c.length + " de los " + S.length + " servicios") +
+          "<small>" + (eleccion === "crowdstrike" ? "CrowdStrike no aparece en ningún dato de la web: rompió computadoras con Windows por dentro." :
+            "En toda la lista, " + c.length + " servicios reportados; " + sinDep + " de ellos no dependen de " + emp + " según el DNS (¿ruido o dependencias ocultas?).") + "</small>";
+        k.innerHTML = "<span><b>●</b> falla confirmada (empresa o medio)</span><span><b>◐</b> reportada en medios</span><span>sin marca: no reportado (no significa que anduvo bien)</span>";
+      }
+    }
+    $("avisoDns").innerHTML = "<b>Ojo:</b> " + D.aviso_dns + " Pasá el mouse por una ficha para ver de qué empresas depende y la fuente.";
+    pintar();
+  })();
+
+  /* ---------- P10: dato de la culpa ---------- */
+  (function () {
+    var c = caidos("cloudflare").filter(function (s) { return !depende(s, "Cloudflare"); });
+    $("culpaNum").textContent = c.length + " servicios";
+  })();
+
+  /* ---------- P12: simulador canario ---------- */
+  (function () {
+    var g = $("gSim"), puntos = [], timers = [];
+    for (var i = 0; i < 100; i++) {
+      puntos.push(svgEl("circle", { cx: 20 + (i % 10) * 40, cy: 20 + Math.floor(i / 10) * 40, r: 14, fill: "var(--ok)", stroke: "var(--bg)", "stroke-width": 2 }, g));
+    }
+    var orden = puntos.map(function (p, i) { return i; }).sort(function () { return Math.random() - .5; });
+    function limpiar() { timers.forEach(clearTimeout); timers = []; puntos.forEach(function (p) { p.setAttribute("fill", "var(--ok)"); }); }
+    function msg(t) { $("simMsg").innerHTML = t; }
+    function marcar(c) { ["c1", "c2", "c3"].forEach(function (id) { $(id).classList.toggle("on", c.indexOf(id) >= 0); }); }
+    $("bGolpe").addEventListener("click", function () {
+      limpiar(); msg("Se manda a las 100 a la vez…"); marcar([]);
+      orden.forEach(function (idx, k) { timers.push(setTimeout(function () { puntos[idx].setAttribute("fill", "var(--bad)"); }, k * 12)); });
+      timers.push(setTimeout(function () { msg("100 de 100 con error. Todas se cayeron juntas: <span style='color:var(--bad)'>un punto único de falla</span>."); marcar(["c1", "c3"]); }, 1400));
+    });
+    $("bPoco").addEventListener("click", function () {
+      limpiar(); msg("Primero, solo a 5 computadoras…"); marcar([]);
+      orden.slice(0, 5).forEach(function (idx, k) { timers.push(setTimeout(function () { puntos[idx].setAttribute("fill", "var(--bad)"); }, 300 + k * 250)); });
+      timers.push(setTimeout(function () { msg("5 de 100 con error → <span style='color:var(--ok)'>se detecta y se frena el despliegue</span>. Las otras 95 siguen andando."); marcar(["c2"]); }, 2000));
+    });
+    $("bReset").addEventListener("click", function () { limpiar(); msg("Cada punto es una computadora. La actualización trae un error."); marcar([]); });
+  })();
+
+  /* ---------- P13: ficha ---------- */
+  $("fUnidad").textContent = "Sitio web más usado desde Argentina (" + fmt(D.sitios.con_datos) + " con datos de " + fmt(D.sitios.en_top) + ")";
+  $("fServ").textContent = "Servicio conocido en Argentina, app o web (" + S.length + ")";
+  $("fGenerado").textContent = "Datos de la pieza generados el " + D.generado.split("-").reverse().join("/");
+
+  /* ---------- Navegación de presentación ---------- */
+  var pant = Array.prototype.slice.call(document.querySelectorAll(".pantalla"));
+  function actual() {
+    var mejor = 0, dist = Infinity;
+    pant.forEach(function (p, i) { var d = Math.abs(p.getBoundingClientRect().top); if (d < dist) { dist = d; mejor = i; } });
+    return mejor;
+  }
+  function ir(i) { i = Math.max(0, Math.min(pant.length - 1, i)); pant[i].scrollIntoView({ behavior: "smooth", block: "start" }); }
+  function contador() {
+    var i = actual();
+    $("contador").textContent = (i + 1) + " / " + pant.length;
+    $("progreso").style.width = ((i + 1) / pant.length * 100) + "%";
+  }
+  addEventListener("scroll", function () { requestAnimationFrame(contador); }, { passive: true });
+  addEventListener("keydown", function (ev) {
+    var enControl = /BUTTON|INPUT|SELECT|TEXTAREA|SUMMARY/.test(document.activeElement && document.activeElement.tagName);
+    if (["ArrowRight", "ArrowDown", "PageDown"].indexOf(ev.key) >= 0 || (ev.key === " " && !enControl)) { ev.preventDefault(); ir(actual() + 1); }
+    else if (["ArrowLeft", "ArrowUp", "PageUp"].indexOf(ev.key) >= 0) { ev.preventDefault(); ir(actual() - 1); }
+    else if (ev.key === "Home") { ev.preventDefault(); ir(0); }
+    else if (ev.key === "End") { ev.preventDefault(); ir(pant.length - 1); }
+    else if ((ev.key === "f" || ev.key === "F") && !enControl) {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+      else document.exitFullscreen && document.exitFullscreen();
+    }
+  });
+  contador();
+})();
+</script>
+</body>
+</html>
